@@ -20,7 +20,7 @@ main =
 
 
 type Msg
-    = GotContent (Result Error PageContent)
+    = GotContent (Result Error PageBy)
 
 
 type alias PageContent =
@@ -29,10 +29,21 @@ type alias PageContent =
     }
 
 
+type alias PageBy =
+    { pageBy : PageContent
+    }
+
+
 type alias Model =
     { title : String
     , content : String
     }
+
+
+decodePageBy : Decoder PageBy
+decodePageBy =
+    Decode.map PageBy
+        (field "pageBy" decodePageContent)
 
 
 decodePageContent : Decoder PageContent
@@ -44,13 +55,12 @@ decodePageContent =
 
 pageRequest : Operation Query Variables
 pageRequest =
-    GraphQl.named "whatever"
-        [ GraphQl.field "posts"
+    GraphQl.named "query"
+        [ GraphQl.field "pageBy"
+            |> GraphQl.withArgument "uri" (GraphQl.string "contact-us")
             |> GraphQl.withSelectors
-                [ GraphQl.field "postTypeInfo"
-                    |> GraphQl.withSelectors
-                        [ GraphQl.field "id"
-                        ]
+                [ GraphQl.field "title"
+                , GraphQl.field "content"
                 ]
         ]
         |> GraphQl.withVariables []
@@ -58,42 +68,49 @@ pageRequest =
 
 baseRequest :
     Operation Query Variables
-    -> Decoder PageContent
-    -> GraphQl.Request Query Variables PageContent
+    -> Decoder PageBy
+    -> GraphQl.Request Query Variables PageBy
 baseRequest =
     GraphQl.query "http://localhost:8000/graphql"
 
 
-sendRequest : String -> Cmd Msg
-sendRequest page =
-    baseRequest pageRequest decodePageContent
-        |> GraphQl.addVariables [ ( "uri", Encode.string page ) ]
+sendRequest : Cmd Msg
+sendRequest =
+    baseRequest pageRequest decodePageBy
         |> GraphQl.send GotContent
 
 
-responseToModel : PageContent -> Model -> Model
-responseToModel content model =
-    { model | title = (toString content) }
+responseToModel : PageBy -> Model -> Model
+responseToModel { pageBy } model =
+    { model
+        | title = Maybe.withDefault model.title pageBy.title
+        , content = Maybe.withDefault model.content pageBy.content
+    }
+
+
+setHtml : String -> Html.Attribute msg
+setHtml str =
+    (Html.Attributes.property "innerHTML" (Encode.string str))
 
 
 init : ( Model, Cmd Msg )
 init =
-    ( Model "..." "...", sendRequest "contact-us" )
+    ( Model "..." "...", sendRequest )
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         GotContent (Ok response) ->
-            ( { model | content = toString response }, Cmd.none )
+            ( responseToModel response model, Cmd.none )
 
         GotContent (Err err) ->
             ( { model | content = toString err }, Cmd.none )
 
 
 view : Model -> Html.Html Msg
-view model =
+view { title, content } =
     div []
-        [ h1 [] [ model.title |> toString |> text ]
-        , p [] [ model.content |> toString |> text ]
+        [ h1 [ setHtml title ] []
+        , p [ setHtml content ] []
         ]

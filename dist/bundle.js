@@ -9313,7 +9313,14 @@ var _ghivert$elm_graphql$GraphQl$nestedInput = function (nestedInput) {
 				A2(_elm_lang$core$List$map, _ghivert$elm_graphql$GraphQl$inputToString, nestedInput))));
 };
 
-var _user$project$App$view = function (model) {
+var _user$project$App$setHtml = function (str) {
+	return A2(
+		_elm_lang$html$Html_Attributes$property,
+		'innerHTML',
+		_elm_lang$core$Json_Encode$string(str));
+};
+var _user$project$App$view = function (_p0) {
+	var _p1 = _p0;
 	return A2(
 		_elm_lang$html$Html$div,
 		{ctor: '[]'},
@@ -9321,39 +9328,44 @@ var _user$project$App$view = function (model) {
 			ctor: '::',
 			_0: A2(
 				_elm_lang$html$Html$h1,
-				{ctor: '[]'},
 				{
 					ctor: '::',
-					_0: _elm_lang$html$Html$text(
-						_elm_lang$core$Basics$toString(model.title)),
+					_0: _user$project$App$setHtml(_p1.title),
 					_1: {ctor: '[]'}
-				}),
+				},
+				{ctor: '[]'}),
 			_1: {
 				ctor: '::',
 				_0: A2(
 					_elm_lang$html$Html$p,
-					{ctor: '[]'},
 					{
 						ctor: '::',
-						_0: _elm_lang$html$Html$text(
-							_elm_lang$core$Basics$toString(model.content)),
+						_0: _user$project$App$setHtml(_p1.content),
 						_1: {ctor: '[]'}
-					}),
+					},
+					{ctor: '[]'}),
 				_1: {ctor: '[]'}
 			}
 		});
 };
+var _user$project$App$responseToModel = F2(
+	function (_p2, model) {
+		var _p3 = _p2;
+		var _p4 = _p3.pageBy;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				title: A2(_elm_lang$core$Maybe$withDefault, model.title, _p4.title),
+				content: A2(_elm_lang$core$Maybe$withDefault, model.content, _p4.content)
+			});
+	});
 var _user$project$App$update = F2(
 	function (msg, model) {
-		var _p0 = msg;
-		if (_p0._0.ctor === 'Ok') {
+		var _p5 = msg;
+		if (_p5._0.ctor === 'Ok') {
 			return {
 				ctor: '_Tuple2',
-				_0: _elm_lang$core$Native_Utils.update(
-					model,
-					{
-						content: _elm_lang$core$Basics$toString(_p0._0._0)
-					}),
+				_0: A2(_user$project$App$responseToModel, _p5._0._0, model),
 				_1: _elm_lang$core$Platform_Cmd$none
 			};
 		} else {
@@ -9362,19 +9374,11 @@ var _user$project$App$update = F2(
 				_0: _elm_lang$core$Native_Utils.update(
 					model,
 					{
-						content: _elm_lang$core$Basics$toString(_p0._0._0)
+						content: _elm_lang$core$Basics$toString(_p5._0._0)
 					}),
 				_1: _elm_lang$core$Platform_Cmd$none
 			};
 		}
-	});
-var _user$project$App$responseToModel = F2(
-	function (content, model) {
-		return _elm_lang$core$Native_Utils.update(
-			model,
-			{
-				title: _elm_lang$core$Basics$toString(content)
-			});
 	});
 var _user$project$App$baseRequest = _ghivert$elm_graphql$GraphQl$query('http://localhost:8000/graphql');
 var _user$project$App$pageRequest = A2(
@@ -9382,24 +9386,25 @@ var _user$project$App$pageRequest = A2(
 	{ctor: '[]'},
 	A2(
 		_ghivert$elm_graphql$GraphQl$named,
-		'what',
+		'query',
 		{
 			ctor: '::',
 			_0: A2(
 				_ghivert$elm_graphql$GraphQl$withSelectors,
 				{
 					ctor: '::',
-					_0: A2(
-						_ghivert$elm_graphql$GraphQl$withSelectors,
-						{
-							ctor: '::',
-							_0: _ghivert$elm_graphql$GraphQl$field('id'),
-							_1: {ctor: '[]'}
-						},
-						_ghivert$elm_graphql$GraphQl$field('postTypeInfo')),
-					_1: {ctor: '[]'}
+					_0: _ghivert$elm_graphql$GraphQl$field('title'),
+					_1: {
+						ctor: '::',
+						_0: _ghivert$elm_graphql$GraphQl$field('content'),
+						_1: {ctor: '[]'}
+					}
 				},
-				_ghivert$elm_graphql$GraphQl$field('posts')),
+				A3(
+					_ghivert$elm_graphql$GraphQl$withArgument,
+					'uri',
+					_ghivert$elm_graphql$GraphQl$string('contact-us'),
+					_ghivert$elm_graphql$GraphQl$field('pageBy'))),
 			_1: {ctor: '[]'}
 		}));
 var _user$project$App$PageContent = F2(
@@ -9413,6 +9418,13 @@ var _user$project$App$decodePageContent = A3(
 		A2(_elm_lang$core$Json_Decode$field, 'title', _elm_lang$core$Json_Decode$string)),
 	_elm_lang$core$Json_Decode$maybe(
 		A2(_elm_lang$core$Json_Decode$field, 'content', _elm_lang$core$Json_Decode$string)));
+var _user$project$App$PageBy = function (a) {
+	return {pageBy: a};
+};
+var _user$project$App$decodePageBy = A2(
+	_elm_lang$core$Json_Decode$map,
+	_user$project$App$PageBy,
+	A2(_elm_lang$core$Json_Decode$field, 'pageBy', _user$project$App$decodePageContent));
 var _user$project$App$Model = F2(
 	function (a, b) {
 		return {title: a, content: b};
@@ -9420,32 +9432,19 @@ var _user$project$App$Model = F2(
 var _user$project$App$GotContent = function (a) {
 	return {ctor: 'GotContent', _0: a};
 };
-var _user$project$App$sendRequest = function (page) {
-	return A2(
-		_ghivert$elm_graphql$GraphQl$send,
-		_user$project$App$GotContent,
-		A2(
-			_ghivert$elm_graphql$GraphQl$addVariables,
-			{
-				ctor: '::',
-				_0: {
-					ctor: '_Tuple2',
-					_0: 'uri',
-					_1: _elm_lang$core$Json_Encode$string(page)
-				},
-				_1: {ctor: '[]'}
-			},
-			A2(_user$project$App$baseRequest, _user$project$App$pageRequest, _user$project$App$decodePageContent)));
-};
+var _user$project$App$sendRequest = A2(
+	_ghivert$elm_graphql$GraphQl$send,
+	_user$project$App$GotContent,
+	A2(_user$project$App$baseRequest, _user$project$App$pageRequest, _user$project$App$decodePageBy));
 var _user$project$App$init = {
 	ctor: '_Tuple2',
 	_0: A2(_user$project$App$Model, '...', '...'),
-	_1: _user$project$App$sendRequest('contact-us')
+	_1: _user$project$App$sendRequest
 };
 var _user$project$App$main = _elm_lang$html$Html$program(
 	{
 		init: _user$project$App$init,
-		subscriptions: function (_p1) {
+		subscriptions: function (_p6) {
 			return _elm_lang$core$Platform_Sub$none;
 		},
 		update: _user$project$App$update,
