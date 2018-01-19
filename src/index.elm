@@ -44,7 +44,7 @@ decodePageContent =
 
 pageRequest : Operation Query Variables
 pageRequest =
-    GraphQl.named "what"
+    GraphQl.named "whatever"
         [ GraphQl.field "posts"
             |> GraphQl.withSelectors
                 [ GraphQl.field "postTypeInfo"
