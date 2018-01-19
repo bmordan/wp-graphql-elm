@@ -1,139 +1,99 @@
-module App exposing (..)
+module App exposing (main)
 
-import Html exposing (Html, div, text, h1, p, span)
-import Html.Attributes exposing (..)
-import GraphQL.Request.Builder exposing (..)
-import GraphQL.Request.Builder.Arg as Arg
-import GraphQL.Request.Builder.Variable as Var
-import GraphQL.Client.Http as GraphQLClient
-import Task exposing (Task)
 import Json.Encode as Encode
+import Json.Decode as Decode exposing (Decoder, field, maybe, int, string)
+import Http exposing (..)
+import Html exposing (..)
+import Html.Attributes exposing (..)
+import GraphQl exposing (Operation, Variables, Query, Named)
 import Debug exposing (log)
-
-
-type alias Page =
-    { title : Maybe String
-    , content : Maybe String
-    }
-
-
-postRequest : Request Query Page
-postRequest =
-    let
-        uri =
-            Var.required "uri" .uri Var.string
-    in
-        extract
-            (field "pageBy"
-                [ ( "uri", Arg.variable uri ) ]
-                (object Page
-                    |> with (field "title" [] (nullable string))
-                    |> with (field "content" [] (nullable string))
-                )
-            )
-            |> queryDocument
-            |> request
-                { uri = "contact-us"
-                }
-
-
-connectionNodes :
-    ValueSpec NonNull ObjectType result vars
-    -> ValueSpec NonNull ObjectType (List result) vars
-connectionNodes spec =
-    extract
-        (field "edges"
-            []
-            (GraphQL.Request.Builder.list
-                (extract
-                    (field "node" [] spec)
-                )
-            )
-        )
-
-
-type alias PageResponse =
-    Result GraphQLClient.Error Page
-
-
-type alias Model =
-    { title : String
-    , content : String
-    , author : String
-    , avatar : String
-    }
-
-
-type Msg
-    = ReceiveQueryResponse PageResponse
-
-
-sendQueryRequest : Request Query a -> Task GraphQLClient.Error a
-sendQueryRequest request =
-    GraphQLClient.sendQuery "http://localhost:8000/graphql" request
-
-
-sendPageQuery : Cmd Msg
-sendPageQuery =
-    sendQueryRequest postRequest
-        |> Task.attempt ReceiveQueryResponse
 
 
 main : Program Never Model Msg
 main =
     Html.program
         { init = init
-        , view = view
+        , subscriptions = \_ -> Sub.none
         , update = update
-        , subscriptions = subscriptions
+        , view = view
         }
+
+
+type Msg
+    = GotContent (Result Error PageContent)
+
+
+type alias PageContent =
+    { title : Maybe String
+    , content : Maybe String
+    }
+
+
+type alias Model =
+    { title : String
+    , content : String
+    }
+
+
+decodePageContent : Decoder PageContent
+decodePageContent =
+    Decode.map2 PageContent
+        (maybe (field "title" string))
+        (maybe (field "content" string))
+
+
+pageRequest : Operation Query Variables
+pageRequest =
+    GraphQl.named "what"
+        [ GraphQl.field "posts"
+            |> GraphQl.withSelectors
+                [ GraphQl.field "postTypeInfo"
+                    |> GraphQl.withSelectors
+                        [ GraphQl.field "id"
+                        ]
+                ]
+        ]
+        |> GraphQl.withVariables []
+
+
+baseRequest :
+    Operation Query Variables
+    -> Decoder PageContent
+    -> GraphQl.Request Query Variables PageContent
+baseRequest =
+    GraphQl.query "http://localhost:8000/graphql"
+
+
+sendRequest : String -> Cmd Msg
+sendRequest page =
+    baseRequest pageRequest decodePageContent
+        |> GraphQl.addVariables [ ( "uri", Encode.string page ) ]
+        |> GraphQl.send GotContent
+
+
+responseToModel : PageContent -> Model -> Model
+responseToModel content model =
+    { model | title = (toString content) }
 
 
 init : ( Model, Cmd Msg )
 init =
-    ( Model "--------" "<p>fetching content ... .   .</p>" "" "http://via.placeholder.com/120x120", sendPageQuery )
-
-
-extractContentToModel : Page -> Model -> Model
-extractContentToModel content model =
-    { model
-        | title = Maybe.withDefault model.title content.title
-        , content = Maybe.withDefault model.content content.content
-    }
+    ( Model "..." "...", sendRequest "contact-us" )
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        ReceiveQueryResponse (Ok content) ->
-            ( (extractContentToModel content model), Cmd.none )
+        GotContent (Ok response) ->
+            ( { model | content = toString response }, Cmd.none )
 
-        ReceiveQueryResponse (Err _) ->
-            ( model, Cmd.none )
-
-
-setHtml : String -> Html.Attribute msg
-setHtml txt =
-    Html.Attributes.property "innerHTML" (Encode.string txt)
+        GotContent (Err err) ->
+            ( { model | content = toString err }, Cmd.none )
 
 
-subscriptions : Model -> Sub Msg
-subscriptions model =
-    Sub.none
-
-
-mainStyle : Html.Attribute msg
-mainStyle =
-    style
-        [ ( "width", "90%" )
-        , ( "margin", "1rem auto" )
-        , ( "fontFamily", "verdana" )
-        ]
-
-
-view : Model -> Html Msg
-view { title, content } =
-    div [ mainStyle ]
-        [ h1 [ setHtml title ] []
-        , p [ setHtml content ] []
+view : Model -> Html.Html Msg
+view model =
+    div []
+        [ h1 [] [ model.title |> toString |> text ]
+        , p [] [ model.content |> toString |> text ]
         ]
