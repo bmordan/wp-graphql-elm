@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "build": "cp src/*.html dist/ && elm-make src/index.elm --output dist/bundle.js",
+    "watch": "onchange src/*.elm -- npm run build",
+    "elm": "elm-reactor --port=3000"
+  }
+}
