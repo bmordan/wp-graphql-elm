@@ -9313,7 +9313,2064 @@ var _ghivert$elm_graphql$GraphQl$nestedInput = function (nestedInput) {
 				A2(_elm_lang$core$List$map, _ghivert$elm_graphql$GraphQl$inputToString, nestedInput))));
 };
 
-var _user$project$App$setHtml = function (str) {
+var _justgage$tachyons_elm$Tachyons$tachyons = {
+	css: A3(
+		_elm_lang$html$Html$node,
+		'style',
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html$text('\n/*! TACHYONS v4.8.1 | http://tachyons.io */\n/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}/* 1 */ [type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}/* 1 */ menu,details{display:block}summary{display:list-item}canvas{display:inline-block}[hidden],template{display:none}.border-box,a,article,body,code,dd,div,dl,dt,fieldset,footer,form,h1,h2,h3,h4,h5,h6,header,html,input[type=email],input[type=number],input[type=password],input[type=tel],input[type=text],input[type=url],legend,li,main,ol,p,pre,section,table,td,textarea,th,tr,ul{box-sizing:border-box}.aspect-ratio{height:0;position:relative}.aspect-ratio--16x9{padding-bottom:56.25%}.aspect-ratio--9x16{padding-bottom:177.77%}.aspect-ratio--4x3{padding-bottom:75%}.aspect-ratio--3x4{padding-bottom:133.33%}.aspect-ratio--6x4{padding-bottom:66.6%}.aspect-ratio--4x6{padding-bottom:150%}.aspect-ratio--8x5{padding-bottom:62.5%}.aspect-ratio--5x8{padding-bottom:160%}.aspect-ratio--7x5{padding-bottom:71.42%}.aspect-ratio--5x7{padding-bottom:140%}.aspect-ratio--1x1{padding-bottom:100%}.aspect-ratio--object{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;z-index:100}img{max-width:100%}.cover{background-size:cover!important}.contain{background-size:contain!important}.bg-center{background-position:50%}.bg-center,.bg-top{background-repeat:no-repeat}.bg-top{background-position:top}.bg-right{background-position:100%}.bg-bottom,.bg-right{background-repeat:no-repeat}.bg-bottom{background-position:bottom}.bg-left{background-repeat:no-repeat;background-position:0}.outline{outline:1px solid}.outline-transparent{outline:1px solid transparent}.outline-0{outline:0}.ba{border-style:solid;border-width:1px}.bt{border-top-style:solid;border-top-width:1px}.br{border-right-style:solid;border-right-width:1px}.bb{border-bottom-style:solid;border-bottom-width:1px}.bl{border-left-style:solid;border-left-width:1px}.bn{border-style:none;border-width:0}.b--black{border-color:#000}.b--near-black{border-color:#111}.b--dark-gray{border-color:#333}.b--mid-gray{border-color:#555}.b--gray{border-color:#777}.b--silver{border-color:#999}.b--light-silver{border-color:#aaa}.b--moon-gray{border-color:#ccc}.b--light-gray{border-color:#eee}.b--near-white{border-color:#f4f4f4}.b--white{border-color:#fff}.b--white-90{border-color:hsla(0,0%,100%,.9)}.b--white-80{border-color:hsla(0,0%,100%,.8)}.b--white-70{border-color:hsla(0,0%,100%,.7)}.b--white-60{border-color:hsla(0,0%,100%,.6)}.b--white-50{border-color:hsla(0,0%,100%,.5)}.b--white-40{border-color:hsla(0,0%,100%,.4)}.b--white-30{border-color:hsla(0,0%,100%,.3)}.b--white-20{border-color:hsla(0,0%,100%,.2)}.b--white-10{border-color:hsla(0,0%,100%,.1)}.b--white-05{border-color:hsla(0,0%,100%,.05)}.b--white-025{border-color:hsla(0,0%,100%,.025)}.b--white-0125{border-color:hsla(0,0%,100%,.0125)}.b--black-90{border-color:rgba(0,0,0,.9)}.b--black-80{border-color:rgba(0,0,0,.8)}.b--black-70{border-color:rgba(0,0,0,.7)}.b--black-60{border-color:rgba(0,0,0,.6)}.b--black-50{border-color:rgba(0,0,0,.5)}.b--black-40{border-color:rgba(0,0,0,.4)}.b--black-30{border-color:rgba(0,0,0,.3)}.b--black-20{border-color:rgba(0,0,0,.2)}.b--black-10{border-color:rgba(0,0,0,.1)}.b--black-05{border-color:rgba(0,0,0,.05)}.b--black-025{border-color:rgba(0,0,0,.025)}.b--black-0125{border-color:rgba(0,0,0,.0125)}.b--dark-red{border-color:#e7040f}.b--red{border-color:#ff4136}.b--light-red{border-color:#ff725c}.b--orange{border-color:#ff6300}.b--gold{border-color:#ffb700}.b--yellow{border-color:gold}.b--light-yellow{border-color:#fbf1a9}.b--purple{border-color:#5e2ca5}.b--light-purple{border-color:#a463f2}.b--dark-pink{border-color:#d5008f}.b--hot-pink{border-color:#ff41b4}.b--pink{border-color:#ff80cc}.b--light-pink{border-color:#ffa3d7}.b--dark-green{border-color:#137752}.b--green{border-color:#19a974}.b--light-green{border-color:#9eebcf}.b--navy{border-color:#001b44}.b--dark-blue{border-color:#00449e}.b--blue{border-color:#357edd}.b--light-blue{border-color:#96ccff}.b--lightest-blue{border-color:#cdecff}.b--washed-blue{border-color:#f6fffe}.b--washed-green{border-color:#e8fdf5}.b--washed-yellow{border-color:#fffceb}.b--washed-red{border-color:#ffdfdf}.b--transparent{border-color:transparent}.b--inherit{border-color:inherit}.br0{border-radius:0}.br1{border-radius:.125rem}.br2{border-radius:.25rem}.br3{border-radius:.5rem}.br4{border-radius:1rem}.br-100{border-radius:100%}.br-pill{border-radius:9999px}.br--bottom{border-top-left-radius:0;border-top-right-radius:0}.br--top{border-bottom-right-radius:0}.br--right,.br--top{border-bottom-left-radius:0}.br--right{border-top-left-radius:0}.br--left{border-top-right-radius:0;border-bottom-right-radius:0}.b--dotted{border-style:dotted}.b--dashed{border-style:dashed}.b--solid{border-style:solid}.b--none{border-style:none}.bw0{border-width:0}.bw1{border-width:.125rem}.bw2{border-width:.25rem}.bw3{border-width:.5rem}.bw4{border-width:1rem}.bw5{border-width:2rem}.bt-0{border-top-width:0}.br-0{border-right-width:0}.bb-0{border-bottom-width:0}.bl-0{border-left-width:0}.shadow-1{box-shadow:0 0 4px 2px rgba(0,0,0,.2)}.shadow-2{box-shadow:0 0 8px 2px rgba(0,0,0,.2)}.shadow-3{box-shadow:2px 2px 4px 2px rgba(0,0,0,.2)}.shadow-4{box-shadow:2px 2px 8px 0 rgba(0,0,0,.2)}.shadow-5{box-shadow:4px 4px 8px 0 rgba(0,0,0,.2)}.pre{overflow-x:auto;overflow-y:hidden;overflow:scroll}.top-0{top:0}.right-0{right:0}.bottom-0{bottom:0}.left-0{left:0}.top-1{top:1rem}.right-1{right:1rem}.bottom-1{bottom:1rem}.left-1{left:1rem}.top-2{top:2rem}.right-2{right:2rem}.bottom-2{bottom:2rem}.left-2{left:2rem}.top--1{top:-1rem}.right--1{right:-1rem}.bottom--1{bottom:-1rem}.left--1{left:-1rem}.top--2{top:-2rem}.right--2{right:-2rem}.bottom--2{bottom:-2rem}.left--2{left:-2rem}.absolute--fill{top:0;right:0;bottom:0;left:0}.cf:after,.cf:before{content:\" \";display:table}.cf:after{clear:both}.cf{*zoom:1}.cl{clear:left}.cr{clear:right}.cb{clear:both}.cn{clear:none}.dn{display:none}.di{display:inline}.db{display:block}.dib{display:inline-block}.dit{display:inline-table}.dt{display:table}.dtc{display:table-cell}.dt-row{display:table-row}.dt-row-group{display:table-row-group}.dt-column{display:table-column}.dt-column-group{display:table-column-group}.dt--fixed{table-layout:fixed;width:100%}.flex{display:-webkit-box;display:-ms-flexbox;display:flex}.inline-flex{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex}.flex-auto{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;min-width:0;min-height:0}.flex-none{-webkit-box-flex:0;-ms-flex:none;flex:none}.flex-column{-webkit-box-orient:vertical;-ms-flex-direction:column;flex-direction:column}.flex-column,.flex-row{-webkit-box-direction:normal}.flex-row{-webkit-box-orient:horizontal;-ms-flex-direction:row;flex-direction:row}.flex-wrap{-ms-flex-wrap:wrap;flex-wrap:wrap}.flex-nowrap{-ms-flex-wrap:nowrap;flex-wrap:nowrap}.flex-wrap-reverse{-ms-flex-wrap:wrap-reverse;flex-wrap:wrap-reverse}.flex-column-reverse{-webkit-box-orient:vertical;-webkit-box-direction:reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse}.flex-row-reverse{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}.items-start{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.items-end{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.items-center{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.items-baseline{-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline}.items-stretch{-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch}.self-start{-ms-flex-item-align:start;align-self:flex-start}.self-end{-ms-flex-item-align:end;align-self:flex-end}.self-center{-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center}.self-baseline{-ms-flex-item-align:baseline;align-self:baseline}.self-stretch{-ms-flex-item-align:stretch;-ms-grid-row-align:stretch;align-self:stretch}.justify-start{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.justify-end{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}.justify-center{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.justify-between{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.justify-around{-ms-flex-pack:distribute;justify-content:space-around}.content-start{-ms-flex-line-pack:start;align-content:flex-start}.content-end{-ms-flex-line-pack:end;align-content:flex-end}.content-center{-ms-flex-line-pack:center;align-content:center}.content-between{-ms-flex-line-pack:justify;align-content:space-between}.content-around{-ms-flex-line-pack:distribute;align-content:space-around}.content-stretch{-ms-flex-line-pack:stretch;align-content:stretch}.order-0{-webkit-box-ordinal-group:1;-ms-flex-order:0;order:0}.order-1{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}.order-2{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}.order-3{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3}.order-4{-webkit-box-ordinal-group:5;-ms-flex-order:4;order:4}.order-5{-webkit-box-ordinal-group:6;-ms-flex-order:5;order:5}.order-6{-webkit-box-ordinal-group:7;-ms-flex-order:6;order:6}.order-7{-webkit-box-ordinal-group:8;-ms-flex-order:7;order:7}.order-8{-webkit-box-ordinal-group:9;-ms-flex-order:8;order:8}.order-last{-webkit-box-ordinal-group:100000;-ms-flex-order:99999;order:99999}.fl{float:left}.fl,.fr{_display:inline}.fr{float:right}.fn{float:none}.sans-serif{font-family:-apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif}.serif{font-family:georgia,times,serif}.system-sans-serif{font-family:sans-serif}.system-serif{font-family:serif}.code,code{font-family:Consolas,monaco,monospace}.courier{font-family:Courier Next,courier,monospace}.helvetica{font-family:helvetica neue,helvetica,sans-serif}.avenir{font-family:avenir next,avenir,sans-serif}.athelas{font-family:athelas,georgia,serif}.georgia{font-family:georgia,serif}.times{font-family:times,serif}.bodoni{font-family:Bodoni MT,serif}.calisto{font-family:Calisto MT,serif}.garamond{font-family:garamond,serif}.baskerville{font-family:baskerville,serif}.i{font-style:italic}.fs-normal{font-style:normal}.normal{font-weight:400}.b{font-weight:700}.fw1{font-weight:100}.fw2{font-weight:200}.fw3{font-weight:300}.fw4{font-weight:400}.fw5{font-weight:500}.fw6{font-weight:600}.fw7{font-weight:700}.fw8{font-weight:800}.fw9{font-weight:900}.input-reset{-webkit-appearance:none;-moz-appearance:none}.button-reset::-moz-focus-inner,.input-reset::-moz-focus-inner{border:0;padding:0}.h1{height:1rem}.h2{height:2rem}.h3{height:4rem}.h4{height:8rem}.h5{height:16rem}.h-25{height:25%}.h-50{height:50%}.h-75{height:75%}.h-100{height:100%}.min-h-100{min-height:100%}.vh-25{height:25vh}.vh-50{height:50vh}.vh-75{height:75vh}.vh-100{height:100vh}.min-vh-100{min-height:100vh}.h-auto{height:auto}.h-inherit{height:inherit}.tracked{letter-spacing:.1em}.tracked-tight{letter-spacing:-.05em}.tracked-mega{letter-spacing:.25em}.lh-solid{line-height:1}.lh-title{line-height:1.25}.lh-copy{line-height:1.5}.link{text-decoration:none}.link,.link:active,.link:focus,.link:hover,.link:link,.link:visited{transition:color .15s ease-in}.link:focus{outline:1px dotted currentColor}.list{list-style-type:none}.mw-100{max-width:100%}.mw1{max-width:1rem}.mw2{max-width:2rem}.mw3{max-width:4rem}.mw4{max-width:8rem}.mw5{max-width:16rem}.mw6{max-width:32rem}.mw7{max-width:48rem}.mw8{max-width:64rem}.mw9{max-width:96rem}.mw-none{max-width:none}.w1{width:1rem}.w2{width:2rem}.w3{width:4rem}.w4{width:8rem}.w5{width:16rem}.w-10{width:10%}.w-20{width:20%}.w-25{width:25%}.w-30{width:30%}.w-33{width:33%}.w-34{width:34%}.w-40{width:40%}.w-50{width:50%}.w-60{width:60%}.w-70{width:70%}.w-75{width:75%}.w-80{width:80%}.w-90{width:90%}.w-100{width:100%}.w-third{width:33.33333%}.w-two-thirds{width:66.66667%}.w-auto{width:auto}.overflow-visible{overflow:visible}.overflow-hidden{overflow:hidden}.overflow-scroll{overflow:scroll}.overflow-auto{overflow:auto}.overflow-x-visible{overflow-x:visible}.overflow-x-hidden{overflow-x:hidden}.overflow-x-scroll{overflow-x:scroll}.overflow-x-auto{overflow-x:auto}.overflow-y-visible{overflow-y:visible}.overflow-y-hidden{overflow-y:hidden}.overflow-y-scroll{overflow-y:scroll}.overflow-y-auto{overflow-y:auto}.static{position:static}.relative{position:relative}.absolute{position:absolute}.fixed{position:fixed}.o-100{opacity:1}.o-90{opacity:.9}.o-80{opacity:.8}.o-70{opacity:.7}.o-60{opacity:.6}.o-50{opacity:.5}.o-40{opacity:.4}.o-30{opacity:.3}.o-20{opacity:.2}.o-10{opacity:.1}.o-05{opacity:.05}.o-025{opacity:.025}.o-0{opacity:0}.rotate-45{-webkit-transform:rotate(45deg);transform:rotate(45deg)}.rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.rotate-135{-webkit-transform:rotate(135deg);transform:rotate(135deg)}.rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.rotate-225{-webkit-transform:rotate(225deg);transform:rotate(225deg)}.rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.rotate-315{-webkit-transform:rotate(315deg);transform:rotate(315deg)}.black-90{color:rgba(0,0,0,.9)}.black-80{color:rgba(0,0,0,.8)}.black-70{color:rgba(0,0,0,.7)}.black-60{color:rgba(0,0,0,.6)}.black-50{color:rgba(0,0,0,.5)}.black-40{color:rgba(0,0,0,.4)}.black-30{color:rgba(0,0,0,.3)}.black-20{color:rgba(0,0,0,.2)}.black-10{color:rgba(0,0,0,.1)}.black-05{color:rgba(0,0,0,.05)}.white-90{color:hsla(0,0%,100%,.9)}.white-80{color:hsla(0,0%,100%,.8)}.white-70{color:hsla(0,0%,100%,.7)}.white-60{color:hsla(0,0%,100%,.6)}.white-50{color:hsla(0,0%,100%,.5)}.white-40{color:hsla(0,0%,100%,.4)}.white-30{color:hsla(0,0%,100%,.3)}.white-20{color:hsla(0,0%,100%,.2)}.white-10{color:hsla(0,0%,100%,.1)}.black{color:#000}.near-black{color:#111}.dark-gray{color:#333}.mid-gray{color:#555}.gray{color:#777}.silver{color:#999}.light-silver{color:#aaa}.moon-gray{color:#ccc}.light-gray{color:#eee}.near-white{color:#f4f4f4}.white{color:#fff}.dark-red{color:#e7040f}.red{color:#ff4136}.light-red{color:#ff725c}.orange{color:#ff6300}.gold{color:#ffb700}.yellow{color:gold}.light-yellow{color:#fbf1a9}.purple{color:#5e2ca5}.light-purple{color:#a463f2}.dark-pink{color:#d5008f}.hot-pink{color:#ff41b4}.pink{color:#ff80cc}.light-pink{color:#ffa3d7}.dark-green{color:#137752}.green{color:#19a974}.light-green{color:#9eebcf}.navy{color:#001b44}.dark-blue{color:#00449e}.blue{color:#357edd}.light-blue{color:#96ccff}.lightest-blue{color:#cdecff}.washed-blue{color:#f6fffe}.washed-green{color:#e8fdf5}.washed-yellow{color:#fffceb}.washed-red{color:#ffdfdf}.color-inherit{color:inherit}.bg-black-90{background-color:rgba(0,0,0,.9)}.bg-black-80{background-color:rgba(0,0,0,.8)}.bg-black-70{background-color:rgba(0,0,0,.7)}.bg-black-60{background-color:rgba(0,0,0,.6)}.bg-black-50{background-color:rgba(0,0,0,.5)}.bg-black-40{background-color:rgba(0,0,0,.4)}.bg-black-30{background-color:rgba(0,0,0,.3)}.bg-black-20{background-color:rgba(0,0,0,.2)}.bg-black-10{background-color:rgba(0,0,0,.1)}.bg-black-05{background-color:rgba(0,0,0,.05)}.bg-white-90{background-color:hsla(0,0%,100%,.9)}.bg-white-80{background-color:hsla(0,0%,100%,.8)}.bg-white-70{background-color:hsla(0,0%,100%,.7)}.bg-white-60{background-color:hsla(0,0%,100%,.6)}.bg-white-50{background-color:hsla(0,0%,100%,.5)}.bg-white-40{background-color:hsla(0,0%,100%,.4)}.bg-white-30{background-color:hsla(0,0%,100%,.3)}.bg-white-20{background-color:hsla(0,0%,100%,.2)}.bg-white-10{background-color:hsla(0,0%,100%,.1)}.bg-black{background-color:#000}.bg-near-black{background-color:#111}.bg-dark-gray{background-color:#333}.bg-mid-gray{background-color:#555}.bg-gray{background-color:#777}.bg-silver{background-color:#999}.bg-light-silver{background-color:#aaa}.bg-moon-gray{background-color:#ccc}.bg-light-gray{background-color:#eee}.bg-near-white{background-color:#f4f4f4}.bg-white{background-color:#fff}.bg-transparent{background-color:transparent}.bg-dark-red{background-color:#e7040f}.bg-red{background-color:#ff4136}.bg-light-red{background-color:#ff725c}.bg-orange{background-color:#ff6300}.bg-gold{background-color:#ffb700}.bg-yellow{background-color:gold}.bg-light-yellow{background-color:#fbf1a9}.bg-purple{background-color:#5e2ca5}.bg-light-purple{background-color:#a463f2}.bg-dark-pink{background-color:#d5008f}.bg-hot-pink{background-color:#ff41b4}.bg-pink{background-color:#ff80cc}.bg-light-pink{background-color:#ffa3d7}.bg-dark-green{background-color:#137752}.bg-green{background-color:#19a974}.bg-light-green{background-color:#9eebcf}.bg-navy{background-color:#001b44}.bg-dark-blue{background-color:#00449e}.bg-blue{background-color:#357edd}.bg-light-blue{background-color:#96ccff}.bg-lightest-blue{background-color:#cdecff}.bg-washed-blue{background-color:#f6fffe}.bg-washed-green{background-color:#e8fdf5}.bg-washed-yellow{background-color:#fffceb}.bg-washed-red{background-color:#ffdfdf}.bg-inherit{background-color:inherit}.hover-black:focus,.hover-black:hover{color:#000}.hover-near-black:focus,.hover-near-black:hover{color:#111}.hover-dark-gray:focus,.hover-dark-gray:hover{color:#333}.hover-mid-gray:focus,.hover-mid-gray:hover{color:#555}.hover-gray:focus,.hover-gray:hover{color:#777}.hover-silver:focus,.hover-silver:hover{color:#999}.hover-light-silver:focus,.hover-light-silver:hover{color:#aaa}.hover-moon-gray:focus,.hover-moon-gray:hover{color:#ccc}.hover-light-gray:focus,.hover-light-gray:hover{color:#eee}.hover-near-white:focus,.hover-near-white:hover{color:#f4f4f4}.hover-white:focus,.hover-white:hover{color:#fff}.hover-black-90:focus,.hover-black-90:hover{color:rgba(0,0,0,.9)}.hover-black-80:focus,.hover-black-80:hover{color:rgba(0,0,0,.8)}.hover-black-70:focus,.hover-black-70:hover{color:rgba(0,0,0,.7)}.hover-black-60:focus,.hover-black-60:hover{color:rgba(0,0,0,.6)}.hover-black-50:focus,.hover-black-50:hover{color:rgba(0,0,0,.5)}.hover-black-40:focus,.hover-black-40:hover{color:rgba(0,0,0,.4)}.hover-black-30:focus,.hover-black-30:hover{color:rgba(0,0,0,.3)}.hover-black-20:focus,.hover-black-20:hover{color:rgba(0,0,0,.2)}.hover-black-10:focus,.hover-black-10:hover{color:rgba(0,0,0,.1)}.hover-white-90:focus,.hover-white-90:hover{color:hsla(0,0%,100%,.9)}.hover-white-80:focus,.hover-white-80:hover{color:hsla(0,0%,100%,.8)}.hover-white-70:focus,.hover-white-70:hover{color:hsla(0,0%,100%,.7)}.hover-white-60:focus,.hover-white-60:hover{color:hsla(0,0%,100%,.6)}.hover-white-50:focus,.hover-white-50:hover{color:hsla(0,0%,100%,.5)}.hover-white-40:focus,.hover-white-40:hover{color:hsla(0,0%,100%,.4)}.hover-white-30:focus,.hover-white-30:hover{color:hsla(0,0%,100%,.3)}.hover-white-20:focus,.hover-white-20:hover{color:hsla(0,0%,100%,.2)}.hover-white-10:focus,.hover-white-10:hover{color:hsla(0,0%,100%,.1)}.hover-inherit:focus,.hover-inherit:hover{color:inherit}.hover-bg-black:focus,.hover-bg-black:hover{background-color:#000}.hover-bg-near-black:focus,.hover-bg-near-black:hover{background-color:#111}.hover-bg-dark-gray:focus,.hover-bg-dark-gray:hover{background-color:#333}.hover-bg-mid-gray:focus,.hover-bg-mid-gray:hover{background-color:#555}.hover-bg-gray:focus,.hover-bg-gray:hover{background-color:#777}.hover-bg-silver:focus,.hover-bg-silver:hover{background-color:#999}.hover-bg-light-silver:focus,.hover-bg-light-silver:hover{background-color:#aaa}.hover-bg-moon-gray:focus,.hover-bg-moon-gray:hover{background-color:#ccc}.hover-bg-light-gray:focus,.hover-bg-light-gray:hover{background-color:#eee}.hover-bg-near-white:focus,.hover-bg-near-white:hover{background-color:#f4f4f4}.hover-bg-white:focus,.hover-bg-white:hover{background-color:#fff}.hover-bg-transparent:focus,.hover-bg-transparent:hover{background-color:transparent}.hover-bg-black-90:focus,.hover-bg-black-90:hover{background-color:rgba(0,0,0,.9)}.hover-bg-black-80:focus,.hover-bg-black-80:hover{background-color:rgba(0,0,0,.8)}.hover-bg-black-70:focus,.hover-bg-black-70:hover{background-color:rgba(0,0,0,.7)}.hover-bg-black-60:focus,.hover-bg-black-60:hover{background-color:rgba(0,0,0,.6)}.hover-bg-black-50:focus,.hover-bg-black-50:hover{background-color:rgba(0,0,0,.5)}.hover-bg-black-40:focus,.hover-bg-black-40:hover{background-color:rgba(0,0,0,.4)}.hover-bg-black-30:focus,.hover-bg-black-30:hover{background-color:rgba(0,0,0,.3)}.hover-bg-black-20:focus,.hover-bg-black-20:hover{background-color:rgba(0,0,0,.2)}.hover-bg-black-10:focus,.hover-bg-black-10:hover{background-color:rgba(0,0,0,.1)}.hover-bg-white-90:focus,.hover-bg-white-90:hover{background-color:hsla(0,0%,100%,.9)}.hover-bg-white-80:focus,.hover-bg-white-80:hover{background-color:hsla(0,0%,100%,.8)}.hover-bg-white-70:focus,.hover-bg-white-70:hover{background-color:hsla(0,0%,100%,.7)}.hover-bg-white-60:focus,.hover-bg-white-60:hover{background-color:hsla(0,0%,100%,.6)}.hover-bg-white-50:focus,.hover-bg-white-50:hover{background-color:hsla(0,0%,100%,.5)}.hover-bg-white-40:focus,.hover-bg-white-40:hover{background-color:hsla(0,0%,100%,.4)}.hover-bg-white-30:focus,.hover-bg-white-30:hover{background-color:hsla(0,0%,100%,.3)}.hover-bg-white-20:focus,.hover-bg-white-20:hover{background-color:hsla(0,0%,100%,.2)}.hover-bg-white-10:focus,.hover-bg-white-10:hover{background-color:hsla(0,0%,100%,.1)}.hover-dark-red:focus,.hover-dark-red:hover{color:#e7040f}.hover-red:focus,.hover-red:hover{color:#ff4136}.hover-light-red:focus,.hover-light-red:hover{color:#ff725c}.hover-orange:focus,.hover-orange:hover{color:#ff6300}.hover-gold:focus,.hover-gold:hover{color:#ffb700}.hover-yellow:focus,.hover-yellow:hover{color:gold}.hover-light-yellow:focus,.hover-light-yellow:hover{color:#fbf1a9}.hover-purple:focus,.hover-purple:hover{color:#5e2ca5}.hover-light-purple:focus,.hover-light-purple:hover{color:#a463f2}.hover-dark-pink:focus,.hover-dark-pink:hover{color:#d5008f}.hover-hot-pink:focus,.hover-hot-pink:hover{color:#ff41b4}.hover-pink:focus,.hover-pink:hover{color:#ff80cc}.hover-light-pink:focus,.hover-light-pink:hover{color:#ffa3d7}.hover-dark-green:focus,.hover-dark-green:hover{color:#137752}.hover-green:focus,.hover-green:hover{color:#19a974}.hover-light-green:focus,.hover-light-green:hover{color:#9eebcf}.hover-navy:focus,.hover-navy:hover{color:#001b44}.hover-dark-blue:focus,.hover-dark-blue:hover{color:#00449e}.hover-blue:focus,.hover-blue:hover{color:#357edd}.hover-light-blue:focus,.hover-light-blue:hover{color:#96ccff}.hover-lightest-blue:focus,.hover-lightest-blue:hover{color:#cdecff}.hover-washed-blue:focus,.hover-washed-blue:hover{color:#f6fffe}.hover-washed-green:focus,.hover-washed-green:hover{color:#e8fdf5}.hover-washed-yellow:focus,.hover-washed-yellow:hover{color:#fffceb}.hover-washed-red:focus,.hover-washed-red:hover{color:#ffdfdf}.hover-bg-dark-red:focus,.hover-bg-dark-red:hover{background-color:#e7040f}.hover-bg-red:focus,.hover-bg-red:hover{background-color:#ff4136}.hover-bg-light-red:focus,.hover-bg-light-red:hover{background-color:#ff725c}.hover-bg-orange:focus,.hover-bg-orange:hover{background-color:#ff6300}.hover-bg-gold:focus,.hover-bg-gold:hover{background-color:#ffb700}.hover-bg-yellow:focus,.hover-bg-yellow:hover{background-color:gold}.hover-bg-light-yellow:focus,.hover-bg-light-yellow:hover{background-color:#fbf1a9}.hover-bg-purple:focus,.hover-bg-purple:hover{background-color:#5e2ca5}.hover-bg-light-purple:focus,.hover-bg-light-purple:hover{background-color:#a463f2}.hover-bg-dark-pink:focus,.hover-bg-dark-pink:hover{background-color:#d5008f}.hover-bg-hot-pink:focus,.hover-bg-hot-pink:hover{background-color:#ff41b4}.hover-bg-pink:focus,.hover-bg-pink:hover{background-color:#ff80cc}.hover-bg-light-pink:focus,.hover-bg-light-pink:hover{background-color:#ffa3d7}.hover-bg-dark-green:focus,.hover-bg-dark-green:hover{background-color:#137752}.hover-bg-green:focus,.hover-bg-green:hover{background-color:#19a974}.hover-bg-light-green:focus,.hover-bg-light-green:hover{background-color:#9eebcf}.hover-bg-navy:focus,.hover-bg-navy:hover{background-color:#001b44}.hover-bg-dark-blue:focus,.hover-bg-dark-blue:hover{background-color:#00449e}.hover-bg-blue:focus,.hover-bg-blue:hover{background-color:#357edd}.hover-bg-light-blue:focus,.hover-bg-light-blue:hover{background-color:#96ccff}.hover-bg-lightest-blue:focus,.hover-bg-lightest-blue:hover{background-color:#cdecff}.hover-bg-washed-blue:focus,.hover-bg-washed-blue:hover{background-color:#f6fffe}.hover-bg-washed-green:focus,.hover-bg-washed-green:hover{background-color:#e8fdf5}.hover-bg-washed-yellow:focus,.hover-bg-washed-yellow:hover{background-color:#fffceb}.hover-bg-washed-red:focus,.hover-bg-washed-red:hover{background-color:#ffdfdf}.hover-bg-inherit:focus,.hover-bg-inherit:hover{background-color:inherit}.pa0{padding:0}.pa1{padding:.25rem}.pa2{padding:.5rem}.pa3{padding:1rem}.pa4{padding:2rem}.pa5{padding:4rem}.pa6{padding:8rem}.pa7{padding:16rem}.pl0{padding-left:0}.pl1{padding-left:.25rem}.pl2{padding-left:.5rem}.pl3{padding-left:1rem}.pl4{padding-left:2rem}.pl5{padding-left:4rem}.pl6{padding-left:8rem}.pl7{padding-left:16rem}.pr0{padding-right:0}.pr1{padding-right:.25rem}.pr2{padding-right:.5rem}.pr3{padding-right:1rem}.pr4{padding-right:2rem}.pr5{padding-right:4rem}.pr6{padding-right:8rem}.pr7{padding-right:16rem}.pb0{padding-bottom:0}.pb1{padding-bottom:.25rem}.pb2{padding-bottom:.5rem}.pb3{padding-bottom:1rem}.pb4{padding-bottom:2rem}.pb5{padding-bottom:4rem}.pb6{padding-bottom:8rem}.pb7{padding-bottom:16rem}.pt0{padding-top:0}.pt1{padding-top:.25rem}.pt2{padding-top:.5rem}.pt3{padding-top:1rem}.pt4{padding-top:2rem}.pt5{padding-top:4rem}.pt6{padding-top:8rem}.pt7{padding-top:16rem}.pv0{padding-top:0;padding-bottom:0}.pv1{padding-top:.25rem;padding-bottom:.25rem}.pv2{padding-top:.5rem;padding-bottom:.5rem}.pv3{padding-top:1rem;padding-bottom:1rem}.pv4{padding-top:2rem;padding-bottom:2rem}.pv5{padding-top:4rem;padding-bottom:4rem}.pv6{padding-top:8rem;padding-bottom:8rem}.pv7{padding-top:16rem;padding-bottom:16rem}.ph0{padding-left:0;padding-right:0}.ph1{padding-left:.25rem;padding-right:.25rem}.ph2{padding-left:.5rem;padding-right:.5rem}.ph3{padding-left:1rem;padding-right:1rem}.ph4{padding-left:2rem;padding-right:2rem}.ph5{padding-left:4rem;padding-right:4rem}.ph6{padding-left:8rem;padding-right:8rem}.ph7{padding-left:16rem;padding-right:16rem}.ma0{margin:0}.ma1{margin:.25rem}.ma2{margin:.5rem}.ma3{margin:1rem}.ma4{margin:2rem}.ma5{margin:4rem}.ma6{margin:8rem}.ma7{margin:16rem}.ml0{margin-left:0}.ml1{margin-left:.25rem}.ml2{margin-left:.5rem}.ml3{margin-left:1rem}.ml4{margin-left:2rem}.ml5{margin-left:4rem}.ml6{margin-left:8rem}.ml7{margin-left:16rem}.mr0{margin-right:0}.mr1{margin-right:.25rem}.mr2{margin-right:.5rem}.mr3{margin-right:1rem}.mr4{margin-right:2rem}.mr5{margin-right:4rem}.mr6{margin-right:8rem}.mr7{margin-right:16rem}.mb0{margin-bottom:0}.mb1{margin-bottom:.25rem}.mb2{margin-bottom:.5rem}.mb3{margin-bottom:1rem}.mb4{margin-bottom:2rem}.mb5{margin-bottom:4rem}.mb6{margin-bottom:8rem}.mb7{margin-bottom:16rem}.mt0{margin-top:0}.mt1{margin-top:.25rem}.mt2{margin-top:.5rem}.mt3{margin-top:1rem}.mt4{margin-top:2rem}.mt5{margin-top:4rem}.mt6{margin-top:8rem}.mt7{margin-top:16rem}.mv0{margin-top:0;margin-bottom:0}.mv1{margin-top:.25rem;margin-bottom:.25rem}.mv2{margin-top:.5rem;margin-bottom:.5rem}.mv3{margin-top:1rem;margin-bottom:1rem}.mv4{margin-top:2rem;margin-bottom:2rem}.mv5{margin-top:4rem;margin-bottom:4rem}.mv6{margin-top:8rem;margin-bottom:8rem}.mv7{margin-top:16rem;margin-bottom:16rem}.mh0{margin-left:0;margin-right:0}.mh1{margin-left:.25rem;margin-right:.25rem}.mh2{margin-left:.5rem;margin-right:.5rem}.mh3{margin-left:1rem;margin-right:1rem}.mh4{margin-left:2rem;margin-right:2rem}.mh5{margin-left:4rem;margin-right:4rem}.mh6{margin-left:8rem;margin-right:8rem}.mh7{margin-left:16rem;margin-right:16rem}.na1{margin:-.25rem}.na2{margin:-.5rem}.na3{margin:-1rem}.na4{margin:-2rem}.na5{margin:-4rem}.na6{margin:-8rem}.na7{margin:-16rem}.nl1{margin-left:-.25rem}.nl2{margin-left:-.5rem}.nl3{margin-left:-1rem}.nl4{margin-left:-2rem}.nl5{margin-left:-4rem}.nl6{margin-left:-8rem}.nl7{margin-left:-16rem}.nr1{margin-right:-.25rem}.nr2{margin-right:-.5rem}.nr3{margin-right:-1rem}.nr4{margin-right:-2rem}.nr5{margin-right:-4rem}.nr6{margin-right:-8rem}.nr7{margin-right:-16rem}.nb1{margin-bottom:-.25rem}.nb2{margin-bottom:-.5rem}.nb3{margin-bottom:-1rem}.nb4{margin-bottom:-2rem}.nb5{margin-bottom:-4rem}.nb6{margin-bottom:-8rem}.nb7{margin-bottom:-16rem}.nt1{margin-top:-.25rem}.nt2{margin-top:-.5rem}.nt3{margin-top:-1rem}.nt4{margin-top:-2rem}.nt5{margin-top:-4rem}.nt6{margin-top:-8rem}.nt7{margin-top:-16rem}.collapse{border-collapse:collapse;border-spacing:0}.striped--light-silver:nth-child(odd){background-color:#aaa}.striped--moon-gray:nth-child(odd){background-color:#ccc}.striped--light-gray:nth-child(odd){background-color:#eee}.striped--near-white:nth-child(odd){background-color:#f4f4f4}.stripe-light:nth-child(odd){background-color:hsla(0,0%,100%,.1)}.stripe-dark:nth-child(odd){background-color:rgba(0,0,0,.1)}.strike{text-decoration:line-through}.underline{text-decoration:underline}.no-underline{text-decoration:none}.tl{text-align:left}.tr{text-align:right}.tc{text-align:center}.tj{text-align:justify}.ttc{text-transform:capitalize}.ttl{text-transform:lowercase}.ttu{text-transform:uppercase}.ttn{text-transform:none}.f-6,.f-headline{font-size:6rem}.f-5,.f-subheadline{font-size:5rem}.f1{font-size:3rem}.f2{font-size:2.25rem}.f3{font-size:1.5rem}.f4{font-size:1.25rem}.f5{font-size:1rem}.f6{font-size:.875rem}.f7{font-size:.75rem}.measure{max-width:30em}.measure-wide{max-width:34em}.measure-narrow{max-width:20em}.indent{text-indent:1em;margin-top:0;margin-bottom:0}.small-caps{font-variant:small-caps}.truncate{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.overflow-container{overflow-y:scroll}.center{margin-left:auto}.center,.mr-auto{margin-right:auto}.ml-auto{margin-left:auto}.clip{position:fixed!important;_position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}.ws-normal{white-space:normal}.nowrap{white-space:nowrap}.pre{white-space:pre}.v-base{vertical-align:baseline}.v-mid{vertical-align:middle}.v-top{vertical-align:top}.v-btm{vertical-align:bottom}.dim{opacity:1}.dim,.dim:focus,.dim:hover{transition:opacity .15s ease-in}.dim:focus,.dim:hover{opacity:.5}.dim:active{opacity:.8;transition:opacity .15s ease-out}.glow,.glow:focus,.glow:hover{transition:opacity .15s ease-in}.glow:focus,.glow:hover{opacity:1}.hide-child .child{opacity:0;transition:opacity .15s ease-in}.hide-child:active .child,.hide-child:focus .child,.hide-child:hover .child{opacity:1;transition:opacity .15s ease-in}.underline-hover:focus,.underline-hover:hover{text-decoration:underline}.grow{-moz-osx-font-smoothing:grayscale;-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform:translateZ(0);transform:translateZ(0);transition:-webkit-transform .25s ease-out;transition:transform .25s ease-out;transition:transform .25s ease-out,-webkit-transform .25s ease-out}.grow:focus,.grow:hover{-webkit-transform:scale(1.05);transform:scale(1.05)}.grow:active{-webkit-transform:scale(.9);transform:scale(.9)}.grow-large{-moz-osx-font-smoothing:grayscale;-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform:translateZ(0);transform:translateZ(0);transition:-webkit-transform .25s ease-in-out;transition:transform .25s ease-in-out;transition:transform .25s ease-in-out,-webkit-transform .25s ease-in-out}.grow-large:focus,.grow-large:hover{-webkit-transform:scale(1.2);transform:scale(1.2)}.grow-large:active{-webkit-transform:scale(.95);transform:scale(.95)}.pointer:hover,.shadow-hover{cursor:pointer}.shadow-hover{position:relative;transition:all .5s cubic-bezier(.165,.84,.44,1)}.shadow-hover:after{content:\"\";box-shadow:0 0 16px 2px rgba(0,0,0,.2);border-radius:inherit;opacity:0;position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1;transition:opacity .5s cubic-bezier(.165,.84,.44,1)}.shadow-hover:focus:after,.shadow-hover:hover:after{opacity:1}.bg-animate,.bg-animate:focus,.bg-animate:hover{transition:background-color .15s ease-in-out}.z-0{z-index:0}.z-1{z-index:1}.z-2{z-index:2}.z-3{z-index:3}.z-4{z-index:4}.z-5{z-index:5}.z-999{z-index:999}.z-9999{z-index:9999}.z-max{z-index:2147483647}.z-inherit{z-index:inherit}.z-initial{z-index:auto}.z-unset{z-index:unset}.nested-copy-line-height ol,.nested-copy-line-height p,.nested-copy-line-height ul{line-height:1.5}.nested-headline-line-height h1,.nested-headline-line-height h2,.nested-headline-line-height h3,.nested-headline-line-height h4,.nested-headline-line-height h5,.nested-headline-line-height h6{line-height:1.25}.nested-list-reset ol,.nested-list-reset ul{padding-left:0;margin-left:0;list-style-type:none}.nested-copy-indent p+p{text-indent:1em;margin-top:0;margin-bottom:0}.nested-copy-seperator p+p{margin-top:1.5em}.nested-img img{width:100%;max-width:100%;display:block}.nested-links a{color:#357edd;transition:color .15s ease-in}.nested-links a:focus,.nested-links a:hover{color:#96ccff;transition:color .15s ease-in}.debug *{outline:1px solid gold}.debug-white *{outline:1px solid #fff}.debug-black *{outline:1px solid #000}.debug-grid{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAFElEQVR4AWPAC97/9x0eCsAEPgwAVLshdpENIxcAAAAASUVORK5CYII=) repeat 0 0}.debug-grid-16{background:transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAMklEQVR4AWOgCLz/b0epAa6UGuBOqQHOQHLUgFEDnAbcBZ4UGwDOkiCnkIhdgNgNxAYAiYlD+8sEuo8AAAAASUVORK5CYII=) repeat 0 0}.debug-grid-8-solid{background:#fff url(data:image/gif;base64,R0lGODdhCAAIAPEAAADw/wDx/////wAAACwAAAAACAAIAAACDZQvgaeb/lxbAIKA8y0AOw==) repeat 0 0}.debug-grid-16-solid{background:#fff url(data:image/gif;base64,R0lGODdhEAAQAPEAAADw/wDx/xXy/////ywAAAAAEAAQAAACIZyPKckYDQFsb6ZqD85jZ2+BkwiRFKehhqQCQgDHcgwEBQA7) repeat 0 0}@media screen and (min-width:30em){.aspect-ratio-ns{height:0;position:relative}.aspect-ratio--16x9-ns{padding-bottom:56.25%}.aspect-ratio--9x16-ns{padding-bottom:177.77%}.aspect-ratio--4x3-ns{padding-bottom:75%}.aspect-ratio--3x4-ns{padding-bottom:133.33%}.aspect-ratio--6x4-ns{padding-bottom:66.6%}.aspect-ratio--4x6-ns{padding-bottom:150%}.aspect-ratio--8x5-ns{padding-bottom:62.5%}.aspect-ratio--5x8-ns{padding-bottom:160%}.aspect-ratio--7x5-ns{padding-bottom:71.42%}.aspect-ratio--5x7-ns{padding-bottom:140%}.aspect-ratio--1x1-ns{padding-bottom:100%}.aspect-ratio--object-ns{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;z-index:100}.cover-ns{background-size:cover!important}.contain-ns{background-size:contain!important}.bg-center-ns{background-position:50%}.bg-center-ns,.bg-top-ns{background-repeat:no-repeat}.bg-top-ns{background-position:top}.bg-right-ns{background-position:100%}.bg-bottom-ns,.bg-right-ns{background-repeat:no-repeat}.bg-bottom-ns{background-position:bottom}.bg-left-ns{background-repeat:no-repeat;background-position:0}.outline-ns{outline:1px solid}.outline-transparent-ns{outline:1px solid transparent}.outline-0-ns{outline:0}.ba-ns{border-style:solid;border-width:1px}.bt-ns{border-top-style:solid;border-top-width:1px}.br-ns{border-right-style:solid;border-right-width:1px}.bb-ns{border-bottom-style:solid;border-bottom-width:1px}.bl-ns{border-left-style:solid;border-left-width:1px}.bn-ns{border-style:none;border-width:0}.br0-ns{border-radius:0}.br1-ns{border-radius:.125rem}.br2-ns{border-radius:.25rem}.br3-ns{border-radius:.5rem}.br4-ns{border-radius:1rem}.br-100-ns{border-radius:100%}.br-pill-ns{border-radius:9999px}.br--bottom-ns{border-top-left-radius:0;border-top-right-radius:0}.br--top-ns{border-bottom-right-radius:0}.br--right-ns,.br--top-ns{border-bottom-left-radius:0}.br--right-ns{border-top-left-radius:0}.br--left-ns{border-top-right-radius:0;border-bottom-right-radius:0}.b--dotted-ns{border-style:dotted}.b--dashed-ns{border-style:dashed}.b--solid-ns{border-style:solid}.b--none-ns{border-style:none}.bw0-ns{border-width:0}.bw1-ns{border-width:.125rem}.bw2-ns{border-width:.25rem}.bw3-ns{border-width:.5rem}.bw4-ns{border-width:1rem}.bw5-ns{border-width:2rem}.bt-0-ns{border-top-width:0}.br-0-ns{border-right-width:0}.bb-0-ns{border-bottom-width:0}.bl-0-ns{border-left-width:0}.shadow-1-ns{box-shadow:0 0 4px 2px rgba(0,0,0,.2)}.shadow-2-ns{box-shadow:0 0 8px 2px rgba(0,0,0,.2)}.shadow-3-ns{box-shadow:2px 2px 4px 2px rgba(0,0,0,.2)}.shadow-4-ns{box-shadow:2px 2px 8px 0 rgba(0,0,0,.2)}.shadow-5-ns{box-shadow:4px 4px 8px 0 rgba(0,0,0,.2)}.top-0-ns{top:0}.left-0-ns{left:0}.right-0-ns{right:0}.bottom-0-ns{bottom:0}.top-1-ns{top:1rem}.left-1-ns{left:1rem}.right-1-ns{right:1rem}.bottom-1-ns{bottom:1rem}.top-2-ns{top:2rem}.left-2-ns{left:2rem}.right-2-ns{right:2rem}.bottom-2-ns{bottom:2rem}.top--1-ns{top:-1rem}.right--1-ns{right:-1rem}.bottom--1-ns{bottom:-1rem}.left--1-ns{left:-1rem}.top--2-ns{top:-2rem}.right--2-ns{right:-2rem}.bottom--2-ns{bottom:-2rem}.left--2-ns{left:-2rem}.absolute--fill-ns{top:0;right:0;bottom:0;left:0}.cl-ns{clear:left}.cr-ns{clear:right}.cb-ns{clear:both}.cn-ns{clear:none}.dn-ns{display:none}.di-ns{display:inline}.db-ns{display:block}.dib-ns{display:inline-block}.dit-ns{display:inline-table}.dt-ns{display:table}.dtc-ns{display:table-cell}.dt-row-ns{display:table-row}.dt-row-group-ns{display:table-row-group}.dt-column-ns{display:table-column}.dt-column-group-ns{display:table-column-group}.dt--fixed-ns{table-layout:fixed;width:100%}.flex-ns{display:-webkit-box;display:-ms-flexbox;display:flex}.inline-flex-ns{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex}.flex-auto-ns{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;min-width:0;min-height:0}.flex-none-ns{-webkit-box-flex:0;-ms-flex:none;flex:none}.flex-column-ns{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}.flex-row-ns{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}.flex-wrap-ns{-ms-flex-wrap:wrap;flex-wrap:wrap}.flex-nowrap-ns{-ms-flex-wrap:nowrap;flex-wrap:nowrap}.flex-wrap-reverse-ns{-ms-flex-wrap:wrap-reverse;flex-wrap:wrap-reverse}.flex-column-reverse-ns{-webkit-box-orient:vertical;-webkit-box-direction:reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse}.flex-row-reverse-ns{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}.items-start-ns{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.items-end-ns{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.items-center-ns{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.items-baseline-ns{-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline}.items-stretch-ns{-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch}.self-start-ns{-ms-flex-item-align:start;align-self:flex-start}.self-end-ns{-ms-flex-item-align:end;align-self:flex-end}.self-center-ns{-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center}.self-baseline-ns{-ms-flex-item-align:baseline;align-self:baseline}.self-stretch-ns{-ms-flex-item-align:stretch;-ms-grid-row-align:stretch;align-self:stretch}.justify-start-ns{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.justify-end-ns{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}.justify-center-ns{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.justify-between-ns{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.justify-around-ns{-ms-flex-pack:distribute;justify-content:space-around}.content-start-ns{-ms-flex-line-pack:start;align-content:flex-start}.content-end-ns{-ms-flex-line-pack:end;align-content:flex-end}.content-center-ns{-ms-flex-line-pack:center;align-content:center}.content-between-ns{-ms-flex-line-pack:justify;align-content:space-between}.content-around-ns{-ms-flex-line-pack:distribute;align-content:space-around}.content-stretch-ns{-ms-flex-line-pack:stretch;align-content:stretch}.order-0-ns{-webkit-box-ordinal-group:1;-ms-flex-order:0;order:0}.order-1-ns{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}.order-2-ns{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}.order-3-ns{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3}.order-4-ns{-webkit-box-ordinal-group:5;-ms-flex-order:4;order:4}.order-5-ns{-webkit-box-ordinal-group:6;-ms-flex-order:5;order:5}.order-6-ns{-webkit-box-ordinal-group:7;-ms-flex-order:6;order:6}.order-7-ns{-webkit-box-ordinal-group:8;-ms-flex-order:7;order:7}.order-8-ns{-webkit-box-ordinal-group:9;-ms-flex-order:8;order:8}.order-last-ns{-webkit-box-ordinal-group:100000;-ms-flex-order:99999;order:99999}.fl-ns{float:left}.fl-ns,.fr-ns{display:inline}.fr-ns{float:right}.fn-ns{float:none}.i-ns{font-style:italic}.fs-normal-ns{font-style:normal}.normal-ns{font-weight:400}.b-ns{font-weight:700}.fw1-ns{font-weight:100}.fw2-ns{font-weight:200}.fw3-ns{font-weight:300}.fw4-ns{font-weight:400}.fw5-ns{font-weight:500}.fw6-ns{font-weight:600}.fw7-ns{font-weight:700}.fw8-ns{font-weight:800}.fw9-ns{font-weight:900}.h1-ns{height:1rem}.h2-ns{height:2rem}.h3-ns{height:4rem}.h4-ns{height:8rem}.h5-ns{height:16rem}.h-25-ns{height:25%}.h-50-ns{height:50%}.h-75-ns{height:75%}.h-100-ns{height:100%}.min-h-100-ns{min-height:100%}.vh-25-ns{height:25vh}.vh-50-ns{height:50vh}.vh-75-ns{height:75vh}.vh-100-ns{height:100vh}.min-vh-100-ns{min-height:100vh}.h-auto-ns{height:auto}.h-inherit-ns{height:inherit}.tracked-ns{letter-spacing:.1em}.tracked-tight-ns{letter-spacing:-.05em}.tracked-mega-ns{letter-spacing:.25em}.lh-solid-ns{line-height:1}.lh-title-ns{line-height:1.25}.lh-copy-ns{line-height:1.5}.mw-100-ns{max-width:100%}.mw1-ns{max-width:1rem}.mw2-ns{max-width:2rem}.mw3-ns{max-width:4rem}.mw4-ns{max-width:8rem}.mw5-ns{max-width:16rem}.mw6-ns{max-width:32rem}.mw7-ns{max-width:48rem}.mw8-ns{max-width:64rem}.mw9-ns{max-width:96rem}.mw-none-ns{max-width:none}.w1-ns{width:1rem}.w2-ns{width:2rem}.w3-ns{width:4rem}.w4-ns{width:8rem}.w5-ns{width:16rem}.w-10-ns{width:10%}.w-20-ns{width:20%}.w-25-ns{width:25%}.w-30-ns{width:30%}.w-33-ns{width:33%}.w-34-ns{width:34%}.w-40-ns{width:40%}.w-50-ns{width:50%}.w-60-ns{width:60%}.w-70-ns{width:70%}.w-75-ns{width:75%}.w-80-ns{width:80%}.w-90-ns{width:90%}.w-100-ns{width:100%}.w-third-ns{width:33.33333%}.w-two-thirds-ns{width:66.66667%}.w-auto-ns{width:auto}.overflow-visible-ns{overflow:visible}.overflow-hidden-ns{overflow:hidden}.overflow-scroll-ns{overflow:scroll}.overflow-auto-ns{overflow:auto}.overflow-x-visible-ns{overflow-x:visible}.overflow-x-hidden-ns{overflow-x:hidden}.overflow-x-scroll-ns{overflow-x:scroll}.overflow-x-auto-ns{overflow-x:auto}.overflow-y-visible-ns{overflow-y:visible}.overflow-y-hidden-ns{overflow-y:hidden}.overflow-y-scroll-ns{overflow-y:scroll}.overflow-y-auto-ns{overflow-y:auto}.static-ns{position:static}.relative-ns{position:relative}.absolute-ns{position:absolute}.fixed-ns{position:fixed}.rotate-45-ns{-webkit-transform:rotate(45deg);transform:rotate(45deg)}.rotate-90-ns{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.rotate-135-ns{-webkit-transform:rotate(135deg);transform:rotate(135deg)}.rotate-180-ns{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.rotate-225-ns{-webkit-transform:rotate(225deg);transform:rotate(225deg)}.rotate-270-ns{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.rotate-315-ns{-webkit-transform:rotate(315deg);transform:rotate(315deg)}.pa0-ns{padding:0}.pa1-ns{padding:.25rem}.pa2-ns{padding:.5rem}.pa3-ns{padding:1rem}.pa4-ns{padding:2rem}.pa5-ns{padding:4rem}.pa6-ns{padding:8rem}.pa7-ns{padding:16rem}.pl0-ns{padding-left:0}.pl1-ns{padding-left:.25rem}.pl2-ns{padding-left:.5rem}.pl3-ns{padding-left:1rem}.pl4-ns{padding-left:2rem}.pl5-ns{padding-left:4rem}.pl6-ns{padding-left:8rem}.pl7-ns{padding-left:16rem}.pr0-ns{padding-right:0}.pr1-ns{padding-right:.25rem}.pr2-ns{padding-right:.5rem}.pr3-ns{padding-right:1rem}.pr4-ns{padding-right:2rem}.pr5-ns{padding-right:4rem}.pr6-ns{padding-right:8rem}.pr7-ns{padding-right:16rem}.pb0-ns{padding-bottom:0}.pb1-ns{padding-bottom:.25rem}.pb2-ns{padding-bottom:.5rem}.pb3-ns{padding-bottom:1rem}.pb4-ns{padding-bottom:2rem}.pb5-ns{padding-bottom:4rem}.pb6-ns{padding-bottom:8rem}.pb7-ns{padding-bottom:16rem}.pt0-ns{padding-top:0}.pt1-ns{padding-top:.25rem}.pt2-ns{padding-top:.5rem}.pt3-ns{padding-top:1rem}.pt4-ns{padding-top:2rem}.pt5-ns{padding-top:4rem}.pt6-ns{padding-top:8rem}.pt7-ns{padding-top:16rem}.pv0-ns{padding-top:0;padding-bottom:0}.pv1-ns{padding-top:.25rem;padding-bottom:.25rem}.pv2-ns{padding-top:.5rem;padding-bottom:.5rem}.pv3-ns{padding-top:1rem;padding-bottom:1rem}.pv4-ns{padding-top:2rem;padding-bottom:2rem}.pv5-ns{padding-top:4rem;padding-bottom:4rem}.pv6-ns{padding-top:8rem;padding-bottom:8rem}.pv7-ns{padding-top:16rem;padding-bottom:16rem}.ph0-ns{padding-left:0;padding-right:0}.ph1-ns{padding-left:.25rem;padding-right:.25rem}.ph2-ns{padding-left:.5rem;padding-right:.5rem}.ph3-ns{padding-left:1rem;padding-right:1rem}.ph4-ns{padding-left:2rem;padding-right:2rem}.ph5-ns{padding-left:4rem;padding-right:4rem}.ph6-ns{padding-left:8rem;padding-right:8rem}.ph7-ns{padding-left:16rem;padding-right:16rem}.ma0-ns{margin:0}.ma1-ns{margin:.25rem}.ma2-ns{margin:.5rem}.ma3-ns{margin:1rem}.ma4-ns{margin:2rem}.ma5-ns{margin:4rem}.ma6-ns{margin:8rem}.ma7-ns{margin:16rem}.ml0-ns{margin-left:0}.ml1-ns{margin-left:.25rem}.ml2-ns{margin-left:.5rem}.ml3-ns{margin-left:1rem}.ml4-ns{margin-left:2rem}.ml5-ns{margin-left:4rem}.ml6-ns{margin-left:8rem}.ml7-ns{margin-left:16rem}.mr0-ns{margin-right:0}.mr1-ns{margin-right:.25rem}.mr2-ns{margin-right:.5rem}.mr3-ns{margin-right:1rem}.mr4-ns{margin-right:2rem}.mr5-ns{margin-right:4rem}.mr6-ns{margin-right:8rem}.mr7-ns{margin-right:16rem}.mb0-ns{margin-bottom:0}.mb1-ns{margin-bottom:.25rem}.mb2-ns{margin-bottom:.5rem}.mb3-ns{margin-bottom:1rem}.mb4-ns{margin-bottom:2rem}.mb5-ns{margin-bottom:4rem}.mb6-ns{margin-bottom:8rem}.mb7-ns{margin-bottom:16rem}.mt0-ns{margin-top:0}.mt1-ns{margin-top:.25rem}.mt2-ns{margin-top:.5rem}.mt3-ns{margin-top:1rem}.mt4-ns{margin-top:2rem}.mt5-ns{margin-top:4rem}.mt6-ns{margin-top:8rem}.mt7-ns{margin-top:16rem}.mv0-ns{margin-top:0;margin-bottom:0}.mv1-ns{margin-top:.25rem;margin-bottom:.25rem}.mv2-ns{margin-top:.5rem;margin-bottom:.5rem}.mv3-ns{margin-top:1rem;margin-bottom:1rem}.mv4-ns{margin-top:2rem;margin-bottom:2rem}.mv5-ns{margin-top:4rem;margin-bottom:4rem}.mv6-ns{margin-top:8rem;margin-bottom:8rem}.mv7-ns{margin-top:16rem;margin-bottom:16rem}.mh0-ns{margin-left:0;margin-right:0}.mh1-ns{margin-left:.25rem;margin-right:.25rem}.mh2-ns{margin-left:.5rem;margin-right:.5rem}.mh3-ns{margin-left:1rem;margin-right:1rem}.mh4-ns{margin-left:2rem;margin-right:2rem}.mh5-ns{margin-left:4rem;margin-right:4rem}.mh6-ns{margin-left:8rem;margin-right:8rem}.mh7-ns{margin-left:16rem;margin-right:16rem}.na1-ns{margin:-.25rem}.na2-ns{margin:-.5rem}.na3-ns{margin:-1rem}.na4-ns{margin:-2rem}.na5-ns{margin:-4rem}.na6-ns{margin:-8rem}.na7-ns{margin:-16rem}.nl1-ns{margin-left:-.25rem}.nl2-ns{margin-left:-.5rem}.nl3-ns{margin-left:-1rem}.nl4-ns{margin-left:-2rem}.nl5-ns{margin-left:-4rem}.nl6-ns{margin-left:-8rem}.nl7-ns{margin-left:-16rem}.nr1-ns{margin-right:-.25rem}.nr2-ns{margin-right:-.5rem}.nr3-ns{margin-right:-1rem}.nr4-ns{margin-right:-2rem}.nr5-ns{margin-right:-4rem}.nr6-ns{margin-right:-8rem}.nr7-ns{margin-right:-16rem}.nb1-ns{margin-bottom:-.25rem}.nb2-ns{margin-bottom:-.5rem}.nb3-ns{margin-bottom:-1rem}.nb4-ns{margin-bottom:-2rem}.nb5-ns{margin-bottom:-4rem}.nb6-ns{margin-bottom:-8rem}.nb7-ns{margin-bottom:-16rem}.nt1-ns{margin-top:-.25rem}.nt2-ns{margin-top:-.5rem}.nt3-ns{margin-top:-1rem}.nt4-ns{margin-top:-2rem}.nt5-ns{margin-top:-4rem}.nt6-ns{margin-top:-8rem}.nt7-ns{margin-top:-16rem}.strike-ns{text-decoration:line-through}.underline-ns{text-decoration:underline}.no-underline-ns{text-decoration:none}.tl-ns{text-align:left}.tr-ns{text-align:right}.tc-ns{text-align:center}.tj-ns{text-align:justify}.ttc-ns{text-transform:capitalize}.ttl-ns{text-transform:lowercase}.ttu-ns{text-transform:uppercase}.ttn-ns{text-transform:none}.f-6-ns,.f-headline-ns{font-size:6rem}.f-5-ns,.f-subheadline-ns{font-size:5rem}.f1-ns{font-size:3rem}.f2-ns{font-size:2.25rem}.f3-ns{font-size:1.5rem}.f4-ns{font-size:1.25rem}.f5-ns{font-size:1rem}.f6-ns{font-size:.875rem}.f7-ns{font-size:.75rem}.measure-ns{max-width:30em}.measure-wide-ns{max-width:34em}.measure-narrow-ns{max-width:20em}.indent-ns{text-indent:1em;margin-top:0;margin-bottom:0}.small-caps-ns{font-variant:small-caps}.truncate-ns{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.center-ns{margin-left:auto}.center-ns,.mr-auto-ns{margin-right:auto}.ml-auto-ns{margin-left:auto}.clip-ns{position:fixed!important;position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}.ws-normal-ns{white-space:normal}.nowrap-ns{white-space:nowrap}.pre-ns{white-space:pre}.v-base-ns{vertical-align:baseline}.v-mid-ns{vertical-align:middle}.v-top-ns{vertical-align:top}.v-btm-ns{vertical-align:bottom}}@media screen and (min-width:30em) and (max-width:60em){.aspect-ratio-m{height:0;position:relative}.aspect-ratio--16x9-m{padding-bottom:56.25%}.aspect-ratio--9x16-m{padding-bottom:177.77%}.aspect-ratio--4x3-m{padding-bottom:75%}.aspect-ratio--3x4-m{padding-bottom:133.33%}.aspect-ratio--6x4-m{padding-bottom:66.6%}.aspect-ratio--4x6-m{padding-bottom:150%}.aspect-ratio--8x5-m{padding-bottom:62.5%}.aspect-ratio--5x8-m{padding-bottom:160%}.aspect-ratio--7x5-m{padding-bottom:71.42%}.aspect-ratio--5x7-m{padding-bottom:140%}.aspect-ratio--1x1-m{padding-bottom:100%}.aspect-ratio--object-m{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;z-index:100}.cover-m{background-size:cover!important}.contain-m{background-size:contain!important}.bg-center-m{background-position:50%}.bg-center-m,.bg-top-m{background-repeat:no-repeat}.bg-top-m{background-position:top}.bg-right-m{background-position:100%}.bg-bottom-m,.bg-right-m{background-repeat:no-repeat}.bg-bottom-m{background-position:bottom}.bg-left-m{background-repeat:no-repeat;background-position:0}.outline-m{outline:1px solid}.outline-transparent-m{outline:1px solid transparent}.outline-0-m{outline:0}.ba-m{border-style:solid;border-width:1px}.bt-m{border-top-style:solid;border-top-width:1px}.br-m{border-right-style:solid;border-right-width:1px}.bb-m{border-bottom-style:solid;border-bottom-width:1px}.bl-m{border-left-style:solid;border-left-width:1px}.bn-m{border-style:none;border-width:0}.br0-m{border-radius:0}.br1-m{border-radius:.125rem}.br2-m{border-radius:.25rem}.br3-m{border-radius:.5rem}.br4-m{border-radius:1rem}.br-100-m{border-radius:100%}.br-pill-m{border-radius:9999px}.br--bottom-m{border-top-left-radius:0;border-top-right-radius:0}.br--top-m{border-bottom-right-radius:0}.br--right-m,.br--top-m{border-bottom-left-radius:0}.br--right-m{border-top-left-radius:0}.br--left-m{border-top-right-radius:0;border-bottom-right-radius:0}.b--dotted-m{border-style:dotted}.b--dashed-m{border-style:dashed}.b--solid-m{border-style:solid}.b--none-m{border-style:none}.bw0-m{border-width:0}.bw1-m{border-width:.125rem}.bw2-m{border-width:.25rem}.bw3-m{border-width:.5rem}.bw4-m{border-width:1rem}.bw5-m{border-width:2rem}.bt-0-m{border-top-width:0}.br-0-m{border-right-width:0}.bb-0-m{border-bottom-width:0}.bl-0-m{border-left-width:0}.shadow-1-m{box-shadow:0 0 4px 2px rgba(0,0,0,.2)}.shadow-2-m{box-shadow:0 0 8px 2px rgba(0,0,0,.2)}.shadow-3-m{box-shadow:2px 2px 4px 2px rgba(0,0,0,.2)}.shadow-4-m{box-shadow:2px 2px 8px 0 rgba(0,0,0,.2)}.shadow-5-m{box-shadow:4px 4px 8px 0 rgba(0,0,0,.2)}.top-0-m{top:0}.left-0-m{left:0}.right-0-m{right:0}.bottom-0-m{bottom:0}.top-1-m{top:1rem}.left-1-m{left:1rem}.right-1-m{right:1rem}.bottom-1-m{bottom:1rem}.top-2-m{top:2rem}.left-2-m{left:2rem}.right-2-m{right:2rem}.bottom-2-m{bottom:2rem}.top--1-m{top:-1rem}.right--1-m{right:-1rem}.bottom--1-m{bottom:-1rem}.left--1-m{left:-1rem}.top--2-m{top:-2rem}.right--2-m{right:-2rem}.bottom--2-m{bottom:-2rem}.left--2-m{left:-2rem}.absolute--fill-m{top:0;right:0;bottom:0;left:0}.cl-m{clear:left}.cr-m{clear:right}.cb-m{clear:both}.cn-m{clear:none}.dn-m{display:none}.di-m{display:inline}.db-m{display:block}.dib-m{display:inline-block}.dit-m{display:inline-table}.dt-m{display:table}.dtc-m{display:table-cell}.dt-row-m{display:table-row}.dt-row-group-m{display:table-row-group}.dt-column-m{display:table-column}.dt-column-group-m{display:table-column-group}.dt--fixed-m{table-layout:fixed;width:100%}.flex-m{display:-webkit-box;display:-ms-flexbox;display:flex}.inline-flex-m{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex}.flex-auto-m{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;min-width:0;min-height:0}.flex-none-m{-webkit-box-flex:0;-ms-flex:none;flex:none}.flex-column-m{-webkit-box-orient:vertical;-ms-flex-direction:column;flex-direction:column}.flex-column-m,.flex-row-m{-webkit-box-direction:normal}.flex-row-m{-webkit-box-orient:horizontal;-ms-flex-direction:row;flex-direction:row}.flex-wrap-m{-ms-flex-wrap:wrap;flex-wrap:wrap}.flex-nowrap-m{-ms-flex-wrap:nowrap;flex-wrap:nowrap}.flex-wrap-reverse-m{-ms-flex-wrap:wrap-reverse;flex-wrap:wrap-reverse}.flex-column-reverse-m{-webkit-box-orient:vertical;-webkit-box-direction:reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse}.flex-row-reverse-m{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}.items-start-m{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.items-end-m{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.items-center-m{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.items-baseline-m{-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline}.items-stretch-m{-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch}.self-start-m{-ms-flex-item-align:start;align-self:flex-start}.self-end-m{-ms-flex-item-align:end;align-self:flex-end}.self-center-m{-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center}.self-baseline-m{-ms-flex-item-align:baseline;align-self:baseline}.self-stretch-m{-ms-flex-item-align:stretch;-ms-grid-row-align:stretch;align-self:stretch}.justify-start-m{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.justify-end-m{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}.justify-center-m{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.justify-between-m{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.justify-around-m{-ms-flex-pack:distribute;justify-content:space-around}.content-start-m{-ms-flex-line-pack:start;align-content:flex-start}.content-end-m{-ms-flex-line-pack:end;align-content:flex-end}.content-center-m{-ms-flex-line-pack:center;align-content:center}.content-between-m{-ms-flex-line-pack:justify;align-content:space-between}.content-around-m{-ms-flex-line-pack:distribute;align-content:space-around}.content-stretch-m{-ms-flex-line-pack:stretch;align-content:stretch}.order-0-m{-webkit-box-ordinal-group:1;-ms-flex-order:0;order:0}.order-1-m{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}.order-2-m{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}.order-3-m{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3}.order-4-m{-webkit-box-ordinal-group:5;-ms-flex-order:4;order:4}.order-5-m{-webkit-box-ordinal-group:6;-ms-flex-order:5;order:5}.order-6-m{-webkit-box-ordinal-group:7;-ms-flex-order:6;order:6}.order-7-m{-webkit-box-ordinal-group:8;-ms-flex-order:7;order:7}.order-8-m{-webkit-box-ordinal-group:9;-ms-flex-order:8;order:8}.order-last-m{-webkit-box-ordinal-group:100000;-ms-flex-order:99999;order:99999}.fl-m{float:left}.fl-m,.fr-m{display:inline}.fr-m{float:right}.fn-m{float:none}.i-m{font-style:italic}.fs-normal-m{font-style:normal}.normal-m{font-weight:400}.b-m{font-weight:700}.fw1-m{font-weight:100}.fw2-m{font-weight:200}.fw3-m{font-weight:300}.fw4-m{font-weight:400}.fw5-m{font-weight:500}.fw6-m{font-weight:600}.fw7-m{font-weight:700}.fw8-m{font-weight:800}.fw9-m{font-weight:900}.h1-m{height:1rem}.h2-m{height:2rem}.h3-m{height:4rem}.h4-m{height:8rem}.h5-m{height:16rem}.h-25-m{height:25%}.h-50-m{height:50%}.h-75-m{height:75%}.h-100-m{height:100%}.min-h-100-m{min-height:100%}.vh-25-m{height:25vh}.vh-50-m{height:50vh}.vh-75-m{height:75vh}.vh-100-m{height:100vh}.min-vh-100-m{min-height:100vh}.h-auto-m{height:auto}.h-inherit-m{height:inherit}.tracked-m{letter-spacing:.1em}.tracked-tight-m{letter-spacing:-.05em}.tracked-mega-m{letter-spacing:.25em}.lh-solid-m{line-height:1}.lh-title-m{line-height:1.25}.lh-copy-m{line-height:1.5}.mw-100-m{max-width:100%}.mw1-m{max-width:1rem}.mw2-m{max-width:2rem}.mw3-m{max-width:4rem}.mw4-m{max-width:8rem}.mw5-m{max-width:16rem}.mw6-m{max-width:32rem}.mw7-m{max-width:48rem}.mw8-m{max-width:64rem}.mw9-m{max-width:96rem}.mw-none-m{max-width:none}.w1-m{width:1rem}.w2-m{width:2rem}.w3-m{width:4rem}.w4-m{width:8rem}.w5-m{width:16rem}.w-10-m{width:10%}.w-20-m{width:20%}.w-25-m{width:25%}.w-30-m{width:30%}.w-33-m{width:33%}.w-34-m{width:34%}.w-40-m{width:40%}.w-50-m{width:50%}.w-60-m{width:60%}.w-70-m{width:70%}.w-75-m{width:75%}.w-80-m{width:80%}.w-90-m{width:90%}.w-100-m{width:100%}.w-third-m{width:33.33333%}.w-two-thirds-m{width:66.66667%}.w-auto-m{width:auto}.overflow-visible-m{overflow:visible}.overflow-hidden-m{overflow:hidden}.overflow-scroll-m{overflow:scroll}.overflow-auto-m{overflow:auto}.overflow-x-visible-m{overflow-x:visible}.overflow-x-hidden-m{overflow-x:hidden}.overflow-x-scroll-m{overflow-x:scroll}.overflow-x-auto-m{overflow-x:auto}.overflow-y-visible-m{overflow-y:visible}.overflow-y-hidden-m{overflow-y:hidden}.overflow-y-scroll-m{overflow-y:scroll}.overflow-y-auto-m{overflow-y:auto}.static-m{position:static}.relative-m{position:relative}.absolute-m{position:absolute}.fixed-m{position:fixed}.rotate-45-m{-webkit-transform:rotate(45deg);transform:rotate(45deg)}.rotate-90-m{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.rotate-135-m{-webkit-transform:rotate(135deg);transform:rotate(135deg)}.rotate-180-m{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.rotate-225-m{-webkit-transform:rotate(225deg);transform:rotate(225deg)}.rotate-270-m{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.rotate-315-m{-webkit-transform:rotate(315deg);transform:rotate(315deg)}.pa0-m{padding:0}.pa1-m{padding:.25rem}.pa2-m{padding:.5rem}.pa3-m{padding:1rem}.pa4-m{padding:2rem}.pa5-m{padding:4rem}.pa6-m{padding:8rem}.pa7-m{padding:16rem}.pl0-m{padding-left:0}.pl1-m{padding-left:.25rem}.pl2-m{padding-left:.5rem}.pl3-m{padding-left:1rem}.pl4-m{padding-left:2rem}.pl5-m{padding-left:4rem}.pl6-m{padding-left:8rem}.pl7-m{padding-left:16rem}.pr0-m{padding-right:0}.pr1-m{padding-right:.25rem}.pr2-m{padding-right:.5rem}.pr3-m{padding-right:1rem}.pr4-m{padding-right:2rem}.pr5-m{padding-right:4rem}.pr6-m{padding-right:8rem}.pr7-m{padding-right:16rem}.pb0-m{padding-bottom:0}.pb1-m{padding-bottom:.25rem}.pb2-m{padding-bottom:.5rem}.pb3-m{padding-bottom:1rem}.pb4-m{padding-bottom:2rem}.pb5-m{padding-bottom:4rem}.pb6-m{padding-bottom:8rem}.pb7-m{padding-bottom:16rem}.pt0-m{padding-top:0}.pt1-m{padding-top:.25rem}.pt2-m{padding-top:.5rem}.pt3-m{padding-top:1rem}.pt4-m{padding-top:2rem}.pt5-m{padding-top:4rem}.pt6-m{padding-top:8rem}.pt7-m{padding-top:16rem}.pv0-m{padding-top:0;padding-bottom:0}.pv1-m{padding-top:.25rem;padding-bottom:.25rem}.pv2-m{padding-top:.5rem;padding-bottom:.5rem}.pv3-m{padding-top:1rem;padding-bottom:1rem}.pv4-m{padding-top:2rem;padding-bottom:2rem}.pv5-m{padding-top:4rem;padding-bottom:4rem}.pv6-m{padding-top:8rem;padding-bottom:8rem}.pv7-m{padding-top:16rem;padding-bottom:16rem}.ph0-m{padding-left:0;padding-right:0}.ph1-m{padding-left:.25rem;padding-right:.25rem}.ph2-m{padding-left:.5rem;padding-right:.5rem}.ph3-m{padding-left:1rem;padding-right:1rem}.ph4-m{padding-left:2rem;padding-right:2rem}.ph5-m{padding-left:4rem;padding-right:4rem}.ph6-m{padding-left:8rem;padding-right:8rem}.ph7-m{padding-left:16rem;padding-right:16rem}.ma0-m{margin:0}.ma1-m{margin:.25rem}.ma2-m{margin:.5rem}.ma3-m{margin:1rem}.ma4-m{margin:2rem}.ma5-m{margin:4rem}.ma6-m{margin:8rem}.ma7-m{margin:16rem}.ml0-m{margin-left:0}.ml1-m{margin-left:.25rem}.ml2-m{margin-left:.5rem}.ml3-m{margin-left:1rem}.ml4-m{margin-left:2rem}.ml5-m{margin-left:4rem}.ml6-m{margin-left:8rem}.ml7-m{margin-left:16rem}.mr0-m{margin-right:0}.mr1-m{margin-right:.25rem}.mr2-m{margin-right:.5rem}.mr3-m{margin-right:1rem}.mr4-m{margin-right:2rem}.mr5-m{margin-right:4rem}.mr6-m{margin-right:8rem}.mr7-m{margin-right:16rem}.mb0-m{margin-bottom:0}.mb1-m{margin-bottom:.25rem}.mb2-m{margin-bottom:.5rem}.mb3-m{margin-bottom:1rem}.mb4-m{margin-bottom:2rem}.mb5-m{margin-bottom:4rem}.mb6-m{margin-bottom:8rem}.mb7-m{margin-bottom:16rem}.mt0-m{margin-top:0}.mt1-m{margin-top:.25rem}.mt2-m{margin-top:.5rem}.mt3-m{margin-top:1rem}.mt4-m{margin-top:2rem}.mt5-m{margin-top:4rem}.mt6-m{margin-top:8rem}.mt7-m{margin-top:16rem}.mv0-m{margin-top:0;margin-bottom:0}.mv1-m{margin-top:.25rem;margin-bottom:.25rem}.mv2-m{margin-top:.5rem;margin-bottom:.5rem}.mv3-m{margin-top:1rem;margin-bottom:1rem}.mv4-m{margin-top:2rem;margin-bottom:2rem}.mv5-m{margin-top:4rem;margin-bottom:4rem}.mv6-m{margin-top:8rem;margin-bottom:8rem}.mv7-m{margin-top:16rem;margin-bottom:16rem}.mh0-m{margin-left:0;margin-right:0}.mh1-m{margin-left:.25rem;margin-right:.25rem}.mh2-m{margin-left:.5rem;margin-right:.5rem}.mh3-m{margin-left:1rem;margin-right:1rem}.mh4-m{margin-left:2rem;margin-right:2rem}.mh5-m{margin-left:4rem;margin-right:4rem}.mh6-m{margin-left:8rem;margin-right:8rem}.mh7-m{margin-left:16rem;margin-right:16rem}.na1-m{margin:-.25rem}.na2-m{margin:-.5rem}.na3-m{margin:-1rem}.na4-m{margin:-2rem}.na5-m{margin:-4rem}.na6-m{margin:-8rem}.na7-m{margin:-16rem}.nl1-m{margin-left:-.25rem}.nl2-m{margin-left:-.5rem}.nl3-m{margin-left:-1rem}.nl4-m{margin-left:-2rem}.nl5-m{margin-left:-4rem}.nl6-m{margin-left:-8rem}.nl7-m{margin-left:-16rem}.nr1-m{margin-right:-.25rem}.nr2-m{margin-right:-.5rem}.nr3-m{margin-right:-1rem}.nr4-m{margin-right:-2rem}.nr5-m{margin-right:-4rem}.nr6-m{margin-right:-8rem}.nr7-m{margin-right:-16rem}.nb1-m{margin-bottom:-.25rem}.nb2-m{margin-bottom:-.5rem}.nb3-m{margin-bottom:-1rem}.nb4-m{margin-bottom:-2rem}.nb5-m{margin-bottom:-4rem}.nb6-m{margin-bottom:-8rem}.nb7-m{margin-bottom:-16rem}.nt1-m{margin-top:-.25rem}.nt2-m{margin-top:-.5rem}.nt3-m{margin-top:-1rem}.nt4-m{margin-top:-2rem}.nt5-m{margin-top:-4rem}.nt6-m{margin-top:-8rem}.nt7-m{margin-top:-16rem}.strike-m{text-decoration:line-through}.underline-m{text-decoration:underline}.no-underline-m{text-decoration:none}.tl-m{text-align:left}.tr-m{text-align:right}.tc-m{text-align:center}.tj-m{text-align:justify}.ttc-m{text-transform:capitalize}.ttl-m{text-transform:lowercase}.ttu-m{text-transform:uppercase}.ttn-m{text-transform:none}.f-6-m,.f-headline-m{font-size:6rem}.f-5-m,.f-subheadline-m{font-size:5rem}.f1-m{font-size:3rem}.f2-m{font-size:2.25rem}.f3-m{font-size:1.5rem}.f4-m{font-size:1.25rem}.f5-m{font-size:1rem}.f6-m{font-size:.875rem}.f7-m{font-size:.75rem}.measure-m{max-width:30em}.measure-wide-m{max-width:34em}.measure-narrow-m{max-width:20em}.indent-m{text-indent:1em;margin-top:0;margin-bottom:0}.small-caps-m{font-variant:small-caps}.truncate-m{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.center-m{margin-left:auto}.center-m,.mr-auto-m{margin-right:auto}.ml-auto-m{margin-left:auto}.clip-m{position:fixed!important;position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}.ws-normal-m{white-space:normal}.nowrap-m{white-space:nowrap}.pre-m{white-space:pre}.v-base-m{vertical-align:baseline}.v-mid-m{vertical-align:middle}.v-top-m{vertical-align:top}.v-btm-m{vertical-align:bottom}}@media screen and (min-width:60em){.aspect-ratio-l{height:0;position:relative}.aspect-ratio--16x9-l{padding-bottom:56.25%}.aspect-ratio--9x16-l{padding-bottom:177.77%}.aspect-ratio--4x3-l{padding-bottom:75%}.aspect-ratio--3x4-l{padding-bottom:133.33%}.aspect-ratio--6x4-l{padding-bottom:66.6%}.aspect-ratio--4x6-l{padding-bottom:150%}.aspect-ratio--8x5-l{padding-bottom:62.5%}.aspect-ratio--5x8-l{padding-bottom:160%}.aspect-ratio--7x5-l{padding-bottom:71.42%}.aspect-ratio--5x7-l{padding-bottom:140%}.aspect-ratio--1x1-l{padding-bottom:100%}.aspect-ratio--object-l{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;z-index:100}.cover-l{background-size:cover!important}.contain-l{background-size:contain!important}.bg-center-l{background-position:50%}.bg-center-l,.bg-top-l{background-repeat:no-repeat}.bg-top-l{background-position:top}.bg-right-l{background-position:100%}.bg-bottom-l,.bg-right-l{background-repeat:no-repeat}.bg-bottom-l{background-position:bottom}.bg-left-l{background-repeat:no-repeat;background-position:0}.outline-l{outline:1px solid}.outline-transparent-l{outline:1px solid transparent}.outline-0-l{outline:0}.ba-l{border-style:solid;border-width:1px}.bt-l{border-top-style:solid;border-top-width:1px}.br-l{border-right-style:solid;border-right-width:1px}.bb-l{border-bottom-style:solid;border-bottom-width:1px}.bl-l{border-left-style:solid;border-left-width:1px}.bn-l{border-style:none;border-width:0}.br0-l{border-radius:0}.br1-l{border-radius:.125rem}.br2-l{border-radius:.25rem}.br3-l{border-radius:.5rem}.br4-l{border-radius:1rem}.br-100-l{border-radius:100%}.br-pill-l{border-radius:9999px}.br--bottom-l{border-top-left-radius:0;border-top-right-radius:0}.br--top-l{border-bottom-right-radius:0}.br--right-l,.br--top-l{border-bottom-left-radius:0}.br--right-l{border-top-left-radius:0}.br--left-l{border-top-right-radius:0;border-bottom-right-radius:0}.b--dotted-l{border-style:dotted}.b--dashed-l{border-style:dashed}.b--solid-l{border-style:solid}.b--none-l{border-style:none}.bw0-l{border-width:0}.bw1-l{border-width:.125rem}.bw2-l{border-width:.25rem}.bw3-l{border-width:.5rem}.bw4-l{border-width:1rem}.bw5-l{border-width:2rem}.bt-0-l{border-top-width:0}.br-0-l{border-right-width:0}.bb-0-l{border-bottom-width:0}.bl-0-l{border-left-width:0}.shadow-1-l{box-shadow:0 0 4px 2px rgba(0,0,0,.2)}.shadow-2-l{box-shadow:0 0 8px 2px rgba(0,0,0,.2)}.shadow-3-l{box-shadow:2px 2px 4px 2px rgba(0,0,0,.2)}.shadow-4-l{box-shadow:2px 2px 8px 0 rgba(0,0,0,.2)}.shadow-5-l{box-shadow:4px 4px 8px 0 rgba(0,0,0,.2)}.top-0-l{top:0}.left-0-l{left:0}.right-0-l{right:0}.bottom-0-l{bottom:0}.top-1-l{top:1rem}.left-1-l{left:1rem}.right-1-l{right:1rem}.bottom-1-l{bottom:1rem}.top-2-l{top:2rem}.left-2-l{left:2rem}.right-2-l{right:2rem}.bottom-2-l{bottom:2rem}.top--1-l{top:-1rem}.right--1-l{right:-1rem}.bottom--1-l{bottom:-1rem}.left--1-l{left:-1rem}.top--2-l{top:-2rem}.right--2-l{right:-2rem}.bottom--2-l{bottom:-2rem}.left--2-l{left:-2rem}.absolute--fill-l{top:0;right:0;bottom:0;left:0}.cl-l{clear:left}.cr-l{clear:right}.cb-l{clear:both}.cn-l{clear:none}.dn-l{display:none}.di-l{display:inline}.db-l{display:block}.dib-l{display:inline-block}.dit-l{display:inline-table}.dt-l{display:table}.dtc-l{display:table-cell}.dt-row-l{display:table-row}.dt-row-group-l{display:table-row-group}.dt-column-l{display:table-column}.dt-column-group-l{display:table-column-group}.dt--fixed-l{table-layout:fixed;width:100%}.flex-l{display:-webkit-box;display:-ms-flexbox;display:flex}.inline-flex-l{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex}.flex-auto-l{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto;min-width:0;min-height:0}.flex-none-l{-webkit-box-flex:0;-ms-flex:none;flex:none}.flex-column-l{-webkit-box-orient:vertical;-ms-flex-direction:column;flex-direction:column}.flex-column-l,.flex-row-l{-webkit-box-direction:normal}.flex-row-l{-webkit-box-orient:horizontal;-ms-flex-direction:row;flex-direction:row}.flex-wrap-l{-ms-flex-wrap:wrap;flex-wrap:wrap}.flex-nowrap-l{-ms-flex-wrap:nowrap;flex-wrap:nowrap}.flex-wrap-reverse-l{-ms-flex-wrap:wrap-reverse;flex-wrap:wrap-reverse}.flex-column-reverse-l{-webkit-box-orient:vertical;-webkit-box-direction:reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse}.flex-row-reverse-l{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}.items-start-l{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.items-end-l{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}.items-center-l{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.items-baseline-l{-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline}.items-stretch-l{-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch}.self-start-l{-ms-flex-item-align:start;align-self:flex-start}.self-end-l{-ms-flex-item-align:end;align-self:flex-end}.self-center-l{-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center}.self-baseline-l{-ms-flex-item-align:baseline;align-self:baseline}.self-stretch-l{-ms-flex-item-align:stretch;-ms-grid-row-align:stretch;align-self:stretch}.justify-start-l{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.justify-end-l{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}.justify-center-l{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.justify-between-l{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.justify-around-l{-ms-flex-pack:distribute;justify-content:space-around}.content-start-l{-ms-flex-line-pack:start;align-content:flex-start}.content-end-l{-ms-flex-line-pack:end;align-content:flex-end}.content-center-l{-ms-flex-line-pack:center;align-content:center}.content-between-l{-ms-flex-line-pack:justify;align-content:space-between}.content-around-l{-ms-flex-line-pack:distribute;align-content:space-around}.content-stretch-l{-ms-flex-line-pack:stretch;align-content:stretch}.order-0-l{-webkit-box-ordinal-group:1;-ms-flex-order:0;order:0}.order-1-l{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}.order-2-l{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}.order-3-l{-webkit-box-ordinal-group:4;-ms-flex-order:3;order:3}.order-4-l{-webkit-box-ordinal-group:5;-ms-flex-order:4;order:4}.order-5-l{-webkit-box-ordinal-group:6;-ms-flex-order:5;order:5}.order-6-l{-webkit-box-ordinal-group:7;-ms-flex-order:6;order:6}.order-7-l{-webkit-box-ordinal-group:8;-ms-flex-order:7;order:7}.order-8-l{-webkit-box-ordinal-group:9;-ms-flex-order:8;order:8}.order-last-l{-webkit-box-ordinal-group:100000;-ms-flex-order:99999;order:99999}.fl-l{float:left}.fl-l,.fr-l{display:inline}.fr-l{float:right}.fn-l{float:none}.i-l{font-style:italic}.fs-normal-l{font-style:normal}.normal-l{font-weight:400}.b-l{font-weight:700}.fw1-l{font-weight:100}.fw2-l{font-weight:200}.fw3-l{font-weight:300}.fw4-l{font-weight:400}.fw5-l{font-weight:500}.fw6-l{font-weight:600}.fw7-l{font-weight:700}.fw8-l{font-weight:800}.fw9-l{font-weight:900}.h1-l{height:1rem}.h2-l{height:2rem}.h3-l{height:4rem}.h4-l{height:8rem}.h5-l{height:16rem}.h-25-l{height:25%}.h-50-l{height:50%}.h-75-l{height:75%}.h-100-l{height:100%}.min-h-100-l{min-height:100%}.vh-25-l{height:25vh}.vh-50-l{height:50vh}.vh-75-l{height:75vh}.vh-100-l{height:100vh}.min-vh-100-l{min-height:100vh}.h-auto-l{height:auto}.h-inherit-l{height:inherit}.tracked-l{letter-spacing:.1em}.tracked-tight-l{letter-spacing:-.05em}.tracked-mega-l{letter-spacing:.25em}.lh-solid-l{line-height:1}.lh-title-l{line-height:1.25}.lh-copy-l{line-height:1.5}.mw-100-l{max-width:100%}.mw1-l{max-width:1rem}.mw2-l{max-width:2rem}.mw3-l{max-width:4rem}.mw4-l{max-width:8rem}.mw5-l{max-width:16rem}.mw6-l{max-width:32rem}.mw7-l{max-width:48rem}.mw8-l{max-width:64rem}.mw9-l{max-width:96rem}.mw-none-l{max-width:none}.w1-l{width:1rem}.w2-l{width:2rem}.w3-l{width:4rem}.w4-l{width:8rem}.w5-l{width:16rem}.w-10-l{width:10%}.w-20-l{width:20%}.w-25-l{width:25%}.w-30-l{width:30%}.w-33-l{width:33%}.w-34-l{width:34%}.w-40-l{width:40%}.w-50-l{width:50%}.w-60-l{width:60%}.w-70-l{width:70%}.w-75-l{width:75%}.w-80-l{width:80%}.w-90-l{width:90%}.w-100-l{width:100%}.w-third-l{width:33.33333%}.w-two-thirds-l{width:66.66667%}.w-auto-l{width:auto}.overflow-visible-l{overflow:visible}.overflow-hidden-l{overflow:hidden}.overflow-scroll-l{overflow:scroll}.overflow-auto-l{overflow:auto}.overflow-x-visible-l{overflow-x:visible}.overflow-x-hidden-l{overflow-x:hidden}.overflow-x-scroll-l{overflow-x:scroll}.overflow-x-auto-l{overflow-x:auto}.overflow-y-visible-l{overflow-y:visible}.overflow-y-hidden-l{overflow-y:hidden}.overflow-y-scroll-l{overflow-y:scroll}.overflow-y-auto-l{overflow-y:auto}.static-l{position:static}.relative-l{position:relative}.absolute-l{position:absolute}.fixed-l{position:fixed}.rotate-45-l{-webkit-transform:rotate(45deg);transform:rotate(45deg)}.rotate-90-l{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.rotate-135-l{-webkit-transform:rotate(135deg);transform:rotate(135deg)}.rotate-180-l{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.rotate-225-l{-webkit-transform:rotate(225deg);transform:rotate(225deg)}.rotate-270-l{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.rotate-315-l{-webkit-transform:rotate(315deg);transform:rotate(315deg)}.pa0-l{padding:0}.pa1-l{padding:.25rem}.pa2-l{padding:.5rem}.pa3-l{padding:1rem}.pa4-l{padding:2rem}.pa5-l{padding:4rem}.pa6-l{padding:8rem}.pa7-l{padding:16rem}.pl0-l{padding-left:0}.pl1-l{padding-left:.25rem}.pl2-l{padding-left:.5rem}.pl3-l{padding-left:1rem}.pl4-l{padding-left:2rem}.pl5-l{padding-left:4rem}.pl6-l{padding-left:8rem}.pl7-l{padding-left:16rem}.pr0-l{padding-right:0}.pr1-l{padding-right:.25rem}.pr2-l{padding-right:.5rem}.pr3-l{padding-right:1rem}.pr4-l{padding-right:2rem}.pr5-l{padding-right:4rem}.pr6-l{padding-right:8rem}.pr7-l{padding-right:16rem}.pb0-l{padding-bottom:0}.pb1-l{padding-bottom:.25rem}.pb2-l{padding-bottom:.5rem}.pb3-l{padding-bottom:1rem}.pb4-l{padding-bottom:2rem}.pb5-l{padding-bottom:4rem}.pb6-l{padding-bottom:8rem}.pb7-l{padding-bottom:16rem}.pt0-l{padding-top:0}.pt1-l{padding-top:.25rem}.pt2-l{padding-top:.5rem}.pt3-l{padding-top:1rem}.pt4-l{padding-top:2rem}.pt5-l{padding-top:4rem}.pt6-l{padding-top:8rem}.pt7-l{padding-top:16rem}.pv0-l{padding-top:0;padding-bottom:0}.pv1-l{padding-top:.25rem;padding-bottom:.25rem}.pv2-l{padding-top:.5rem;padding-bottom:.5rem}.pv3-l{padding-top:1rem;padding-bottom:1rem}.pv4-l{padding-top:2rem;padding-bottom:2rem}.pv5-l{padding-top:4rem;padding-bottom:4rem}.pv6-l{padding-top:8rem;padding-bottom:8rem}.pv7-l{padding-top:16rem;padding-bottom:16rem}.ph0-l{padding-left:0;padding-right:0}.ph1-l{padding-left:.25rem;padding-right:.25rem}.ph2-l{padding-left:.5rem;padding-right:.5rem}.ph3-l{padding-left:1rem;padding-right:1rem}.ph4-l{padding-left:2rem;padding-right:2rem}.ph5-l{padding-left:4rem;padding-right:4rem}.ph6-l{padding-left:8rem;padding-right:8rem}.ph7-l{padding-left:16rem;padding-right:16rem}.ma0-l{margin:0}.ma1-l{margin:.25rem}.ma2-l{margin:.5rem}.ma3-l{margin:1rem}.ma4-l{margin:2rem}.ma5-l{margin:4rem}.ma6-l{margin:8rem}.ma7-l{margin:16rem}.ml0-l{margin-left:0}.ml1-l{margin-left:.25rem}.ml2-l{margin-left:.5rem}.ml3-l{margin-left:1rem}.ml4-l{margin-left:2rem}.ml5-l{margin-left:4rem}.ml6-l{margin-left:8rem}.ml7-l{margin-left:16rem}.mr0-l{margin-right:0}.mr1-l{margin-right:.25rem}.mr2-l{margin-right:.5rem}.mr3-l{margin-right:1rem}.mr4-l{margin-right:2rem}.mr5-l{margin-right:4rem}.mr6-l{margin-right:8rem}.mr7-l{margin-right:16rem}.mb0-l{margin-bottom:0}.mb1-l{margin-bottom:.25rem}.mb2-l{margin-bottom:.5rem}.mb3-l{margin-bottom:1rem}.mb4-l{margin-bottom:2rem}.mb5-l{margin-bottom:4rem}.mb6-l{margin-bottom:8rem}.mb7-l{margin-bottom:16rem}.mt0-l{margin-top:0}.mt1-l{margin-top:.25rem}.mt2-l{margin-top:.5rem}.mt3-l{margin-top:1rem}.mt4-l{margin-top:2rem}.mt5-l{margin-top:4rem}.mt6-l{margin-top:8rem}.mt7-l{margin-top:16rem}.mv0-l{margin-top:0;margin-bottom:0}.mv1-l{margin-top:.25rem;margin-bottom:.25rem}.mv2-l{margin-top:.5rem;margin-bottom:.5rem}.mv3-l{margin-top:1rem;margin-bottom:1rem}.mv4-l{margin-top:2rem;margin-bottom:2rem}.mv5-l{margin-top:4rem;margin-bottom:4rem}.mv6-l{margin-top:8rem;margin-bottom:8rem}.mv7-l{margin-top:16rem;margin-bottom:16rem}.mh0-l{margin-left:0;margin-right:0}.mh1-l{margin-left:.25rem;margin-right:.25rem}.mh2-l{margin-left:.5rem;margin-right:.5rem}.mh3-l{margin-left:1rem;margin-right:1rem}.mh4-l{margin-left:2rem;margin-right:2rem}.mh5-l{margin-left:4rem;margin-right:4rem}.mh6-l{margin-left:8rem;margin-right:8rem}.mh7-l{margin-left:16rem;margin-right:16rem}.na1-l{margin:-.25rem}.na2-l{margin:-.5rem}.na3-l{margin:-1rem}.na4-l{margin:-2rem}.na5-l{margin:-4rem}.na6-l{margin:-8rem}.na7-l{margin:-16rem}.nl1-l{margin-left:-.25rem}.nl2-l{margin-left:-.5rem}.nl3-l{margin-left:-1rem}.nl4-l{margin-left:-2rem}.nl5-l{margin-left:-4rem}.nl6-l{margin-left:-8rem}.nl7-l{margin-left:-16rem}.nr1-l{margin-right:-.25rem}.nr2-l{margin-right:-.5rem}.nr3-l{margin-right:-1rem}.nr4-l{margin-right:-2rem}.nr5-l{margin-right:-4rem}.nr6-l{margin-right:-8rem}.nr7-l{margin-right:-16rem}.nb1-l{margin-bottom:-.25rem}.nb2-l{margin-bottom:-.5rem}.nb3-l{margin-bottom:-1rem}.nb4-l{margin-bottom:-2rem}.nb5-l{margin-bottom:-4rem}.nb6-l{margin-bottom:-8rem}.nb7-l{margin-bottom:-16rem}.nt1-l{margin-top:-.25rem}.nt2-l{margin-top:-.5rem}.nt3-l{margin-top:-1rem}.nt4-l{margin-top:-2rem}.nt5-l{margin-top:-4rem}.nt6-l{margin-top:-8rem}.nt7-l{margin-top:-16rem}.strike-l{text-decoration:line-through}.underline-l{text-decoration:underline}.no-underline-l{text-decoration:none}.tl-l{text-align:left}.tr-l{text-align:right}.tc-l{text-align:center}.tj-l{text-align:justify}.ttc-l{text-transform:capitalize}.ttl-l{text-transform:lowercase}.ttu-l{text-transform:uppercase}.ttn-l{text-transform:none}.f-6-l,.f-headline-l{font-size:6rem}.f-5-l,.f-subheadline-l{font-size:5rem}.f1-l{font-size:3rem}.f2-l{font-size:2.25rem}.f3-l{font-size:1.5rem}.f4-l{font-size:1.25rem}.f5-l{font-size:1rem}.f6-l{font-size:.875rem}.f7-l{font-size:.75rem}.measure-l{max-width:30em}.measure-wide-l{max-width:34em}.measure-narrow-l{max-width:20em}.indent-l{text-indent:1em;margin-top:0;margin-bottom:0}.small-caps-l{font-variant:small-caps}.truncate-l{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.center-l{margin-left:auto}.center-l,.mr-auto-l{margin-right:auto}.ml-auto-l{margin-left:auto}.clip-l{position:fixed!important;position:absolute!important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px)}.ws-normal-l{white-space:normal}.nowrap-l{white-space:nowrap}.pre-l{white-space:pre}.v-base-l{vertical-align:baseline}.v-mid-l{vertical-align:middle}.v-top-l{vertical-align:top}.v-btm-l{vertical-align:bottom}}\n            '),
+			_1: {ctor: '[]'}
+		})
+};
+var _justgage$tachyons_elm$Tachyons$classes = function (stringList) {
+	return _elm_lang$html$Html_Attributes$class(
+		A2(_elm_lang$core$String$join, ' ', stringList));
+};
+
+var _justgage$tachyons_elm$Tachyons_Classes$z_unset = 'z-unset';
+var _justgage$tachyons_elm$Tachyons_Classes$z_max = 'z-max';
+var _justgage$tachyons_elm$Tachyons_Classes$z_initial = 'z-initial';
+var _justgage$tachyons_elm$Tachyons_Classes$z_inherit = 'z-inherit';
+var _justgage$tachyons_elm$Tachyons_Classes$z_9999 = 'z-9999';
+var _justgage$tachyons_elm$Tachyons_Classes$z_999 = 'z-999';
+var _justgage$tachyons_elm$Tachyons_Classes$z_5 = 'z-5';
+var _justgage$tachyons_elm$Tachyons_Classes$z_4 = 'z-4';
+var _justgage$tachyons_elm$Tachyons_Classes$z_3 = 'z-3';
+var _justgage$tachyons_elm$Tachyons_Classes$z_2 = 'z-2';
+var _justgage$tachyons_elm$Tachyons_Classes$z_1 = 'z-1';
+var _justgage$tachyons_elm$Tachyons_Classes$z_0 = 'z-0';
+var _justgage$tachyons_elm$Tachyons_Classes$yellow = 'yellow';
+var _justgage$tachyons_elm$Tachyons_Classes$ws_normal_ns = 'ws-normal-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ws_normal_m = 'ws-normal-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ws_normal_l = 'ws-normal-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ws_normal = 'ws-normal';
+var _justgage$tachyons_elm$Tachyons_Classes$white_90 = 'white-90';
+var _justgage$tachyons_elm$Tachyons_Classes$white_80 = 'white-80';
+var _justgage$tachyons_elm$Tachyons_Classes$white_70 = 'white-70';
+var _justgage$tachyons_elm$Tachyons_Classes$white_60 = 'white-60';
+var _justgage$tachyons_elm$Tachyons_Classes$white_50 = 'white-50';
+var _justgage$tachyons_elm$Tachyons_Classes$white_40 = 'white-40';
+var _justgage$tachyons_elm$Tachyons_Classes$white_30 = 'white-30';
+var _justgage$tachyons_elm$Tachyons_Classes$white_20 = 'white-20';
+var _justgage$tachyons_elm$Tachyons_Classes$white_10 = 'white-10';
+var _justgage$tachyons_elm$Tachyons_Classes$white = 'white';
+var _justgage$tachyons_elm$Tachyons_Classes$washed_yellow = 'washed-yellow';
+var _justgage$tachyons_elm$Tachyons_Classes$washed_red = 'washed-red';
+var _justgage$tachyons_elm$Tachyons_Classes$washed_green = 'washed-green';
+var _justgage$tachyons_elm$Tachyons_Classes$washed_blue = 'washed-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$w5_ns = 'w5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$w5_m = 'w5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$w5_l = 'w5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$w5 = 'w5';
+var _justgage$tachyons_elm$Tachyons_Classes$w4_ns = 'w4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$w4_m = 'w4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$w4_l = 'w4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$w4 = 'w4';
+var _justgage$tachyons_elm$Tachyons_Classes$w3_ns = 'w3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$w3_m = 'w3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$w3_l = 'w3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$w3 = 'w3';
+var _justgage$tachyons_elm$Tachyons_Classes$w2_ns = 'w2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$w2_m = 'w2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$w2_l = 'w2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$w2 = 'w2';
+var _justgage$tachyons_elm$Tachyons_Classes$w1_ns = 'w1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$w1_m = 'w1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$w1_l = 'w1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$w1 = 'w1';
+var _justgage$tachyons_elm$Tachyons_Classes$w_two_thirds_ns = 'w-two-thirds-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$w_two_thirds_m = 'w-two-thirds-m';
+var _justgage$tachyons_elm$Tachyons_Classes$w_two_thirds_l = 'w-two-thirds-l';
+var _justgage$tachyons_elm$Tachyons_Classes$w_two_thirds = 'w-two-thirds';
+var _justgage$tachyons_elm$Tachyons_Classes$w_third_ns = 'w-third-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$w_third_m = 'w-third-m';
+var _justgage$tachyons_elm$Tachyons_Classes$w_third_l = 'w-third-l';
+var _justgage$tachyons_elm$Tachyons_Classes$w_third = 'w-third';
+var _justgage$tachyons_elm$Tachyons_Classes$w_auto_ns = 'w-auto-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$w_auto_m = 'w-auto-m';
+var _justgage$tachyons_elm$Tachyons_Classes$w_auto_l = 'w-auto-l';
+var _justgage$tachyons_elm$Tachyons_Classes$w_auto = 'w-auto';
+var _justgage$tachyons_elm$Tachyons_Classes$w_90_ns = 'w-90-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$w_90_m = 'w-90-m';
+var _justgage$tachyons_elm$Tachyons_Classes$w_90_l = 'w-90-l';
+var _justgage$tachyons_elm$Tachyons_Classes$w_90 = 'w-90';
+var _justgage$tachyons_elm$Tachyons_Classes$w_80_ns = 'w-80-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$w_80_m = 'w-80-m';
+var _justgage$tachyons_elm$Tachyons_Classes$w_80_l = 'w-80-l';
+var _justgage$tachyons_elm$Tachyons_Classes$w_80 = 'w-80';
+var _justgage$tachyons_elm$Tachyons_Classes$w_75_ns = 'w-75-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$w_75_m = 'w-75-m';
+var _justgage$tachyons_elm$Tachyons_Classes$w_75_l = 'w-75-l';
+var _justgage$tachyons_elm$Tachyons_Classes$w_75 = 'w-75';
+var _justgage$tachyons_elm$Tachyons_Classes$w_70_ns = 'w-70-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$w_70_m = 'w-70-m';
+var _justgage$tachyons_elm$Tachyons_Classes$w_70_l = 'w-70-l';
+var _justgage$tachyons_elm$Tachyons_Classes$w_70 = 'w-70';
+var _justgage$tachyons_elm$Tachyons_Classes$w_60_ns = 'w-60-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$w_60_m = 'w-60-m';
+var _justgage$tachyons_elm$Tachyons_Classes$w_60_l = 'w-60-l';
+var _justgage$tachyons_elm$Tachyons_Classes$w_60 = 'w-60';
+var _justgage$tachyons_elm$Tachyons_Classes$w_50_ns = 'w-50-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$w_50_m = 'w-50-m';
+var _justgage$tachyons_elm$Tachyons_Classes$w_50_l = 'w-50-l';
+var _justgage$tachyons_elm$Tachyons_Classes$w_50 = 'w-50';
+var _justgage$tachyons_elm$Tachyons_Classes$w_40_ns = 'w-40-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$w_40_m = 'w-40-m';
+var _justgage$tachyons_elm$Tachyons_Classes$w_40_l = 'w-40-l';
+var _justgage$tachyons_elm$Tachyons_Classes$w_40 = 'w-40';
+var _justgage$tachyons_elm$Tachyons_Classes$w_34_ns = 'w-34-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$w_34_m = 'w-34-m';
+var _justgage$tachyons_elm$Tachyons_Classes$w_34_l = 'w-34-l';
+var _justgage$tachyons_elm$Tachyons_Classes$w_34 = 'w-34';
+var _justgage$tachyons_elm$Tachyons_Classes$w_33_ns = 'w-33-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$w_33_m = 'w-33-m';
+var _justgage$tachyons_elm$Tachyons_Classes$w_33_l = 'w-33-l';
+var _justgage$tachyons_elm$Tachyons_Classes$w_33 = 'w-33';
+var _justgage$tachyons_elm$Tachyons_Classes$w_30_ns = 'w-30-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$w_30_m = 'w-30-m';
+var _justgage$tachyons_elm$Tachyons_Classes$w_30_l = 'w-30-l';
+var _justgage$tachyons_elm$Tachyons_Classes$w_30 = 'w-30';
+var _justgage$tachyons_elm$Tachyons_Classes$w_25_ns = 'w-25-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$w_25_m = 'w-25-m';
+var _justgage$tachyons_elm$Tachyons_Classes$w_25_l = 'w-25-l';
+var _justgage$tachyons_elm$Tachyons_Classes$w_25 = 'w-25';
+var _justgage$tachyons_elm$Tachyons_Classes$w_20_ns = 'w-20-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$w_20_m = 'w-20-m';
+var _justgage$tachyons_elm$Tachyons_Classes$w_20_l = 'w-20-l';
+var _justgage$tachyons_elm$Tachyons_Classes$w_20 = 'w-20';
+var _justgage$tachyons_elm$Tachyons_Classes$w_100_ns = 'w-100-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$w_100_m = 'w-100-m';
+var _justgage$tachyons_elm$Tachyons_Classes$w_100_l = 'w-100-l';
+var _justgage$tachyons_elm$Tachyons_Classes$w_100 = 'w-100';
+var _justgage$tachyons_elm$Tachyons_Classes$w_10_ns = 'w-10-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$w_10_m = 'w-10-m';
+var _justgage$tachyons_elm$Tachyons_Classes$w_10_l = 'w-10-l';
+var _justgage$tachyons_elm$Tachyons_Classes$w_10 = 'w-10';
+var _justgage$tachyons_elm$Tachyons_Classes$vh_75_ns = 'vh-75-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$vh_75_m = 'vh-75-m';
+var _justgage$tachyons_elm$Tachyons_Classes$vh_75_l = 'vh-75-l';
+var _justgage$tachyons_elm$Tachyons_Classes$vh_75 = 'vh-75';
+var _justgage$tachyons_elm$Tachyons_Classes$vh_50_ns = 'vh-50-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$vh_50_m = 'vh-50-m';
+var _justgage$tachyons_elm$Tachyons_Classes$vh_50_l = 'vh-50-l';
+var _justgage$tachyons_elm$Tachyons_Classes$vh_50 = 'vh-50';
+var _justgage$tachyons_elm$Tachyons_Classes$vh_25_ns = 'vh-25-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$vh_25_m = 'vh-25-m';
+var _justgage$tachyons_elm$Tachyons_Classes$vh_25_l = 'vh-25-l';
+var _justgage$tachyons_elm$Tachyons_Classes$vh_25 = 'vh-25';
+var _justgage$tachyons_elm$Tachyons_Classes$vh_100_ns = 'vh-100-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$vh_100_m = 'vh-100-m';
+var _justgage$tachyons_elm$Tachyons_Classes$vh_100_l = 'vh-100-l';
+var _justgage$tachyons_elm$Tachyons_Classes$vh_100 = 'vh-100';
+var _justgage$tachyons_elm$Tachyons_Classes$v_top_ns = 'v-top-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$v_top_m = 'v-top-m';
+var _justgage$tachyons_elm$Tachyons_Classes$v_top_l = 'v-top-l';
+var _justgage$tachyons_elm$Tachyons_Classes$v_top = 'v-top';
+var _justgage$tachyons_elm$Tachyons_Classes$v_mid_ns = 'v-mid-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$v_mid_m = 'v-mid-m';
+var _justgage$tachyons_elm$Tachyons_Classes$v_mid_l = 'v-mid-l';
+var _justgage$tachyons_elm$Tachyons_Classes$v_mid = 'v-mid';
+var _justgage$tachyons_elm$Tachyons_Classes$v_btm_ns = 'v-btm-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$v_btm_m = 'v-btm-m';
+var _justgage$tachyons_elm$Tachyons_Classes$v_btm_l = 'v-btm-l';
+var _justgage$tachyons_elm$Tachyons_Classes$v_btm = 'v-btm';
+var _justgage$tachyons_elm$Tachyons_Classes$v_base_ns = 'v-base-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$v_base_m = 'v-base-m';
+var _justgage$tachyons_elm$Tachyons_Classes$v_base_l = 'v-base-l';
+var _justgage$tachyons_elm$Tachyons_Classes$v_base = 'v-base';
+var _justgage$tachyons_elm$Tachyons_Classes$underline_ns = 'underline-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$underline_m = 'underline-m';
+var _justgage$tachyons_elm$Tachyons_Classes$underline_l = 'underline-l';
+var _justgage$tachyons_elm$Tachyons_Classes$underline_hover = 'underline-hover';
+var _justgage$tachyons_elm$Tachyons_Classes$underline = 'underline';
+var _justgage$tachyons_elm$Tachyons_Classes$ttu_ns = 'ttu-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ttu_m = 'ttu-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ttu_l = 'ttu-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ttu = 'ttu';
+var _justgage$tachyons_elm$Tachyons_Classes$ttn_ns = 'ttn-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ttn_m = 'ttn-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ttn_l = 'ttn-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ttn = 'ttn';
+var _justgage$tachyons_elm$Tachyons_Classes$ttl_ns = 'ttl-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ttl_m = 'ttl-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ttl_l = 'ttl-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ttl = 'ttl';
+var _justgage$tachyons_elm$Tachyons_Classes$ttc_ns = 'ttc-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ttc_m = 'ttc-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ttc_l = 'ttc-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ttc = 'ttc';
+var _justgage$tachyons_elm$Tachyons_Classes$truncate_ns = 'truncate-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$truncate_m = 'truncate-m';
+var _justgage$tachyons_elm$Tachyons_Classes$truncate_l = 'truncate-l';
+var _justgage$tachyons_elm$Tachyons_Classes$truncate = 'truncate';
+var _justgage$tachyons_elm$Tachyons_Classes$tracked_tight_ns = 'tracked-tight-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$tracked_tight_m = 'tracked-tight-m';
+var _justgage$tachyons_elm$Tachyons_Classes$tracked_tight_l = 'tracked-tight-l';
+var _justgage$tachyons_elm$Tachyons_Classes$tracked_tight = 'tracked-tight';
+var _justgage$tachyons_elm$Tachyons_Classes$tracked_ns = 'tracked-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$tracked_mega_ns = 'tracked-mega-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$tracked_mega_m = 'tracked-mega-m';
+var _justgage$tachyons_elm$Tachyons_Classes$tracked_mega_l = 'tracked-mega-l';
+var _justgage$tachyons_elm$Tachyons_Classes$tracked_mega = 'tracked-mega';
+var _justgage$tachyons_elm$Tachyons_Classes$tracked_m = 'tracked-m';
+var _justgage$tachyons_elm$Tachyons_Classes$tracked_l = 'tracked-l';
+var _justgage$tachyons_elm$Tachyons_Classes$tracked = 'tracked';
+var _justgage$tachyons_elm$Tachyons_Classes$tr_ns = 'tr-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$tr_m = 'tr-m';
+var _justgage$tachyons_elm$Tachyons_Classes$tr_l = 'tr-l';
+var _justgage$tachyons_elm$Tachyons_Classes$tr = 'tr';
+var _justgage$tachyons_elm$Tachyons_Classes$top_2_ns = 'top-2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$top_2_m = 'top-2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$top_2_l = 'top-2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$top_2 = 'top-2';
+var _justgage$tachyons_elm$Tachyons_Classes$top_1_ns = 'top-1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$top_1_m = 'top-1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$top_1_l = 'top-1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$top_1 = 'top-1';
+var _justgage$tachyons_elm$Tachyons_Classes$top_0_ns = 'top-0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$top_0_m = 'top-0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$top_0_l = 'top-0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$top_0 = 'top-0';
+var _justgage$tachyons_elm$Tachyons_Classes$top__2_ns = 'top--2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$top__2_m = 'top--2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$top__2_l = 'top--2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$top__2 = 'top--2';
+var _justgage$tachyons_elm$Tachyons_Classes$top__1_ns = 'top--1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$top__1_m = 'top--1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$top__1_l = 'top--1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$top__1 = 'top--1';
+var _justgage$tachyons_elm$Tachyons_Classes$tl_ns = 'tl-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$tl_m = 'tl-m';
+var _justgage$tachyons_elm$Tachyons_Classes$tl_l = 'tl-l';
+var _justgage$tachyons_elm$Tachyons_Classes$tl = 'tl';
+var _justgage$tachyons_elm$Tachyons_Classes$tj_ns = 'tj-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$tj_m = 'tj-m';
+var _justgage$tachyons_elm$Tachyons_Classes$tj_l = 'tj-l';
+var _justgage$tachyons_elm$Tachyons_Classes$tj = 'tj';
+var _justgage$tachyons_elm$Tachyons_Classes$times = 'times';
+var _justgage$tachyons_elm$Tachyons_Classes$tc_ns = 'tc-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$tc_m = 'tc-m';
+var _justgage$tachyons_elm$Tachyons_Classes$tc_l = 'tc-l';
+var _justgage$tachyons_elm$Tachyons_Classes$tc = 'tc';
+var _justgage$tachyons_elm$Tachyons_Classes$system_serif = 'system-serif';
+var _justgage$tachyons_elm$Tachyons_Classes$system_sans_serif = 'system-sans-serif';
+var _justgage$tachyons_elm$Tachyons_Classes$striped__near_white = 'striped--near-white';
+var _justgage$tachyons_elm$Tachyons_Classes$striped__moon_gray = 'striped--moon-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$striped__light_silver = 'striped--light-silver';
+var _justgage$tachyons_elm$Tachyons_Classes$striped__light_gray = 'striped--light-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$stripe_light = 'stripe-light';
+var _justgage$tachyons_elm$Tachyons_Classes$stripe_dark = 'stripe-dark';
+var _justgage$tachyons_elm$Tachyons_Classes$strike_ns = 'strike-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$strike_m = 'strike-m';
+var _justgage$tachyons_elm$Tachyons_Classes$strike_l = 'strike-l';
+var _justgage$tachyons_elm$Tachyons_Classes$strike = 'strike';
+var _justgage$tachyons_elm$Tachyons_Classes$static_ns = 'static-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$static_m = 'static-m';
+var _justgage$tachyons_elm$Tachyons_Classes$static_l = 'static-l';
+var _justgage$tachyons_elm$Tachyons_Classes$static = 'static';
+var _justgage$tachyons_elm$Tachyons_Classes$small_caps_ns = 'small-caps-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$small_caps_m = 'small-caps-m';
+var _justgage$tachyons_elm$Tachyons_Classes$small_caps_l = 'small-caps-l';
+var _justgage$tachyons_elm$Tachyons_Classes$small_caps = 'small-caps';
+var _justgage$tachyons_elm$Tachyons_Classes$silver = 'silver';
+var _justgage$tachyons_elm$Tachyons_Classes$shadow_hover = 'shadow-hover';
+var _justgage$tachyons_elm$Tachyons_Classes$shadow_5_ns = 'shadow-5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$shadow_5_m = 'shadow-5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$shadow_5_l = 'shadow-5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$shadow_5 = 'shadow-5';
+var _justgage$tachyons_elm$Tachyons_Classes$shadow_4_ns = 'shadow-4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$shadow_4_m = 'shadow-4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$shadow_4_l = 'shadow-4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$shadow_4 = 'shadow-4';
+var _justgage$tachyons_elm$Tachyons_Classes$shadow_3_ns = 'shadow-3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$shadow_3_m = 'shadow-3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$shadow_3_l = 'shadow-3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$shadow_3 = 'shadow-3';
+var _justgage$tachyons_elm$Tachyons_Classes$shadow_2_ns = 'shadow-2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$shadow_2_m = 'shadow-2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$shadow_2_l = 'shadow-2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$shadow_2 = 'shadow-2';
+var _justgage$tachyons_elm$Tachyons_Classes$shadow_1_ns = 'shadow-1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$shadow_1_m = 'shadow-1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$shadow_1_l = 'shadow-1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$shadow_1 = 'shadow-1';
+var _justgage$tachyons_elm$Tachyons_Classes$serif = 'serif';
+var _justgage$tachyons_elm$Tachyons_Classes$self_stretch_ns = 'self-stretch-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$self_stretch_m = 'self-stretch-m';
+var _justgage$tachyons_elm$Tachyons_Classes$self_stretch_l = 'self-stretch-l';
+var _justgage$tachyons_elm$Tachyons_Classes$self_stretch = 'self-stretch';
+var _justgage$tachyons_elm$Tachyons_Classes$self_start_ns = 'self-start-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$self_start_m = 'self-start-m';
+var _justgage$tachyons_elm$Tachyons_Classes$self_start_l = 'self-start-l';
+var _justgage$tachyons_elm$Tachyons_Classes$self_start = 'self-start';
+var _justgage$tachyons_elm$Tachyons_Classes$self_end_ns = 'self-end-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$self_end_m = 'self-end-m';
+var _justgage$tachyons_elm$Tachyons_Classes$self_end_l = 'self-end-l';
+var _justgage$tachyons_elm$Tachyons_Classes$self_end = 'self-end';
+var _justgage$tachyons_elm$Tachyons_Classes$self_center_ns = 'self-center-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$self_center_m = 'self-center-m';
+var _justgage$tachyons_elm$Tachyons_Classes$self_center_l = 'self-center-l';
+var _justgage$tachyons_elm$Tachyons_Classes$self_center = 'self-center';
+var _justgage$tachyons_elm$Tachyons_Classes$self_baseline_ns = 'self-baseline-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$self_baseline_m = 'self-baseline-m';
+var _justgage$tachyons_elm$Tachyons_Classes$self_baseline_l = 'self-baseline-l';
+var _justgage$tachyons_elm$Tachyons_Classes$self_baseline = 'self-baseline';
+var _justgage$tachyons_elm$Tachyons_Classes$sans_serif = 'sans-serif';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_90_ns = 'rotate-90-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_90_m = 'rotate-90-m';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_90_l = 'rotate-90-l';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_90 = 'rotate-90';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_45_ns = 'rotate-45-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_45_m = 'rotate-45-m';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_45_l = 'rotate-45-l';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_45 = 'rotate-45';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_315_ns = 'rotate-315-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_315_m = 'rotate-315-m';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_315_l = 'rotate-315-l';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_315 = 'rotate-315';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_270_ns = 'rotate-270-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_270_m = 'rotate-270-m';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_270_l = 'rotate-270-l';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_270 = 'rotate-270';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_225_ns = 'rotate-225-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_225_m = 'rotate-225-m';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_225_l = 'rotate-225-l';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_225 = 'rotate-225';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_180_ns = 'rotate-180-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_180_m = 'rotate-180-m';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_180_l = 'rotate-180-l';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_180 = 'rotate-180';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_135_ns = 'rotate-135-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_135_m = 'rotate-135-m';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_135_l = 'rotate-135-l';
+var _justgage$tachyons_elm$Tachyons_Classes$rotate_135 = 'rotate-135';
+var _justgage$tachyons_elm$Tachyons_Classes$right_2_ns = 'right-2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$right_2_m = 'right-2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$right_2_l = 'right-2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$right_2 = 'right-2';
+var _justgage$tachyons_elm$Tachyons_Classes$right_1_ns = 'right-1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$right_1_m = 'right-1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$right_1_l = 'right-1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$right_1 = 'right-1';
+var _justgage$tachyons_elm$Tachyons_Classes$right_0_ns = 'right-0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$right_0_m = 'right-0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$right_0_l = 'right-0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$right_0 = 'right-0';
+var _justgage$tachyons_elm$Tachyons_Classes$right__2_ns = 'right--2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$right__2_m = 'right--2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$right__2_l = 'right--2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$right__2 = 'right--2';
+var _justgage$tachyons_elm$Tachyons_Classes$right__1_ns = 'right--1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$right__1_m = 'right--1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$right__1_l = 'right--1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$right__1 = 'right--1';
+var _justgage$tachyons_elm$Tachyons_Classes$relative_ns = 'relative-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$relative_m = 'relative-m';
+var _justgage$tachyons_elm$Tachyons_Classes$relative_l = 'relative-l';
+var _justgage$tachyons_elm$Tachyons_Classes$relative = 'relative';
+var _justgage$tachyons_elm$Tachyons_Classes$red = 'red';
+var _justgage$tachyons_elm$Tachyons_Classes$pv7_ns = 'pv7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pv7_m = 'pv7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pv7_l = 'pv7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pv7 = 'pv7';
+var _justgage$tachyons_elm$Tachyons_Classes$pv6_ns = 'pv6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pv6_m = 'pv6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pv6_l = 'pv6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pv6 = 'pv6';
+var _justgage$tachyons_elm$Tachyons_Classes$pv5_ns = 'pv5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pv5_m = 'pv5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pv5_l = 'pv5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pv5 = 'pv5';
+var _justgage$tachyons_elm$Tachyons_Classes$pv4_ns = 'pv4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pv4_m = 'pv4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pv4_l = 'pv4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pv4 = 'pv4';
+var _justgage$tachyons_elm$Tachyons_Classes$pv3_ns = 'pv3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pv3_m = 'pv3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pv3_l = 'pv3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pv3 = 'pv3';
+var _justgage$tachyons_elm$Tachyons_Classes$pv2_ns = 'pv2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pv2_m = 'pv2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pv2_l = 'pv2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pv2 = 'pv2';
+var _justgage$tachyons_elm$Tachyons_Classes$pv1_ns = 'pv1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pv1_m = 'pv1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pv1_l = 'pv1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pv1 = 'pv1';
+var _justgage$tachyons_elm$Tachyons_Classes$pv0_ns = 'pv0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pv0_m = 'pv0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pv0_l = 'pv0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pv0 = 'pv0';
+var _justgage$tachyons_elm$Tachyons_Classes$purple = 'purple';
+var _justgage$tachyons_elm$Tachyons_Classes$pt7_ns = 'pt7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pt7_m = 'pt7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pt7_l = 'pt7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pt7 = 'pt7';
+var _justgage$tachyons_elm$Tachyons_Classes$pt6_ns = 'pt6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pt6_m = 'pt6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pt6_l = 'pt6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pt6 = 'pt6';
+var _justgage$tachyons_elm$Tachyons_Classes$pt5_ns = 'pt5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pt5_m = 'pt5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pt5_l = 'pt5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pt5 = 'pt5';
+var _justgage$tachyons_elm$Tachyons_Classes$pt4_ns = 'pt4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pt4_m = 'pt4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pt4_l = 'pt4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pt4 = 'pt4';
+var _justgage$tachyons_elm$Tachyons_Classes$pt3_ns = 'pt3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pt3_m = 'pt3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pt3_l = 'pt3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pt3 = 'pt3';
+var _justgage$tachyons_elm$Tachyons_Classes$pt2_ns = 'pt2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pt2_m = 'pt2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pt2_l = 'pt2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pt2 = 'pt2';
+var _justgage$tachyons_elm$Tachyons_Classes$pt1_ns = 'pt1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pt1_m = 'pt1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pt1_l = 'pt1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pt1 = 'pt1';
+var _justgage$tachyons_elm$Tachyons_Classes$pt0_ns = 'pt0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pt0_m = 'pt0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pt0_l = 'pt0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pt0 = 'pt0';
+var _justgage$tachyons_elm$Tachyons_Classes$pre_ns = 'pre-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pre_m = 'pre-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pre_l = 'pre-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pre = 'pre';
+var _justgage$tachyons_elm$Tachyons_Classes$pr7_ns = 'pr7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pr7_m = 'pr7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pr7_l = 'pr7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pr7 = 'pr7';
+var _justgage$tachyons_elm$Tachyons_Classes$pr6_ns = 'pr6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pr6_m = 'pr6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pr6_l = 'pr6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pr6 = 'pr6';
+var _justgage$tachyons_elm$Tachyons_Classes$pr5_ns = 'pr5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pr5_m = 'pr5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pr5_l = 'pr5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pr5 = 'pr5';
+var _justgage$tachyons_elm$Tachyons_Classes$pr4_ns = 'pr4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pr4_m = 'pr4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pr4_l = 'pr4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pr4 = 'pr4';
+var _justgage$tachyons_elm$Tachyons_Classes$pr3_ns = 'pr3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pr3_m = 'pr3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pr3_l = 'pr3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pr3 = 'pr3';
+var _justgage$tachyons_elm$Tachyons_Classes$pr2_ns = 'pr2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pr2_m = 'pr2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pr2_l = 'pr2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pr2 = 'pr2';
+var _justgage$tachyons_elm$Tachyons_Classes$pr1_ns = 'pr1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pr1_m = 'pr1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pr1_l = 'pr1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pr1 = 'pr1';
+var _justgage$tachyons_elm$Tachyons_Classes$pr0_ns = 'pr0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pr0_m = 'pr0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pr0_l = 'pr0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pr0 = 'pr0';
+var _justgage$tachyons_elm$Tachyons_Classes$pointer = 'pointer';
+var _justgage$tachyons_elm$Tachyons_Classes$pl7_ns = 'pl7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pl7_m = 'pl7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pl7_l = 'pl7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pl7 = 'pl7';
+var _justgage$tachyons_elm$Tachyons_Classes$pl6_ns = 'pl6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pl6_m = 'pl6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pl6_l = 'pl6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pl6 = 'pl6';
+var _justgage$tachyons_elm$Tachyons_Classes$pl5_ns = 'pl5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pl5_m = 'pl5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pl5_l = 'pl5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pl5 = 'pl5';
+var _justgage$tachyons_elm$Tachyons_Classes$pl4_ns = 'pl4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pl4_m = 'pl4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pl4_l = 'pl4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pl4 = 'pl4';
+var _justgage$tachyons_elm$Tachyons_Classes$pl3_ns = 'pl3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pl3_m = 'pl3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pl3_l = 'pl3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pl3 = 'pl3';
+var _justgage$tachyons_elm$Tachyons_Classes$pl2_ns = 'pl2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pl2_m = 'pl2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pl2_l = 'pl2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pl2 = 'pl2';
+var _justgage$tachyons_elm$Tachyons_Classes$pl1_ns = 'pl1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pl1_m = 'pl1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pl1_l = 'pl1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pl1 = 'pl1';
+var _justgage$tachyons_elm$Tachyons_Classes$pl0_ns = 'pl0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pl0_m = 'pl0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pl0_l = 'pl0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pl0 = 'pl0';
+var _justgage$tachyons_elm$Tachyons_Classes$pink = 'pink';
+var _justgage$tachyons_elm$Tachyons_Classes$ph7_ns = 'ph7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ph7_m = 'ph7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ph7_l = 'ph7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ph7 = 'ph7';
+var _justgage$tachyons_elm$Tachyons_Classes$ph6_ns = 'ph6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ph6_m = 'ph6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ph6_l = 'ph6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ph6 = 'ph6';
+var _justgage$tachyons_elm$Tachyons_Classes$ph5_ns = 'ph5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ph5_m = 'ph5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ph5_l = 'ph5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ph5 = 'ph5';
+var _justgage$tachyons_elm$Tachyons_Classes$ph4_ns = 'ph4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ph4_m = 'ph4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ph4_l = 'ph4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ph4 = 'ph4';
+var _justgage$tachyons_elm$Tachyons_Classes$ph3_ns = 'ph3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ph3_m = 'ph3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ph3_l = 'ph3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ph3 = 'ph3';
+var _justgage$tachyons_elm$Tachyons_Classes$ph2_ns = 'ph2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ph2_m = 'ph2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ph2_l = 'ph2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ph2 = 'ph2';
+var _justgage$tachyons_elm$Tachyons_Classes$ph1_ns = 'ph1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ph1_m = 'ph1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ph1_l = 'ph1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ph1 = 'ph1';
+var _justgage$tachyons_elm$Tachyons_Classes$ph0_ns = 'ph0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ph0_m = 'ph0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ph0_l = 'ph0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ph0 = 'ph0';
+var _justgage$tachyons_elm$Tachyons_Classes$pb7_ns = 'pb7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pb7_m = 'pb7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pb7_l = 'pb7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pb7 = 'pb7';
+var _justgage$tachyons_elm$Tachyons_Classes$pb6_ns = 'pb6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pb6_m = 'pb6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pb6_l = 'pb6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pb6 = 'pb6';
+var _justgage$tachyons_elm$Tachyons_Classes$pb5_ns = 'pb5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pb5_m = 'pb5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pb5_l = 'pb5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pb5 = 'pb5';
+var _justgage$tachyons_elm$Tachyons_Classes$pb4_ns = 'pb4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pb4_m = 'pb4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pb4_l = 'pb4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pb4 = 'pb4';
+var _justgage$tachyons_elm$Tachyons_Classes$pb3_ns = 'pb3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pb3_m = 'pb3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pb3_l = 'pb3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pb3 = 'pb3';
+var _justgage$tachyons_elm$Tachyons_Classes$pb2_ns = 'pb2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pb2_m = 'pb2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pb2_l = 'pb2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pb2 = 'pb2';
+var _justgage$tachyons_elm$Tachyons_Classes$pb1_ns = 'pb1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pb1_m = 'pb1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pb1_l = 'pb1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pb1 = 'pb1';
+var _justgage$tachyons_elm$Tachyons_Classes$pb0_ns = 'pb0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pb0_m = 'pb0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pb0_l = 'pb0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pb0 = 'pb0';
+var _justgage$tachyons_elm$Tachyons_Classes$pa7_ns = 'pa7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pa7_m = 'pa7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pa7_l = 'pa7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pa7 = 'pa7';
+var _justgage$tachyons_elm$Tachyons_Classes$pa6_ns = 'pa6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pa6_m = 'pa6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pa6_l = 'pa6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pa6 = 'pa6';
+var _justgage$tachyons_elm$Tachyons_Classes$pa5_ns = 'pa5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pa5_m = 'pa5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pa5_l = 'pa5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pa5 = 'pa5';
+var _justgage$tachyons_elm$Tachyons_Classes$pa4_ns = 'pa4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pa4_m = 'pa4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pa4_l = 'pa4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pa4 = 'pa4';
+var _justgage$tachyons_elm$Tachyons_Classes$pa3_ns = 'pa3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pa3_m = 'pa3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pa3_l = 'pa3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pa3 = 'pa3';
+var _justgage$tachyons_elm$Tachyons_Classes$pa2_ns = 'pa2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pa2_m = 'pa2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pa2_l = 'pa2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pa2 = 'pa2';
+var _justgage$tachyons_elm$Tachyons_Classes$pa1_ns = 'pa1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pa1_m = 'pa1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pa1_l = 'pa1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pa1 = 'pa1';
+var _justgage$tachyons_elm$Tachyons_Classes$pa0_ns = 'pa0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$pa0_m = 'pa0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$pa0_l = 'pa0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$pa0 = 'pa0';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_y_visible_ns = 'overflow-y-visible-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_y_visible_m = 'overflow-y-visible-m';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_y_visible_l = 'overflow-y-visible-l';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_y_visible = 'overflow-y-visible';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_y_scroll_ns = 'overflow-y-scroll-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_y_scroll_m = 'overflow-y-scroll-m';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_y_scroll_l = 'overflow-y-scroll-l';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_y_scroll = 'overflow-y-scroll';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_y_hidden_ns = 'overflow-y-hidden-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_y_hidden_m = 'overflow-y-hidden-m';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_y_hidden_l = 'overflow-y-hidden-l';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_y_hidden = 'overflow-y-hidden';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_y_auto_ns = 'overflow-y-auto-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_y_auto_m = 'overflow-y-auto-m';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_y_auto_l = 'overflow-y-auto-l';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_y_auto = 'overflow-y-auto';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_x_visible_ns = 'overflow-x-visible-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_x_visible_m = 'overflow-x-visible-m';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_x_visible_l = 'overflow-x-visible-l';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_x_visible = 'overflow-x-visible';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_x_scroll_ns = 'overflow-x-scroll-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_x_scroll_m = 'overflow-x-scroll-m';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_x_scroll_l = 'overflow-x-scroll-l';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_x_scroll = 'overflow-x-scroll';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_x_hidden_ns = 'overflow-x-hidden-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_x_hidden_m = 'overflow-x-hidden-m';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_x_hidden_l = 'overflow-x-hidden-l';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_x_hidden = 'overflow-x-hidden';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_x_auto_ns = 'overflow-x-auto-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_x_auto_m = 'overflow-x-auto-m';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_x_auto_l = 'overflow-x-auto-l';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_x_auto = 'overflow-x-auto';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_visible_ns = 'overflow-visible-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_visible_m = 'overflow-visible-m';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_visible_l = 'overflow-visible-l';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_visible = 'overflow-visible';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_scroll_ns = 'overflow-scroll-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_scroll_m = 'overflow-scroll-m';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_scroll_l = 'overflow-scroll-l';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_scroll = 'overflow-scroll';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_hidden_ns = 'overflow-hidden-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_hidden_m = 'overflow-hidden-m';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_hidden_l = 'overflow-hidden-l';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_hidden = 'overflow-hidden';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_container = 'overflow-container';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_auto_ns = 'overflow-auto-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_auto_m = 'overflow-auto-m';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_auto_l = 'overflow-auto-l';
+var _justgage$tachyons_elm$Tachyons_Classes$overflow_auto = 'overflow-auto';
+var _justgage$tachyons_elm$Tachyons_Classes$outline_transparent_ns = 'outline-transparent-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$outline_transparent_m = 'outline-transparent-m';
+var _justgage$tachyons_elm$Tachyons_Classes$outline_transparent_l = 'outline-transparent-l';
+var _justgage$tachyons_elm$Tachyons_Classes$outline_transparent = 'outline-transparent';
+var _justgage$tachyons_elm$Tachyons_Classes$outline_ns = 'outline-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$outline_m = 'outline-m';
+var _justgage$tachyons_elm$Tachyons_Classes$outline_l = 'outline-l';
+var _justgage$tachyons_elm$Tachyons_Classes$outline_0_ns = 'outline-0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$outline_0_m = 'outline-0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$outline_0_l = 'outline-0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$outline_0 = 'outline-0';
+var _justgage$tachyons_elm$Tachyons_Classes$outline = 'outline';
+var _justgage$tachyons_elm$Tachyons_Classes$order_last_ns = 'order-last-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$order_last_m = 'order-last-m';
+var _justgage$tachyons_elm$Tachyons_Classes$order_last_l = 'order-last-l';
+var _justgage$tachyons_elm$Tachyons_Classes$order_last = 'order-last';
+var _justgage$tachyons_elm$Tachyons_Classes$order_8_ns = 'order-8-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$order_8_m = 'order-8-m';
+var _justgage$tachyons_elm$Tachyons_Classes$order_8_l = 'order-8-l';
+var _justgage$tachyons_elm$Tachyons_Classes$order_8 = 'order-8';
+var _justgage$tachyons_elm$Tachyons_Classes$order_7_ns = 'order-7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$order_7_m = 'order-7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$order_7_l = 'order-7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$order_7 = 'order-7';
+var _justgage$tachyons_elm$Tachyons_Classes$order_6_ns = 'order-6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$order_6_m = 'order-6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$order_6_l = 'order-6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$order_6 = 'order-6';
+var _justgage$tachyons_elm$Tachyons_Classes$order_5_ns = 'order-5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$order_5_m = 'order-5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$order_5_l = 'order-5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$order_5 = 'order-5';
+var _justgage$tachyons_elm$Tachyons_Classes$order_4_ns = 'order-4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$order_4_m = 'order-4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$order_4_l = 'order-4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$order_4 = 'order-4';
+var _justgage$tachyons_elm$Tachyons_Classes$order_3_ns = 'order-3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$order_3_m = 'order-3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$order_3_l = 'order-3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$order_3 = 'order-3';
+var _justgage$tachyons_elm$Tachyons_Classes$order_2_ns = 'order-2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$order_2_m = 'order-2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$order_2_l = 'order-2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$order_2 = 'order-2';
+var _justgage$tachyons_elm$Tachyons_Classes$order_1_ns = 'order-1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$order_1_m = 'order-1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$order_1_l = 'order-1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$order_1 = 'order-1';
+var _justgage$tachyons_elm$Tachyons_Classes$order_0_ns = 'order-0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$order_0_m = 'order-0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$order_0_l = 'order-0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$order_0 = 'order-0';
+var _justgage$tachyons_elm$Tachyons_Classes$orange = 'orange';
+var _justgage$tachyons_elm$Tachyons_Classes$o_90 = 'o-90';
+var _justgage$tachyons_elm$Tachyons_Classes$o_80 = 'o-80';
+var _justgage$tachyons_elm$Tachyons_Classes$o_70 = 'o-70';
+var _justgage$tachyons_elm$Tachyons_Classes$o_60 = 'o-60';
+var _justgage$tachyons_elm$Tachyons_Classes$o_50 = 'o-50';
+var _justgage$tachyons_elm$Tachyons_Classes$o_40 = 'o-40';
+var _justgage$tachyons_elm$Tachyons_Classes$o_30 = 'o-30';
+var _justgage$tachyons_elm$Tachyons_Classes$o_20 = 'o-20';
+var _justgage$tachyons_elm$Tachyons_Classes$o_100 = 'o-100';
+var _justgage$tachyons_elm$Tachyons_Classes$o_10 = 'o-10';
+var _justgage$tachyons_elm$Tachyons_Classes$o_05 = 'o-05';
+var _justgage$tachyons_elm$Tachyons_Classes$o_025 = 'o-025';
+var _justgage$tachyons_elm$Tachyons_Classes$o_0 = 'o-0';
+var _justgage$tachyons_elm$Tachyons_Classes$nt7_ns = 'nt7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nt7_m = 'nt7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nt7_l = 'nt7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nt7 = 'nt7';
+var _justgage$tachyons_elm$Tachyons_Classes$nt6_ns = 'nt6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nt6_m = 'nt6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nt6_l = 'nt6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nt6 = 'nt6';
+var _justgage$tachyons_elm$Tachyons_Classes$nt5_ns = 'nt5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nt5_m = 'nt5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nt5_l = 'nt5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nt5 = 'nt5';
+var _justgage$tachyons_elm$Tachyons_Classes$nt4_ns = 'nt4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nt4_m = 'nt4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nt4_l = 'nt4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nt4 = 'nt4';
+var _justgage$tachyons_elm$Tachyons_Classes$nt3_ns = 'nt3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nt3_m = 'nt3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nt3_l = 'nt3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nt3 = 'nt3';
+var _justgage$tachyons_elm$Tachyons_Classes$nt2_ns = 'nt2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nt2_m = 'nt2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nt2_l = 'nt2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nt2 = 'nt2';
+var _justgage$tachyons_elm$Tachyons_Classes$nt1_ns = 'nt1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nt1_m = 'nt1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nt1_l = 'nt1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nt1 = 'nt1';
+var _justgage$tachyons_elm$Tachyons_Classes$nr7_ns = 'nr7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nr7_m = 'nr7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nr7_l = 'nr7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nr7 = 'nr7';
+var _justgage$tachyons_elm$Tachyons_Classes$nr6_ns = 'nr6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nr6_m = 'nr6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nr6_l = 'nr6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nr6 = 'nr6';
+var _justgage$tachyons_elm$Tachyons_Classes$nr5_ns = 'nr5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nr5_m = 'nr5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nr5_l = 'nr5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nr5 = 'nr5';
+var _justgage$tachyons_elm$Tachyons_Classes$nr4_ns = 'nr4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nr4_m = 'nr4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nr4_l = 'nr4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nr4 = 'nr4';
+var _justgage$tachyons_elm$Tachyons_Classes$nr3_ns = 'nr3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nr3_m = 'nr3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nr3_l = 'nr3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nr3 = 'nr3';
+var _justgage$tachyons_elm$Tachyons_Classes$nr2_ns = 'nr2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nr2_m = 'nr2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nr2_l = 'nr2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nr2 = 'nr2';
+var _justgage$tachyons_elm$Tachyons_Classes$nr1_ns = 'nr1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nr1_m = 'nr1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nr1_l = 'nr1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nr1 = 'nr1';
+var _justgage$tachyons_elm$Tachyons_Classes$nowrap_ns = 'nowrap-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nowrap_m = 'nowrap-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nowrap_l = 'nowrap-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nowrap = 'nowrap';
+var _justgage$tachyons_elm$Tachyons_Classes$normal_ns = 'normal-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$normal_m = 'normal-m';
+var _justgage$tachyons_elm$Tachyons_Classes$normal_l = 'normal-l';
+var _justgage$tachyons_elm$Tachyons_Classes$normal = 'normal';
+var _justgage$tachyons_elm$Tachyons_Classes$no_underline_ns = 'no-underline-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$no_underline_m = 'no-underline-m';
+var _justgage$tachyons_elm$Tachyons_Classes$no_underline_l = 'no-underline-l';
+var _justgage$tachyons_elm$Tachyons_Classes$no_underline = 'no-underline';
+var _justgage$tachyons_elm$Tachyons_Classes$nl7_ns = 'nl7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nl7_m = 'nl7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nl7_l = 'nl7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nl7 = 'nl7';
+var _justgage$tachyons_elm$Tachyons_Classes$nl6_ns = 'nl6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nl6_m = 'nl6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nl6_l = 'nl6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nl6 = 'nl6';
+var _justgage$tachyons_elm$Tachyons_Classes$nl5_ns = 'nl5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nl5_m = 'nl5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nl5_l = 'nl5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nl5 = 'nl5';
+var _justgage$tachyons_elm$Tachyons_Classes$nl4_ns = 'nl4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nl4_m = 'nl4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nl4_l = 'nl4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nl4 = 'nl4';
+var _justgage$tachyons_elm$Tachyons_Classes$nl3_ns = 'nl3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nl3_m = 'nl3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nl3_l = 'nl3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nl3 = 'nl3';
+var _justgage$tachyons_elm$Tachyons_Classes$nl2_ns = 'nl2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nl2_m = 'nl2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nl2_l = 'nl2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nl2 = 'nl2';
+var _justgage$tachyons_elm$Tachyons_Classes$nl1_ns = 'nl1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nl1_m = 'nl1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nl1_l = 'nl1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nl1 = 'nl1';
+var _justgage$tachyons_elm$Tachyons_Classes$nested_list_reset = 'nested-list-reset';
+var _justgage$tachyons_elm$Tachyons_Classes$nested_links = 'nested-links';
+var _justgage$tachyons_elm$Tachyons_Classes$nested_img = 'nested-img';
+var _justgage$tachyons_elm$Tachyons_Classes$nested_headline_line_height = 'nested-headline-line-height';
+var _justgage$tachyons_elm$Tachyons_Classes$nested_copy_seperator = 'nested-copy-seperator';
+var _justgage$tachyons_elm$Tachyons_Classes$nested_copy_line_height = 'nested-copy-line-height';
+var _justgage$tachyons_elm$Tachyons_Classes$nested_copy_indent = 'nested-copy-indent';
+var _justgage$tachyons_elm$Tachyons_Classes$near_white = 'near-white';
+var _justgage$tachyons_elm$Tachyons_Classes$near_black = 'near-black';
+var _justgage$tachyons_elm$Tachyons_Classes$nb7_ns = 'nb7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nb7_m = 'nb7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nb7_l = 'nb7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nb7 = 'nb7';
+var _justgage$tachyons_elm$Tachyons_Classes$nb6_ns = 'nb6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nb6_m = 'nb6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nb6_l = 'nb6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nb6 = 'nb6';
+var _justgage$tachyons_elm$Tachyons_Classes$nb5_ns = 'nb5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nb5_m = 'nb5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nb5_l = 'nb5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nb5 = 'nb5';
+var _justgage$tachyons_elm$Tachyons_Classes$nb4_ns = 'nb4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nb4_m = 'nb4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nb4_l = 'nb4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nb4 = 'nb4';
+var _justgage$tachyons_elm$Tachyons_Classes$nb3_ns = 'nb3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nb3_m = 'nb3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nb3_l = 'nb3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nb3 = 'nb3';
+var _justgage$tachyons_elm$Tachyons_Classes$nb2_ns = 'nb2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nb2_m = 'nb2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nb2_l = 'nb2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nb2 = 'nb2';
+var _justgage$tachyons_elm$Tachyons_Classes$nb1_ns = 'nb1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$nb1_m = 'nb1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$nb1_l = 'nb1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$nb1 = 'nb1';
+var _justgage$tachyons_elm$Tachyons_Classes$navy = 'navy';
+var _justgage$tachyons_elm$Tachyons_Classes$na7_ns = 'na7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$na7_m = 'na7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$na7_l = 'na7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$na7 = 'na7';
+var _justgage$tachyons_elm$Tachyons_Classes$na6_ns = 'na6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$na6_m = 'na6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$na6_l = 'na6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$na6 = 'na6';
+var _justgage$tachyons_elm$Tachyons_Classes$na5_ns = 'na5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$na5_m = 'na5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$na5_l = 'na5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$na5 = 'na5';
+var _justgage$tachyons_elm$Tachyons_Classes$na4_ns = 'na4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$na4_m = 'na4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$na4_l = 'na4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$na4 = 'na4';
+var _justgage$tachyons_elm$Tachyons_Classes$na3_ns = 'na3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$na3_m = 'na3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$na3_l = 'na3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$na3 = 'na3';
+var _justgage$tachyons_elm$Tachyons_Classes$na2_ns = 'na2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$na2_m = 'na2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$na2_l = 'na2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$na2 = 'na2';
+var _justgage$tachyons_elm$Tachyons_Classes$na1_ns = 'na1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$na1_m = 'na1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$na1_l = 'na1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$na1 = 'na1';
+var _justgage$tachyons_elm$Tachyons_Classes$mw9_ns = 'mw9-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mw9_m = 'mw9-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mw9_l = 'mw9-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mw9 = 'mw9';
+var _justgage$tachyons_elm$Tachyons_Classes$mw8_ns = 'mw8-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mw8_m = 'mw8-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mw8_l = 'mw8-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mw8 = 'mw8';
+var _justgage$tachyons_elm$Tachyons_Classes$mw7_ns = 'mw7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mw7_m = 'mw7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mw7_l = 'mw7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mw7 = 'mw7';
+var _justgage$tachyons_elm$Tachyons_Classes$mw6_ns = 'mw6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mw6_m = 'mw6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mw6_l = 'mw6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mw6 = 'mw6';
+var _justgage$tachyons_elm$Tachyons_Classes$mw5_ns = 'mw5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mw5_m = 'mw5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mw5_l = 'mw5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mw5 = 'mw5';
+var _justgage$tachyons_elm$Tachyons_Classes$mw4_ns = 'mw4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mw4_m = 'mw4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mw4_l = 'mw4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mw4 = 'mw4';
+var _justgage$tachyons_elm$Tachyons_Classes$mw3_ns = 'mw3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mw3_m = 'mw3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mw3_l = 'mw3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mw3 = 'mw3';
+var _justgage$tachyons_elm$Tachyons_Classes$mw2_ns = 'mw2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mw2_m = 'mw2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mw2_l = 'mw2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mw2 = 'mw2';
+var _justgage$tachyons_elm$Tachyons_Classes$mw1_ns = 'mw1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mw1_m = 'mw1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mw1_l = 'mw1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mw1 = 'mw1';
+var _justgage$tachyons_elm$Tachyons_Classes$mw_none_ns = 'mw-none-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mw_none_m = 'mw-none-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mw_none_l = 'mw-none-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mw_none = 'mw-none';
+var _justgage$tachyons_elm$Tachyons_Classes$mw_100_ns = 'mw-100-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mw_100_m = 'mw-100-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mw_100_l = 'mw-100-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mw_100 = 'mw-100';
+var _justgage$tachyons_elm$Tachyons_Classes$mv7_ns = 'mv7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mv7_m = 'mv7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mv7_l = 'mv7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mv7 = 'mv7';
+var _justgage$tachyons_elm$Tachyons_Classes$mv6_ns = 'mv6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mv6_m = 'mv6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mv6_l = 'mv6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mv6 = 'mv6';
+var _justgage$tachyons_elm$Tachyons_Classes$mv5_ns = 'mv5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mv5_m = 'mv5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mv5_l = 'mv5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mv5 = 'mv5';
+var _justgage$tachyons_elm$Tachyons_Classes$mv4_ns = 'mv4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mv4_m = 'mv4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mv4_l = 'mv4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mv4 = 'mv4';
+var _justgage$tachyons_elm$Tachyons_Classes$mv3_ns = 'mv3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mv3_m = 'mv3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mv3_l = 'mv3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mv3 = 'mv3';
+var _justgage$tachyons_elm$Tachyons_Classes$mv2_ns = 'mv2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mv2_m = 'mv2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mv2_l = 'mv2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mv2 = 'mv2';
+var _justgage$tachyons_elm$Tachyons_Classes$mv1_ns = 'mv1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mv1_m = 'mv1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mv1_l = 'mv1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mv1 = 'mv1';
+var _justgage$tachyons_elm$Tachyons_Classes$mv0_ns = 'mv0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mv0_m = 'mv0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mv0_l = 'mv0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mv0 = 'mv0';
+var _justgage$tachyons_elm$Tachyons_Classes$mt7_ns = 'mt7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mt7_m = 'mt7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mt7_l = 'mt7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mt7 = 'mt7';
+var _justgage$tachyons_elm$Tachyons_Classes$mt6_ns = 'mt6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mt6_m = 'mt6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mt6_l = 'mt6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mt6 = 'mt6';
+var _justgage$tachyons_elm$Tachyons_Classes$mt5_ns = 'mt5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mt5_m = 'mt5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mt5_l = 'mt5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mt5 = 'mt5';
+var _justgage$tachyons_elm$Tachyons_Classes$mt4_ns = 'mt4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mt4_m = 'mt4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mt4_l = 'mt4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mt4 = 'mt4';
+var _justgage$tachyons_elm$Tachyons_Classes$mt3_ns = 'mt3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mt3_m = 'mt3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mt3_l = 'mt3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mt3 = 'mt3';
+var _justgage$tachyons_elm$Tachyons_Classes$mt2_ns = 'mt2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mt2_m = 'mt2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mt2_l = 'mt2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mt2 = 'mt2';
+var _justgage$tachyons_elm$Tachyons_Classes$mt1_ns = 'mt1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mt1_m = 'mt1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mt1_l = 'mt1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mt1 = 'mt1';
+var _justgage$tachyons_elm$Tachyons_Classes$mt0_ns = 'mt0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mt0_m = 'mt0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mt0_l = 'mt0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mt0 = 'mt0';
+var _justgage$tachyons_elm$Tachyons_Classes$mr7_ns = 'mr7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mr7_m = 'mr7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mr7_l = 'mr7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mr7 = 'mr7';
+var _justgage$tachyons_elm$Tachyons_Classes$mr6_ns = 'mr6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mr6_m = 'mr6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mr6_l = 'mr6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mr6 = 'mr6';
+var _justgage$tachyons_elm$Tachyons_Classes$mr5_ns = 'mr5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mr5_m = 'mr5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mr5_l = 'mr5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mr5 = 'mr5';
+var _justgage$tachyons_elm$Tachyons_Classes$mr4_ns = 'mr4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mr4_m = 'mr4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mr4_l = 'mr4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mr4 = 'mr4';
+var _justgage$tachyons_elm$Tachyons_Classes$mr3_ns = 'mr3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mr3_m = 'mr3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mr3_l = 'mr3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mr3 = 'mr3';
+var _justgage$tachyons_elm$Tachyons_Classes$mr2_ns = 'mr2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mr2_m = 'mr2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mr2_l = 'mr2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mr2 = 'mr2';
+var _justgage$tachyons_elm$Tachyons_Classes$mr1_ns = 'mr1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mr1_m = 'mr1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mr1_l = 'mr1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mr1 = 'mr1';
+var _justgage$tachyons_elm$Tachyons_Classes$mr0_ns = 'mr0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mr0_m = 'mr0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mr0_l = 'mr0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mr0 = 'mr0';
+var _justgage$tachyons_elm$Tachyons_Classes$mr_auto_ns = 'mr-auto-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mr_auto_m = 'mr-auto-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mr_auto_l = 'mr-auto-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mr_auto = 'mr-auto';
+var _justgage$tachyons_elm$Tachyons_Classes$moon_gray = 'moon-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$ml7_ns = 'ml7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ml7_m = 'ml7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ml7_l = 'ml7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ml7 = 'ml7';
+var _justgage$tachyons_elm$Tachyons_Classes$ml6_ns = 'ml6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ml6_m = 'ml6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ml6_l = 'ml6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ml6 = 'ml6';
+var _justgage$tachyons_elm$Tachyons_Classes$ml5_ns = 'ml5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ml5_m = 'ml5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ml5_l = 'ml5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ml5 = 'ml5';
+var _justgage$tachyons_elm$Tachyons_Classes$ml4_ns = 'ml4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ml4_m = 'ml4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ml4_l = 'ml4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ml4 = 'ml4';
+var _justgage$tachyons_elm$Tachyons_Classes$ml3_ns = 'ml3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ml3_m = 'ml3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ml3_l = 'ml3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ml3 = 'ml3';
+var _justgage$tachyons_elm$Tachyons_Classes$ml2_ns = 'ml2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ml2_m = 'ml2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ml2_l = 'ml2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ml2 = 'ml2';
+var _justgage$tachyons_elm$Tachyons_Classes$ml1_ns = 'ml1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ml1_m = 'ml1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ml1_l = 'ml1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ml1 = 'ml1';
+var _justgage$tachyons_elm$Tachyons_Classes$ml0_ns = 'ml0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ml0_m = 'ml0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ml0_l = 'ml0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ml0 = 'ml0';
+var _justgage$tachyons_elm$Tachyons_Classes$ml_auto_ns = 'ml-auto-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ml_auto_m = 'ml-auto-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ml_auto_l = 'ml-auto-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ml_auto = 'ml-auto';
+var _justgage$tachyons_elm$Tachyons_Classes$min_vh_100_ns = 'min-vh-100-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$min_vh_100_m = 'min-vh-100-m';
+var _justgage$tachyons_elm$Tachyons_Classes$min_vh_100_l = 'min-vh-100-l';
+var _justgage$tachyons_elm$Tachyons_Classes$min_vh_100 = 'min-vh-100';
+var _justgage$tachyons_elm$Tachyons_Classes$min_h_100_ns = 'min-h-100-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$min_h_100_m = 'min-h-100-m';
+var _justgage$tachyons_elm$Tachyons_Classes$min_h_100_l = 'min-h-100-l';
+var _justgage$tachyons_elm$Tachyons_Classes$min_h_100 = 'min-h-100';
+var _justgage$tachyons_elm$Tachyons_Classes$mid_gray = 'mid-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$mh7_ns = 'mh7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mh7_m = 'mh7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mh7_l = 'mh7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mh7 = 'mh7';
+var _justgage$tachyons_elm$Tachyons_Classes$mh6_ns = 'mh6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mh6_m = 'mh6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mh6_l = 'mh6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mh6 = 'mh6';
+var _justgage$tachyons_elm$Tachyons_Classes$mh5_ns = 'mh5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mh5_m = 'mh5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mh5_l = 'mh5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mh5 = 'mh5';
+var _justgage$tachyons_elm$Tachyons_Classes$mh4_ns = 'mh4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mh4_m = 'mh4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mh4_l = 'mh4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mh4 = 'mh4';
+var _justgage$tachyons_elm$Tachyons_Classes$mh3_ns = 'mh3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mh3_m = 'mh3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mh3_l = 'mh3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mh3 = 'mh3';
+var _justgage$tachyons_elm$Tachyons_Classes$mh2_ns = 'mh2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mh2_m = 'mh2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mh2_l = 'mh2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mh2 = 'mh2';
+var _justgage$tachyons_elm$Tachyons_Classes$mh1_ns = 'mh1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mh1_m = 'mh1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mh1_l = 'mh1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mh1 = 'mh1';
+var _justgage$tachyons_elm$Tachyons_Classes$mh0_ns = 'mh0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mh0_m = 'mh0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mh0_l = 'mh0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mh0 = 'mh0';
+var _justgage$tachyons_elm$Tachyons_Classes$measure_wide_ns = 'measure-wide-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$measure_wide_m = 'measure-wide-m';
+var _justgage$tachyons_elm$Tachyons_Classes$measure_wide_l = 'measure-wide-l';
+var _justgage$tachyons_elm$Tachyons_Classes$measure_wide = 'measure-wide';
+var _justgage$tachyons_elm$Tachyons_Classes$measure_ns = 'measure-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$measure_narrow_ns = 'measure-narrow-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$measure_narrow_m = 'measure-narrow-m';
+var _justgage$tachyons_elm$Tachyons_Classes$measure_narrow_l = 'measure-narrow-l';
+var _justgage$tachyons_elm$Tachyons_Classes$measure_narrow = 'measure-narrow';
+var _justgage$tachyons_elm$Tachyons_Classes$measure_m = 'measure-m';
+var _justgage$tachyons_elm$Tachyons_Classes$measure_l = 'measure-l';
+var _justgage$tachyons_elm$Tachyons_Classes$measure = 'measure';
+var _justgage$tachyons_elm$Tachyons_Classes$mb7_ns = 'mb7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mb7_m = 'mb7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mb7_l = 'mb7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mb7 = 'mb7';
+var _justgage$tachyons_elm$Tachyons_Classes$mb6_ns = 'mb6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mb6_m = 'mb6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mb6_l = 'mb6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mb6 = 'mb6';
+var _justgage$tachyons_elm$Tachyons_Classes$mb5_ns = 'mb5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mb5_m = 'mb5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mb5_l = 'mb5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mb5 = 'mb5';
+var _justgage$tachyons_elm$Tachyons_Classes$mb4_ns = 'mb4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mb4_m = 'mb4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mb4_l = 'mb4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mb4 = 'mb4';
+var _justgage$tachyons_elm$Tachyons_Classes$mb3_ns = 'mb3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mb3_m = 'mb3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mb3_l = 'mb3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mb3 = 'mb3';
+var _justgage$tachyons_elm$Tachyons_Classes$mb2_ns = 'mb2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mb2_m = 'mb2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mb2_l = 'mb2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mb2 = 'mb2';
+var _justgage$tachyons_elm$Tachyons_Classes$mb1_ns = 'mb1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mb1_m = 'mb1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mb1_l = 'mb1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mb1 = 'mb1';
+var _justgage$tachyons_elm$Tachyons_Classes$mb0_ns = 'mb0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$mb0_m = 'mb0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$mb0_l = 'mb0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$mb0 = 'mb0';
+var _justgage$tachyons_elm$Tachyons_Classes$ma7_ns = 'ma7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ma7_m = 'ma7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ma7_l = 'ma7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ma7 = 'ma7';
+var _justgage$tachyons_elm$Tachyons_Classes$ma6_ns = 'ma6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ma6_m = 'ma6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ma6_l = 'ma6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ma6 = 'ma6';
+var _justgage$tachyons_elm$Tachyons_Classes$ma5_ns = 'ma5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ma5_m = 'ma5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ma5_l = 'ma5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ma5 = 'ma5';
+var _justgage$tachyons_elm$Tachyons_Classes$ma4_ns = 'ma4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ma4_m = 'ma4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ma4_l = 'ma4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ma4 = 'ma4';
+var _justgage$tachyons_elm$Tachyons_Classes$ma3_ns = 'ma3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ma3_m = 'ma3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ma3_l = 'ma3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ma3 = 'ma3';
+var _justgage$tachyons_elm$Tachyons_Classes$ma2_ns = 'ma2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ma2_m = 'ma2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ma2_l = 'ma2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ma2 = 'ma2';
+var _justgage$tachyons_elm$Tachyons_Classes$ma1_ns = 'ma1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ma1_m = 'ma1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ma1_l = 'ma1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ma1 = 'ma1';
+var _justgage$tachyons_elm$Tachyons_Classes$ma0_ns = 'ma0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ma0_m = 'ma0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ma0_l = 'ma0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ma0 = 'ma0';
+var _justgage$tachyons_elm$Tachyons_Classes$list = 'list';
+var _justgage$tachyons_elm$Tachyons_Classes$link = 'link';
+var _justgage$tachyons_elm$Tachyons_Classes$lightest_blue = 'lightest-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$light_yellow = 'light-yellow';
+var _justgage$tachyons_elm$Tachyons_Classes$light_silver = 'light-silver';
+var _justgage$tachyons_elm$Tachyons_Classes$light_red = 'light-red';
+var _justgage$tachyons_elm$Tachyons_Classes$light_purple = 'light-purple';
+var _justgage$tachyons_elm$Tachyons_Classes$light_pink = 'light-pink';
+var _justgage$tachyons_elm$Tachyons_Classes$light_green = 'light-green';
+var _justgage$tachyons_elm$Tachyons_Classes$light_gray = 'light-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$light_blue = 'light-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$lh_title_ns = 'lh-title-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$lh_title_m = 'lh-title-m';
+var _justgage$tachyons_elm$Tachyons_Classes$lh_title_l = 'lh-title-l';
+var _justgage$tachyons_elm$Tachyons_Classes$lh_title = 'lh-title';
+var _justgage$tachyons_elm$Tachyons_Classes$lh_solid_ns = 'lh-solid-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$lh_solid_m = 'lh-solid-m';
+var _justgage$tachyons_elm$Tachyons_Classes$lh_solid_l = 'lh-solid-l';
+var _justgage$tachyons_elm$Tachyons_Classes$lh_solid = 'lh-solid';
+var _justgage$tachyons_elm$Tachyons_Classes$lh_copy_ns = 'lh-copy-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$lh_copy_m = 'lh-copy-m';
+var _justgage$tachyons_elm$Tachyons_Classes$lh_copy_l = 'lh-copy-l';
+var _justgage$tachyons_elm$Tachyons_Classes$lh_copy = 'lh-copy';
+var _justgage$tachyons_elm$Tachyons_Classes$left_2_ns = 'left-2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$left_2_m = 'left-2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$left_2_l = 'left-2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$left_2 = 'left-2';
+var _justgage$tachyons_elm$Tachyons_Classes$left_1_ns = 'left-1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$left_1_m = 'left-1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$left_1_l = 'left-1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$left_1 = 'left-1';
+var _justgage$tachyons_elm$Tachyons_Classes$left_0_ns = 'left-0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$left_0_m = 'left-0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$left_0_l = 'left-0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$left_0 = 'left-0';
+var _justgage$tachyons_elm$Tachyons_Classes$left__2_ns = 'left--2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$left__2_m = 'left--2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$left__2_l = 'left--2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$left__2 = 'left--2';
+var _justgage$tachyons_elm$Tachyons_Classes$left__1_ns = 'left--1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$left__1_m = 'left--1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$left__1_l = 'left--1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$left__1 = 'left--1';
+var _justgage$tachyons_elm$Tachyons_Classes$justify_start_ns = 'justify-start-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$justify_start_m = 'justify-start-m';
+var _justgage$tachyons_elm$Tachyons_Classes$justify_start_l = 'justify-start-l';
+var _justgage$tachyons_elm$Tachyons_Classes$justify_start = 'justify-start';
+var _justgage$tachyons_elm$Tachyons_Classes$justify_end_ns = 'justify-end-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$justify_end_m = 'justify-end-m';
+var _justgage$tachyons_elm$Tachyons_Classes$justify_end_l = 'justify-end-l';
+var _justgage$tachyons_elm$Tachyons_Classes$justify_end = 'justify-end';
+var _justgage$tachyons_elm$Tachyons_Classes$justify_center_ns = 'justify-center-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$justify_center_m = 'justify-center-m';
+var _justgage$tachyons_elm$Tachyons_Classes$justify_center_l = 'justify-center-l';
+var _justgage$tachyons_elm$Tachyons_Classes$justify_center = 'justify-center';
+var _justgage$tachyons_elm$Tachyons_Classes$justify_between_ns = 'justify-between-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$justify_between_m = 'justify-between-m';
+var _justgage$tachyons_elm$Tachyons_Classes$justify_between_l = 'justify-between-l';
+var _justgage$tachyons_elm$Tachyons_Classes$justify_between = 'justify-between';
+var _justgage$tachyons_elm$Tachyons_Classes$justify_around_ns = 'justify-around-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$justify_around_m = 'justify-around-m';
+var _justgage$tachyons_elm$Tachyons_Classes$justify_around_l = 'justify-around-l';
+var _justgage$tachyons_elm$Tachyons_Classes$justify_around = 'justify-around';
+var _justgage$tachyons_elm$Tachyons_Classes$items_stretch_ns = 'items-stretch-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$items_stretch_m = 'items-stretch-m';
+var _justgage$tachyons_elm$Tachyons_Classes$items_stretch_l = 'items-stretch-l';
+var _justgage$tachyons_elm$Tachyons_Classes$items_stretch = 'items-stretch';
+var _justgage$tachyons_elm$Tachyons_Classes$items_start_ns = 'items-start-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$items_start_m = 'items-start-m';
+var _justgage$tachyons_elm$Tachyons_Classes$items_start_l = 'items-start-l';
+var _justgage$tachyons_elm$Tachyons_Classes$items_start = 'items-start';
+var _justgage$tachyons_elm$Tachyons_Classes$items_end_ns = 'items-end-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$items_end_m = 'items-end-m';
+var _justgage$tachyons_elm$Tachyons_Classes$items_end_l = 'items-end-l';
+var _justgage$tachyons_elm$Tachyons_Classes$items_end = 'items-end';
+var _justgage$tachyons_elm$Tachyons_Classes$items_center_ns = 'items-center-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$items_center_m = 'items-center-m';
+var _justgage$tachyons_elm$Tachyons_Classes$items_center_l = 'items-center-l';
+var _justgage$tachyons_elm$Tachyons_Classes$items_center = 'items-center';
+var _justgage$tachyons_elm$Tachyons_Classes$items_baseline_ns = 'items-baseline-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$items_baseline_m = 'items-baseline-m';
+var _justgage$tachyons_elm$Tachyons_Classes$items_baseline_l = 'items-baseline-l';
+var _justgage$tachyons_elm$Tachyons_Classes$items_baseline = 'items-baseline';
+var _justgage$tachyons_elm$Tachyons_Classes$input_reset = 'input-reset';
+var _justgage$tachyons_elm$Tachyons_Classes$inline_flex_ns = 'inline-flex-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$inline_flex_m = 'inline-flex-m';
+var _justgage$tachyons_elm$Tachyons_Classes$inline_flex_l = 'inline-flex-l';
+var _justgage$tachyons_elm$Tachyons_Classes$inline_flex = 'inline-flex';
+var _justgage$tachyons_elm$Tachyons_Classes$indent_ns = 'indent-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$indent_m = 'indent-m';
+var _justgage$tachyons_elm$Tachyons_Classes$indent_l = 'indent-l';
+var _justgage$tachyons_elm$Tachyons_Classes$indent = 'indent';
+var _justgage$tachyons_elm$Tachyons_Classes$i_ns = 'i-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$i_m = 'i-m';
+var _justgage$tachyons_elm$Tachyons_Classes$i_l = 'i-l';
+var _justgage$tachyons_elm$Tachyons_Classes$i = 'i';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_yellow = 'hover-yellow';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_white_90 = 'hover-white-90';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_white_80 = 'hover-white-80';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_white_70 = 'hover-white-70';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_white_60 = 'hover-white-60';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_white_50 = 'hover-white-50';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_white_40 = 'hover-white-40';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_white_30 = 'hover-white-30';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_white_20 = 'hover-white-20';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_white_10 = 'hover-white-10';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_white = 'hover-white';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_washed_yellow = 'hover-washed-yellow';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_washed_red = 'hover-washed-red';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_washed_green = 'hover-washed-green';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_washed_blue = 'hover-washed-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_silver = 'hover-silver';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_red = 'hover-red';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_purple = 'hover-purple';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_pink = 'hover-pink';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_orange = 'hover-orange';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_near_white = 'hover-near-white';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_near_black = 'hover-near-black';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_navy = 'hover-navy';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_moon_gray = 'hover-moon-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_mid_gray = 'hover-mid-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_lightest_blue = 'hover-lightest-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_light_yellow = 'hover-light-yellow';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_light_silver = 'hover-light-silver';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_light_red = 'hover-light-red';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_light_purple = 'hover-light-purple';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_light_pink = 'hover-light-pink';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_light_green = 'hover-light-green';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_light_gray = 'hover-light-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_light_blue = 'hover-light-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_inherit = 'hover-inherit';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_hot_pink = 'hover-hot-pink';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_green = 'hover-green';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_gray = 'hover-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_gold = 'hover-gold';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_dark_red = 'hover-dark-red';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_dark_pink = 'hover-dark-pink';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_dark_green = 'hover-dark-green';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_dark_gray = 'hover-dark-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_dark_blue = 'hover-dark-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_blue = 'hover-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_black_90 = 'hover-black-90';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_black_80 = 'hover-black-80';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_black_70 = 'hover-black-70';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_black_60 = 'hover-black-60';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_black_50 = 'hover-black-50';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_black_40 = 'hover-black-40';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_black_30 = 'hover-black-30';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_black_20 = 'hover-black-20';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_black_10 = 'hover-black-10';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_black = 'hover-black';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_yellow = 'hover-bg-yellow';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_white_90 = 'hover-bg-white-90';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_white_80 = 'hover-bg-white-80';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_white_70 = 'hover-bg-white-70';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_white_60 = 'hover-bg-white-60';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_white_50 = 'hover-bg-white-50';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_white_40 = 'hover-bg-white-40';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_white_30 = 'hover-bg-white-30';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_white_20 = 'hover-bg-white-20';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_white_10 = 'hover-bg-white-10';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_white = 'hover-bg-white';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_washed_yellow = 'hover-bg-washed-yellow';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_washed_red = 'hover-bg-washed-red';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_washed_green = 'hover-bg-washed-green';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_washed_blue = 'hover-bg-washed-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_transparent = 'hover-bg-transparent';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_silver = 'hover-bg-silver';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_red = 'hover-bg-red';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_purple = 'hover-bg-purple';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_pink = 'hover-bg-pink';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_orange = 'hover-bg-orange';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_near_white = 'hover-bg-near-white';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_near_black = 'hover-bg-near-black';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_navy = 'hover-bg-navy';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_moon_gray = 'hover-bg-moon-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_mid_gray = 'hover-bg-mid-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_lightest_blue = 'hover-bg-lightest-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_light_yellow = 'hover-bg-light-yellow';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_light_silver = 'hover-bg-light-silver';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_light_red = 'hover-bg-light-red';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_light_purple = 'hover-bg-light-purple';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_light_pink = 'hover-bg-light-pink';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_light_green = 'hover-bg-light-green';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_light_gray = 'hover-bg-light-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_light_blue = 'hover-bg-light-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_inherit = 'hover-bg-inherit';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_hot_pink = 'hover-bg-hot-pink';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_green = 'hover-bg-green';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_gray = 'hover-bg-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_gold = 'hover-bg-gold';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_dark_red = 'hover-bg-dark-red';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_dark_pink = 'hover-bg-dark-pink';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_dark_green = 'hover-bg-dark-green';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_dark_gray = 'hover-bg-dark-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_dark_blue = 'hover-bg-dark-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_blue = 'hover-bg-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_black_90 = 'hover-bg-black-90';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_black_80 = 'hover-bg-black-80';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_black_70 = 'hover-bg-black-70';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_black_60 = 'hover-bg-black-60';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_black_50 = 'hover-bg-black-50';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_black_40 = 'hover-bg-black-40';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_black_30 = 'hover-bg-black-30';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_black_20 = 'hover-bg-black-20';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_black_10 = 'hover-bg-black-10';
+var _justgage$tachyons_elm$Tachyons_Classes$hover_bg_black = 'hover-bg-black';
+var _justgage$tachyons_elm$Tachyons_Classes$hot_pink = 'hot-pink';
+var _justgage$tachyons_elm$Tachyons_Classes$hide_child = 'hide-child';
+var _justgage$tachyons_elm$Tachyons_Classes$helvetica = 'helvetica';
+var _justgage$tachyons_elm$Tachyons_Classes$h5_ns = 'h5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$h5_m = 'h5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$h5_l = 'h5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$h5 = 'h5';
+var _justgage$tachyons_elm$Tachyons_Classes$h4_ns = 'h4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$h4_m = 'h4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$h4_l = 'h4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$h4 = 'h4';
+var _justgage$tachyons_elm$Tachyons_Classes$h3_ns = 'h3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$h3_m = 'h3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$h3_l = 'h3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$h3 = 'h3';
+var _justgage$tachyons_elm$Tachyons_Classes$h2_ns = 'h2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$h2_m = 'h2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$h2_l = 'h2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$h2 = 'h2';
+var _justgage$tachyons_elm$Tachyons_Classes$h1_ns = 'h1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$h1_m = 'h1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$h1_l = 'h1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$h1 = 'h1';
+var _justgage$tachyons_elm$Tachyons_Classes$h_inherit_ns = 'h-inherit-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$h_inherit_m = 'h-inherit-m';
+var _justgage$tachyons_elm$Tachyons_Classes$h_inherit_l = 'h-inherit-l';
+var _justgage$tachyons_elm$Tachyons_Classes$h_inherit = 'h-inherit';
+var _justgage$tachyons_elm$Tachyons_Classes$h_auto_ns = 'h-auto-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$h_auto_m = 'h-auto-m';
+var _justgage$tachyons_elm$Tachyons_Classes$h_auto_l = 'h-auto-l';
+var _justgage$tachyons_elm$Tachyons_Classes$h_auto = 'h-auto';
+var _justgage$tachyons_elm$Tachyons_Classes$h_75_ns = 'h-75-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$h_75_m = 'h-75-m';
+var _justgage$tachyons_elm$Tachyons_Classes$h_75_l = 'h-75-l';
+var _justgage$tachyons_elm$Tachyons_Classes$h_75 = 'h-75';
+var _justgage$tachyons_elm$Tachyons_Classes$h_50_ns = 'h-50-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$h_50_m = 'h-50-m';
+var _justgage$tachyons_elm$Tachyons_Classes$h_50_l = 'h-50-l';
+var _justgage$tachyons_elm$Tachyons_Classes$h_50 = 'h-50';
+var _justgage$tachyons_elm$Tachyons_Classes$h_25_ns = 'h-25-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$h_25_m = 'h-25-m';
+var _justgage$tachyons_elm$Tachyons_Classes$h_25_l = 'h-25-l';
+var _justgage$tachyons_elm$Tachyons_Classes$h_25 = 'h-25';
+var _justgage$tachyons_elm$Tachyons_Classes$h_100_ns = 'h-100-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$h_100_m = 'h-100-m';
+var _justgage$tachyons_elm$Tachyons_Classes$h_100_l = 'h-100-l';
+var _justgage$tachyons_elm$Tachyons_Classes$h_100 = 'h-100';
+var _justgage$tachyons_elm$Tachyons_Classes$grow_large = 'grow-large';
+var _justgage$tachyons_elm$Tachyons_Classes$grow = 'grow';
+var _justgage$tachyons_elm$Tachyons_Classes$green = 'green';
+var _justgage$tachyons_elm$Tachyons_Classes$gray = 'gray';
+var _justgage$tachyons_elm$Tachyons_Classes$gold = 'gold';
+var _justgage$tachyons_elm$Tachyons_Classes$glow = 'glow';
+var _justgage$tachyons_elm$Tachyons_Classes$georgia = 'georgia';
+var _justgage$tachyons_elm$Tachyons_Classes$garamond = 'garamond';
+var _justgage$tachyons_elm$Tachyons_Classes$fw9_ns = 'fw9-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$fw9_m = 'fw9-m';
+var _justgage$tachyons_elm$Tachyons_Classes$fw9_l = 'fw9-l';
+var _justgage$tachyons_elm$Tachyons_Classes$fw9 = 'fw9';
+var _justgage$tachyons_elm$Tachyons_Classes$fw8_ns = 'fw8-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$fw8_m = 'fw8-m';
+var _justgage$tachyons_elm$Tachyons_Classes$fw8_l = 'fw8-l';
+var _justgage$tachyons_elm$Tachyons_Classes$fw8 = 'fw8';
+var _justgage$tachyons_elm$Tachyons_Classes$fw7_ns = 'fw7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$fw7_m = 'fw7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$fw7_l = 'fw7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$fw7 = 'fw7';
+var _justgage$tachyons_elm$Tachyons_Classes$fw6_ns = 'fw6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$fw6_m = 'fw6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$fw6_l = 'fw6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$fw6 = 'fw6';
+var _justgage$tachyons_elm$Tachyons_Classes$fw5_ns = 'fw5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$fw5_m = 'fw5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$fw5_l = 'fw5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$fw5 = 'fw5';
+var _justgage$tachyons_elm$Tachyons_Classes$fw4_ns = 'fw4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$fw4_m = 'fw4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$fw4_l = 'fw4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$fw4 = 'fw4';
+var _justgage$tachyons_elm$Tachyons_Classes$fw3_ns = 'fw3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$fw3_m = 'fw3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$fw3_l = 'fw3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$fw3 = 'fw3';
+var _justgage$tachyons_elm$Tachyons_Classes$fw2_ns = 'fw2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$fw2_m = 'fw2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$fw2_l = 'fw2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$fw2 = 'fw2';
+var _justgage$tachyons_elm$Tachyons_Classes$fw1_ns = 'fw1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$fw1_m = 'fw1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$fw1_l = 'fw1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$fw1 = 'fw1';
+var _justgage$tachyons_elm$Tachyons_Classes$fs_normal_ns = 'fs-normal-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$fs_normal_m = 'fs-normal-m';
+var _justgage$tachyons_elm$Tachyons_Classes$fs_normal_l = 'fs-normal-l';
+var _justgage$tachyons_elm$Tachyons_Classes$fs_normal = 'fs-normal';
+var _justgage$tachyons_elm$Tachyons_Classes$fr_ns = 'fr-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$fr_m = 'fr-m';
+var _justgage$tachyons_elm$Tachyons_Classes$fr_l = 'fr-l';
+var _justgage$tachyons_elm$Tachyons_Classes$fr = 'fr';
+var _justgage$tachyons_elm$Tachyons_Classes$fn_ns = 'fn-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$fn_m = 'fn-m';
+var _justgage$tachyons_elm$Tachyons_Classes$fn_l = 'fn-l';
+var _justgage$tachyons_elm$Tachyons_Classes$fn = 'fn';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_wrap_reverse_ns = 'flex-wrap-reverse-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_wrap_reverse_m = 'flex-wrap-reverse-m';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_wrap_reverse_l = 'flex-wrap-reverse-l';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_wrap_reverse = 'flex-wrap-reverse';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_wrap_ns = 'flex-wrap-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_wrap_m = 'flex-wrap-m';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_wrap_l = 'flex-wrap-l';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_wrap = 'flex-wrap';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_row_reverse_ns = 'flex-row-reverse-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_row_reverse_m = 'flex-row-reverse-m';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_row_reverse_l = 'flex-row-reverse-l';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_row_reverse = 'flex-row-reverse';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_row_ns = 'flex-row-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_row_m = 'flex-row-m';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_row_l = 'flex-row-l';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_row = 'flex-row';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_ns = 'flex-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_nowrap_ns = 'flex-nowrap-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_nowrap_m = 'flex-nowrap-m';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_nowrap_l = 'flex-nowrap-l';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_nowrap = 'flex-nowrap';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_none_ns = 'flex-none-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_none_m = 'flex-none-m';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_none_l = 'flex-none-l';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_none = 'flex-none';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_m = 'flex-m';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_l = 'flex-l';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_column_reverse_ns = 'flex-column-reverse-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_column_reverse_m = 'flex-column-reverse-m';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_column_reverse_l = 'flex-column-reverse-l';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_column_reverse = 'flex-column-reverse';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_column_ns = 'flex-column-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_column_m = 'flex-column-m';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_column_l = 'flex-column-l';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_column = 'flex-column';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_auto_ns = 'flex-auto-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_auto_m = 'flex-auto-m';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_auto_l = 'flex-auto-l';
+var _justgage$tachyons_elm$Tachyons_Classes$flex_auto = 'flex-auto';
+var _justgage$tachyons_elm$Tachyons_Classes$flex = 'flex';
+var _justgage$tachyons_elm$Tachyons_Classes$fl_ns = 'fl-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$fl_m = 'fl-m';
+var _justgage$tachyons_elm$Tachyons_Classes$fl_l = 'fl-l';
+var _justgage$tachyons_elm$Tachyons_Classes$fl = 'fl';
+var _justgage$tachyons_elm$Tachyons_Classes$fixed_ns = 'fixed-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$fixed_m = 'fixed-m';
+var _justgage$tachyons_elm$Tachyons_Classes$fixed_l = 'fixed-l';
+var _justgage$tachyons_elm$Tachyons_Classes$fixed = 'fixed';
+var _justgage$tachyons_elm$Tachyons_Classes$f7_ns = 'f7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$f7_m = 'f7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$f7_l = 'f7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$f7 = 'f7';
+var _justgage$tachyons_elm$Tachyons_Classes$f6_ns = 'f6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$f6_m = 'f6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$f6_l = 'f6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$f6 = 'f6';
+var _justgage$tachyons_elm$Tachyons_Classes$f5_ns = 'f5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$f5_m = 'f5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$f5_l = 'f5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$f5 = 'f5';
+var _justgage$tachyons_elm$Tachyons_Classes$f4_ns = 'f4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$f4_m = 'f4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$f4_l = 'f4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$f4 = 'f4';
+var _justgage$tachyons_elm$Tachyons_Classes$f3_ns = 'f3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$f3_m = 'f3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$f3_l = 'f3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$f3 = 'f3';
+var _justgage$tachyons_elm$Tachyons_Classes$f2_ns = 'f2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$f2_m = 'f2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$f2_l = 'f2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$f2 = 'f2';
+var _justgage$tachyons_elm$Tachyons_Classes$f1_ns = 'f1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$f1_m = 'f1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$f1_l = 'f1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$f1 = 'f1';
+var _justgage$tachyons_elm$Tachyons_Classes$f_subheadline_ns = 'f-subheadline-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$f_subheadline_m = 'f-subheadline-m';
+var _justgage$tachyons_elm$Tachyons_Classes$f_subheadline_l = 'f-subheadline-l';
+var _justgage$tachyons_elm$Tachyons_Classes$f_subheadline = 'f-subheadline';
+var _justgage$tachyons_elm$Tachyons_Classes$f_headline_ns = 'f-headline-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$f_headline_m = 'f-headline-m';
+var _justgage$tachyons_elm$Tachyons_Classes$f_headline_l = 'f-headline-l';
+var _justgage$tachyons_elm$Tachyons_Classes$f_headline = 'f-headline';
+var _justgage$tachyons_elm$Tachyons_Classes$f_6_ns = 'f-6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$f_6_m = 'f-6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$f_6_l = 'f-6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$f_6 = 'f-6';
+var _justgage$tachyons_elm$Tachyons_Classes$f_5_ns = 'f-5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$f_5_m = 'f-5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$f_5_l = 'f-5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$f_5 = 'f-5';
+var _justgage$tachyons_elm$Tachyons_Classes$dtc_ns = 'dtc-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$dtc_m = 'dtc-m';
+var _justgage$tachyons_elm$Tachyons_Classes$dtc_l = 'dtc-l';
+var _justgage$tachyons_elm$Tachyons_Classes$dtc = 'dtc';
+var _justgage$tachyons_elm$Tachyons_Classes$dt_row_ns = 'dt-row-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$dt_row_m = 'dt-row-m';
+var _justgage$tachyons_elm$Tachyons_Classes$dt_row_l = 'dt-row-l';
+var _justgage$tachyons_elm$Tachyons_Classes$dt_row_group_ns = 'dt-row-group-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$dt_row_group_m = 'dt-row-group-m';
+var _justgage$tachyons_elm$Tachyons_Classes$dt_row_group_l = 'dt-row-group-l';
+var _justgage$tachyons_elm$Tachyons_Classes$dt_row_group = 'dt-row-group';
+var _justgage$tachyons_elm$Tachyons_Classes$dt_row = 'dt-row';
+var _justgage$tachyons_elm$Tachyons_Classes$dt_ns = 'dt-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$dt_m = 'dt-m';
+var _justgage$tachyons_elm$Tachyons_Classes$dt_l = 'dt-l';
+var _justgage$tachyons_elm$Tachyons_Classes$dt_column_ns = 'dt-column-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$dt_column_m = 'dt-column-m';
+var _justgage$tachyons_elm$Tachyons_Classes$dt_column_l = 'dt-column-l';
+var _justgage$tachyons_elm$Tachyons_Classes$dt_column_group_ns = 'dt-column-group-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$dt_column_group_m = 'dt-column-group-m';
+var _justgage$tachyons_elm$Tachyons_Classes$dt_column_group_l = 'dt-column-group-l';
+var _justgage$tachyons_elm$Tachyons_Classes$dt_column_group = 'dt-column-group';
+var _justgage$tachyons_elm$Tachyons_Classes$dt_column = 'dt-column';
+var _justgage$tachyons_elm$Tachyons_Classes$dt__fixed_ns = 'dt--fixed-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$dt__fixed_m = 'dt--fixed-m';
+var _justgage$tachyons_elm$Tachyons_Classes$dt__fixed_l = 'dt--fixed-l';
+var _justgage$tachyons_elm$Tachyons_Classes$dt__fixed = 'dt--fixed';
+var _justgage$tachyons_elm$Tachyons_Classes$dt = 'dt';
+var _justgage$tachyons_elm$Tachyons_Classes$dn_ns = 'dn-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$dn_m = 'dn-m';
+var _justgage$tachyons_elm$Tachyons_Classes$dn_l = 'dn-l';
+var _justgage$tachyons_elm$Tachyons_Classes$dn = 'dn';
+var _justgage$tachyons_elm$Tachyons_Classes$dit_ns = 'dit-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$dit_m = 'dit-m';
+var _justgage$tachyons_elm$Tachyons_Classes$dit_l = 'dit-l';
+var _justgage$tachyons_elm$Tachyons_Classes$dit = 'dit';
+var _justgage$tachyons_elm$Tachyons_Classes$dim = 'dim';
+var _justgage$tachyons_elm$Tachyons_Classes$dib_ns = 'dib-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$dib_m = 'dib-m';
+var _justgage$tachyons_elm$Tachyons_Classes$dib_l = 'dib-l';
+var _justgage$tachyons_elm$Tachyons_Classes$dib = 'dib';
+var _justgage$tachyons_elm$Tachyons_Classes$di_ns = 'di-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$di_m = 'di-m';
+var _justgage$tachyons_elm$Tachyons_Classes$di_l = 'di-l';
+var _justgage$tachyons_elm$Tachyons_Classes$di = 'di';
+var _justgage$tachyons_elm$Tachyons_Classes$debug_white = 'debug-white';
+var _justgage$tachyons_elm$Tachyons_Classes$debug_grid_8_solid = 'debug-grid-8-solid';
+var _justgage$tachyons_elm$Tachyons_Classes$debug_grid_16_solid = 'debug-grid-16-solid';
+var _justgage$tachyons_elm$Tachyons_Classes$debug_grid_16 = 'debug-grid-16';
+var _justgage$tachyons_elm$Tachyons_Classes$debug_grid = 'debug-grid';
+var _justgage$tachyons_elm$Tachyons_Classes$debug_black = 'debug-black';
+var _justgage$tachyons_elm$Tachyons_Classes$debug = 'debug';
+var _justgage$tachyons_elm$Tachyons_Classes$db_ns = 'db-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$db_m = 'db-m';
+var _justgage$tachyons_elm$Tachyons_Classes$db_l = 'db-l';
+var _justgage$tachyons_elm$Tachyons_Classes$db = 'db';
+var _justgage$tachyons_elm$Tachyons_Classes$dark_red = 'dark-red';
+var _justgage$tachyons_elm$Tachyons_Classes$dark_pink = 'dark-pink';
+var _justgage$tachyons_elm$Tachyons_Classes$dark_green = 'dark-green';
+var _justgage$tachyons_elm$Tachyons_Classes$dark_gray = 'dark-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$dark_blue = 'dark-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$cr_ns = 'cr-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$cr_m = 'cr-m';
+var _justgage$tachyons_elm$Tachyons_Classes$cr_l = 'cr-l';
+var _justgage$tachyons_elm$Tachyons_Classes$cr = 'cr';
+var _justgage$tachyons_elm$Tachyons_Classes$cover_ns = 'cover-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$cover_m = 'cover-m';
+var _justgage$tachyons_elm$Tachyons_Classes$cover_l = 'cover-l';
+var _justgage$tachyons_elm$Tachyons_Classes$cover = 'cover';
+var _justgage$tachyons_elm$Tachyons_Classes$courier = 'courier';
+var _justgage$tachyons_elm$Tachyons_Classes$content_stretch_ns = 'content-stretch-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$content_stretch_m = 'content-stretch-m';
+var _justgage$tachyons_elm$Tachyons_Classes$content_stretch_l = 'content-stretch-l';
+var _justgage$tachyons_elm$Tachyons_Classes$content_stretch = 'content-stretch';
+var _justgage$tachyons_elm$Tachyons_Classes$content_start_ns = 'content-start-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$content_start_m = 'content-start-m';
+var _justgage$tachyons_elm$Tachyons_Classes$content_start_l = 'content-start-l';
+var _justgage$tachyons_elm$Tachyons_Classes$content_start = 'content-start';
+var _justgage$tachyons_elm$Tachyons_Classes$content_end_ns = 'content-end-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$content_end_m = 'content-end-m';
+var _justgage$tachyons_elm$Tachyons_Classes$content_end_l = 'content-end-l';
+var _justgage$tachyons_elm$Tachyons_Classes$content_end = 'content-end';
+var _justgage$tachyons_elm$Tachyons_Classes$content_center_ns = 'content-center-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$content_center_m = 'content-center-m';
+var _justgage$tachyons_elm$Tachyons_Classes$content_center_l = 'content-center-l';
+var _justgage$tachyons_elm$Tachyons_Classes$content_center = 'content-center';
+var _justgage$tachyons_elm$Tachyons_Classes$content_between_ns = 'content-between-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$content_between_m = 'content-between-m';
+var _justgage$tachyons_elm$Tachyons_Classes$content_between_l = 'content-between-l';
+var _justgage$tachyons_elm$Tachyons_Classes$content_between = 'content-between';
+var _justgage$tachyons_elm$Tachyons_Classes$content_around_ns = 'content-around-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$content_around_m = 'content-around-m';
+var _justgage$tachyons_elm$Tachyons_Classes$content_around_l = 'content-around-l';
+var _justgage$tachyons_elm$Tachyons_Classes$content_around = 'content-around';
+var _justgage$tachyons_elm$Tachyons_Classes$contain_ns = 'contain-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$contain_m = 'contain-m';
+var _justgage$tachyons_elm$Tachyons_Classes$contain_l = 'contain-l';
+var _justgage$tachyons_elm$Tachyons_Classes$contain = 'contain';
+var _justgage$tachyons_elm$Tachyons_Classes$color_inherit = 'color-inherit';
+var _justgage$tachyons_elm$Tachyons_Classes$collapse = 'collapse';
+var _justgage$tachyons_elm$Tachyons_Classes$code = 'code';
+var _justgage$tachyons_elm$Tachyons_Classes$cn_ns = 'cn-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$cn_m = 'cn-m';
+var _justgage$tachyons_elm$Tachyons_Classes$cn_l = 'cn-l';
+var _justgage$tachyons_elm$Tachyons_Classes$cn = 'cn';
+var _justgage$tachyons_elm$Tachyons_Classes$clip_ns = 'clip-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$clip_m = 'clip-m';
+var _justgage$tachyons_elm$Tachyons_Classes$clip_l = 'clip-l';
+var _justgage$tachyons_elm$Tachyons_Classes$clip = 'clip';
+var _justgage$tachyons_elm$Tachyons_Classes$cl_ns = 'cl-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$cl_m = 'cl-m';
+var _justgage$tachyons_elm$Tachyons_Classes$cl_l = 'cl-l';
+var _justgage$tachyons_elm$Tachyons_Classes$cl = 'cl';
+var _justgage$tachyons_elm$Tachyons_Classes$child = 'child';
+var _justgage$tachyons_elm$Tachyons_Classes$cf = 'cf';
+var _justgage$tachyons_elm$Tachyons_Classes$center_ns = 'center-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$center_m = 'center-m';
+var _justgage$tachyons_elm$Tachyons_Classes$center_l = 'center-l';
+var _justgage$tachyons_elm$Tachyons_Classes$center = 'center';
+var _justgage$tachyons_elm$Tachyons_Classes$cb_ns = 'cb-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$cb_m = 'cb-m';
+var _justgage$tachyons_elm$Tachyons_Classes$cb_l = 'cb-l';
+var _justgage$tachyons_elm$Tachyons_Classes$cb = 'cb';
+var _justgage$tachyons_elm$Tachyons_Classes$calisto = 'calisto';
+var _justgage$tachyons_elm$Tachyons_Classes$bw5_ns = 'bw5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bw5_m = 'bw5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bw5_l = 'bw5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bw5 = 'bw5';
+var _justgage$tachyons_elm$Tachyons_Classes$bw4_ns = 'bw4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bw4_m = 'bw4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bw4_l = 'bw4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bw4 = 'bw4';
+var _justgage$tachyons_elm$Tachyons_Classes$bw3_ns = 'bw3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bw3_m = 'bw3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bw3_l = 'bw3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bw3 = 'bw3';
+var _justgage$tachyons_elm$Tachyons_Classes$bw2_ns = 'bw2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bw2_m = 'bw2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bw2_l = 'bw2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bw2 = 'bw2';
+var _justgage$tachyons_elm$Tachyons_Classes$bw1_ns = 'bw1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bw1_m = 'bw1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bw1_l = 'bw1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bw1 = 'bw1';
+var _justgage$tachyons_elm$Tachyons_Classes$bw0_ns = 'bw0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bw0_m = 'bw0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bw0_l = 'bw0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bw0 = 'bw0';
+var _justgage$tachyons_elm$Tachyons_Classes$button_reset = 'button-reset';
+var _justgage$tachyons_elm$Tachyons_Classes$bt_ns = 'bt-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bt_m = 'bt-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bt_l = 'bt-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bt_0_ns = 'bt-0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bt_0_m = 'bt-0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bt_0_l = 'bt-0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bt_0 = 'bt-0';
+var _justgage$tachyons_elm$Tachyons_Classes$bt = 'bt';
+var _justgage$tachyons_elm$Tachyons_Classes$br4_ns = 'br4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$br4_m = 'br4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$br4_l = 'br4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$br4 = 'br4';
+var _justgage$tachyons_elm$Tachyons_Classes$br3_ns = 'br3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$br3_m = 'br3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$br3_l = 'br3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$br3 = 'br3';
+var _justgage$tachyons_elm$Tachyons_Classes$br2_ns = 'br2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$br2_m = 'br2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$br2_l = 'br2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$br2 = 'br2';
+var _justgage$tachyons_elm$Tachyons_Classes$br1_ns = 'br1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$br1_m = 'br1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$br1_l = 'br1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$br1 = 'br1';
+var _justgage$tachyons_elm$Tachyons_Classes$br0_ns = 'br0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$br0_m = 'br0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$br0_l = 'br0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$br0 = 'br0';
+var _justgage$tachyons_elm$Tachyons_Classes$br_pill_ns = 'br-pill-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$br_pill_m = 'br-pill-m';
+var _justgage$tachyons_elm$Tachyons_Classes$br_pill_l = 'br-pill-l';
+var _justgage$tachyons_elm$Tachyons_Classes$br_pill = 'br-pill';
+var _justgage$tachyons_elm$Tachyons_Classes$br_ns = 'br-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$br_m = 'br-m';
+var _justgage$tachyons_elm$Tachyons_Classes$br_l = 'br-l';
+var _justgage$tachyons_elm$Tachyons_Classes$br_100_ns = 'br-100-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$br_100_m = 'br-100-m';
+var _justgage$tachyons_elm$Tachyons_Classes$br_100_l = 'br-100-l';
+var _justgage$tachyons_elm$Tachyons_Classes$br_100 = 'br-100';
+var _justgage$tachyons_elm$Tachyons_Classes$br_0_ns = 'br-0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$br_0_m = 'br-0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$br_0_l = 'br-0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$br_0 = 'br-0';
+var _justgage$tachyons_elm$Tachyons_Classes$br__top_ns = 'br--top-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$br__top_m = 'br--top-m';
+var _justgage$tachyons_elm$Tachyons_Classes$br__top_l = 'br--top-l';
+var _justgage$tachyons_elm$Tachyons_Classes$br__top = 'br--top';
+var _justgage$tachyons_elm$Tachyons_Classes$br__right_ns = 'br--right-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$br__right_m = 'br--right-m';
+var _justgage$tachyons_elm$Tachyons_Classes$br__right_l = 'br--right-l';
+var _justgage$tachyons_elm$Tachyons_Classes$br__right = 'br--right';
+var _justgage$tachyons_elm$Tachyons_Classes$br__left_ns = 'br--left-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$br__left_m = 'br--left-m';
+var _justgage$tachyons_elm$Tachyons_Classes$br__left_l = 'br--left-l';
+var _justgage$tachyons_elm$Tachyons_Classes$br__left = 'br--left';
+var _justgage$tachyons_elm$Tachyons_Classes$br__bottom_ns = 'br--bottom-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$br__bottom_m = 'br--bottom-m';
+var _justgage$tachyons_elm$Tachyons_Classes$br__bottom_l = 'br--bottom-l';
+var _justgage$tachyons_elm$Tachyons_Classes$br__bottom = 'br--bottom';
+var _justgage$tachyons_elm$Tachyons_Classes$br = 'br';
+var _justgage$tachyons_elm$Tachyons_Classes$bottom_2_ns = 'bottom-2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bottom_2_m = 'bottom-2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bottom_2_l = 'bottom-2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bottom_2 = 'bottom-2';
+var _justgage$tachyons_elm$Tachyons_Classes$bottom_1_ns = 'bottom-1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bottom_1_m = 'bottom-1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bottom_1_l = 'bottom-1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bottom_1 = 'bottom-1';
+var _justgage$tachyons_elm$Tachyons_Classes$bottom_0_ns = 'bottom-0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bottom_0_m = 'bottom-0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bottom_0_l = 'bottom-0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bottom_0 = 'bottom-0';
+var _justgage$tachyons_elm$Tachyons_Classes$bottom__2_ns = 'bottom--2-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bottom__2_m = 'bottom--2-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bottom__2_l = 'bottom--2-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bottom__2 = 'bottom--2';
+var _justgage$tachyons_elm$Tachyons_Classes$bottom__1_ns = 'bottom--1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bottom__1_m = 'bottom--1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bottom__1_l = 'bottom--1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bottom__1 = 'bottom--1';
+var _justgage$tachyons_elm$Tachyons_Classes$border_box = 'border-box';
+var _justgage$tachyons_elm$Tachyons_Classes$bodoni = 'bodoni';
+var _justgage$tachyons_elm$Tachyons_Classes$bn_ns = 'bn-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bn_m = 'bn-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bn_l = 'bn-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bn = 'bn';
+var _justgage$tachyons_elm$Tachyons_Classes$blue = 'blue';
+var _justgage$tachyons_elm$Tachyons_Classes$black_90 = 'black-90';
+var _justgage$tachyons_elm$Tachyons_Classes$black_80 = 'black-80';
+var _justgage$tachyons_elm$Tachyons_Classes$black_70 = 'black-70';
+var _justgage$tachyons_elm$Tachyons_Classes$black_60 = 'black-60';
+var _justgage$tachyons_elm$Tachyons_Classes$black_50 = 'black-50';
+var _justgage$tachyons_elm$Tachyons_Classes$black_40 = 'black-40';
+var _justgage$tachyons_elm$Tachyons_Classes$black_30 = 'black-30';
+var _justgage$tachyons_elm$Tachyons_Classes$black_20 = 'black-20';
+var _justgage$tachyons_elm$Tachyons_Classes$black_10 = 'black-10';
+var _justgage$tachyons_elm$Tachyons_Classes$black_05 = 'black-05';
+var _justgage$tachyons_elm$Tachyons_Classes$black = 'black';
+var _justgage$tachyons_elm$Tachyons_Classes$bl_ns = 'bl-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bl_m = 'bl-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bl_l = 'bl-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bl_0_ns = 'bl-0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bl_0_m = 'bl-0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bl_0_l = 'bl-0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bl_0 = 'bl-0';
+var _justgage$tachyons_elm$Tachyons_Classes$bl = 'bl';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_yellow = 'bg-yellow';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_white_90 = 'bg-white-90';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_white_80 = 'bg-white-80';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_white_70 = 'bg-white-70';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_white_60 = 'bg-white-60';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_white_50 = 'bg-white-50';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_white_40 = 'bg-white-40';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_white_30 = 'bg-white-30';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_white_20 = 'bg-white-20';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_white_10 = 'bg-white-10';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_white = 'bg-white';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_washed_yellow = 'bg-washed-yellow';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_washed_red = 'bg-washed-red';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_washed_green = 'bg-washed-green';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_washed_blue = 'bg-washed-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_transparent = 'bg-transparent';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_top_ns = 'bg-top-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_top_m = 'bg-top-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_top_l = 'bg-top-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_top = 'bg-top';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_silver = 'bg-silver';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_right_ns = 'bg-right-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_right_m = 'bg-right-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_right_l = 'bg-right-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_right = 'bg-right';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_red = 'bg-red';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_purple = 'bg-purple';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_pink = 'bg-pink';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_orange = 'bg-orange';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_near_white = 'bg-near-white';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_near_black = 'bg-near-black';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_navy = 'bg-navy';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_moon_gray = 'bg-moon-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_mid_gray = 'bg-mid-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_lightest_blue = 'bg-lightest-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_light_yellow = 'bg-light-yellow';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_light_silver = 'bg-light-silver';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_light_red = 'bg-light-red';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_light_purple = 'bg-light-purple';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_light_pink = 'bg-light-pink';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_light_green = 'bg-light-green';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_light_gray = 'bg-light-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_light_blue = 'bg-light-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_left_ns = 'bg-left-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_left_m = 'bg-left-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_left_l = 'bg-left-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_left = 'bg-left';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_inherit = 'bg-inherit';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_hot_pink = 'bg-hot-pink';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_green = 'bg-green';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_gray = 'bg-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_gold = 'bg-gold';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_dark_red = 'bg-dark-red';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_dark_pink = 'bg-dark-pink';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_dark_green = 'bg-dark-green';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_dark_gray = 'bg-dark-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_dark_blue = 'bg-dark-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_center_ns = 'bg-center-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_center_m = 'bg-center-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_center_l = 'bg-center-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_center = 'bg-center';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_bottom_ns = 'bg-bottom-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_bottom_m = 'bg-bottom-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_bottom_l = 'bg-bottom-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_bottom = 'bg-bottom';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_blue = 'bg-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_black_90 = 'bg-black-90';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_black_80 = 'bg-black-80';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_black_70 = 'bg-black-70';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_black_60 = 'bg-black-60';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_black_50 = 'bg-black-50';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_black_40 = 'bg-black-40';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_black_30 = 'bg-black-30';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_black_20 = 'bg-black-20';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_black_10 = 'bg-black-10';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_black_05 = 'bg-black-05';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_black = 'bg-black';
+var _justgage$tachyons_elm$Tachyons_Classes$bg_animate = 'bg-animate';
+var _justgage$tachyons_elm$Tachyons_Classes$bb_ns = 'bb-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bb_m = 'bb-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bb_l = 'bb-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bb_0_ns = 'bb-0-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$bb_0_m = 'bb-0-m';
+var _justgage$tachyons_elm$Tachyons_Classes$bb_0_l = 'bb-0-l';
+var _justgage$tachyons_elm$Tachyons_Classes$bb_0 = 'bb-0';
+var _justgage$tachyons_elm$Tachyons_Classes$bb = 'bb';
+var _justgage$tachyons_elm$Tachyons_Classes$baskerville = 'baskerville';
+var _justgage$tachyons_elm$Tachyons_Classes$ba_ns = 'ba-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$ba_m = 'ba-m';
+var _justgage$tachyons_elm$Tachyons_Classes$ba_l = 'ba-l';
+var _justgage$tachyons_elm$Tachyons_Classes$ba = 'ba';
+var _justgage$tachyons_elm$Tachyons_Classes$b_ns = 'b-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$b_m = 'b-m';
+var _justgage$tachyons_elm$Tachyons_Classes$b_l = 'b-l';
+var _justgage$tachyons_elm$Tachyons_Classes$b__yellow = 'b--yellow';
+var _justgage$tachyons_elm$Tachyons_Classes$b__white_90 = 'b--white-90';
+var _justgage$tachyons_elm$Tachyons_Classes$b__white_80 = 'b--white-80';
+var _justgage$tachyons_elm$Tachyons_Classes$b__white_70 = 'b--white-70';
+var _justgage$tachyons_elm$Tachyons_Classes$b__white_60 = 'b--white-60';
+var _justgage$tachyons_elm$Tachyons_Classes$b__white_50 = 'b--white-50';
+var _justgage$tachyons_elm$Tachyons_Classes$b__white_40 = 'b--white-40';
+var _justgage$tachyons_elm$Tachyons_Classes$b__white_30 = 'b--white-30';
+var _justgage$tachyons_elm$Tachyons_Classes$b__white_20 = 'b--white-20';
+var _justgage$tachyons_elm$Tachyons_Classes$b__white_10 = 'b--white-10';
+var _justgage$tachyons_elm$Tachyons_Classes$b__white_05 = 'b--white-05';
+var _justgage$tachyons_elm$Tachyons_Classes$b__white_025 = 'b--white-025';
+var _justgage$tachyons_elm$Tachyons_Classes$b__white_0125 = 'b--white-0125';
+var _justgage$tachyons_elm$Tachyons_Classes$b__white = 'b--white';
+var _justgage$tachyons_elm$Tachyons_Classes$b__washed_yellow = 'b--washed-yellow';
+var _justgage$tachyons_elm$Tachyons_Classes$b__washed_red = 'b--washed-red';
+var _justgage$tachyons_elm$Tachyons_Classes$b__washed_green = 'b--washed-green';
+var _justgage$tachyons_elm$Tachyons_Classes$b__washed_blue = 'b--washed-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$b__transparent = 'b--transparent';
+var _justgage$tachyons_elm$Tachyons_Classes$b__solid_ns = 'b--solid-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$b__solid_m = 'b--solid-m';
+var _justgage$tachyons_elm$Tachyons_Classes$b__solid_l = 'b--solid-l';
+var _justgage$tachyons_elm$Tachyons_Classes$b__solid = 'b--solid';
+var _justgage$tachyons_elm$Tachyons_Classes$b__silver = 'b--silver';
+var _justgage$tachyons_elm$Tachyons_Classes$b__red = 'b--red';
+var _justgage$tachyons_elm$Tachyons_Classes$b__purple = 'b--purple';
+var _justgage$tachyons_elm$Tachyons_Classes$b__pink = 'b--pink';
+var _justgage$tachyons_elm$Tachyons_Classes$b__orange = 'b--orange';
+var _justgage$tachyons_elm$Tachyons_Classes$b__none_ns = 'b--none-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$b__none_m = 'b--none-m';
+var _justgage$tachyons_elm$Tachyons_Classes$b__none_l = 'b--none-l';
+var _justgage$tachyons_elm$Tachyons_Classes$b__none = 'b--none';
+var _justgage$tachyons_elm$Tachyons_Classes$b__near_white = 'b--near-white';
+var _justgage$tachyons_elm$Tachyons_Classes$b__near_black = 'b--near-black';
+var _justgage$tachyons_elm$Tachyons_Classes$b__navy = 'b--navy';
+var _justgage$tachyons_elm$Tachyons_Classes$b__moon_gray = 'b--moon-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$b__mid_gray = 'b--mid-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$b__lightest_blue = 'b--lightest-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$b__light_yellow = 'b--light-yellow';
+var _justgage$tachyons_elm$Tachyons_Classes$b__light_silver = 'b--light-silver';
+var _justgage$tachyons_elm$Tachyons_Classes$b__light_red = 'b--light-red';
+var _justgage$tachyons_elm$Tachyons_Classes$b__light_purple = 'b--light-purple';
+var _justgage$tachyons_elm$Tachyons_Classes$b__light_pink = 'b--light-pink';
+var _justgage$tachyons_elm$Tachyons_Classes$b__light_green = 'b--light-green';
+var _justgage$tachyons_elm$Tachyons_Classes$b__light_gray = 'b--light-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$b__light_blue = 'b--light-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$b__inherit = 'b--inherit';
+var _justgage$tachyons_elm$Tachyons_Classes$b__hot_pink = 'b--hot-pink';
+var _justgage$tachyons_elm$Tachyons_Classes$b__green = 'b--green';
+var _justgage$tachyons_elm$Tachyons_Classes$b__gray = 'b--gray';
+var _justgage$tachyons_elm$Tachyons_Classes$b__gold = 'b--gold';
+var _justgage$tachyons_elm$Tachyons_Classes$b__dotted_ns = 'b--dotted-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$b__dotted_m = 'b--dotted-m';
+var _justgage$tachyons_elm$Tachyons_Classes$b__dotted_l = 'b--dotted-l';
+var _justgage$tachyons_elm$Tachyons_Classes$b__dotted = 'b--dotted';
+var _justgage$tachyons_elm$Tachyons_Classes$b__dashed_ns = 'b--dashed-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$b__dashed_m = 'b--dashed-m';
+var _justgage$tachyons_elm$Tachyons_Classes$b__dashed_l = 'b--dashed-l';
+var _justgage$tachyons_elm$Tachyons_Classes$b__dashed = 'b--dashed';
+var _justgage$tachyons_elm$Tachyons_Classes$b__dark_red = 'b--dark-red';
+var _justgage$tachyons_elm$Tachyons_Classes$b__dark_pink = 'b--dark-pink';
+var _justgage$tachyons_elm$Tachyons_Classes$b__dark_green = 'b--dark-green';
+var _justgage$tachyons_elm$Tachyons_Classes$b__dark_gray = 'b--dark-gray';
+var _justgage$tachyons_elm$Tachyons_Classes$b__dark_blue = 'b--dark-blue';
+var _justgage$tachyons_elm$Tachyons_Classes$b__blue = 'b--blue';
+var _justgage$tachyons_elm$Tachyons_Classes$b__black_90 = 'b--black-90';
+var _justgage$tachyons_elm$Tachyons_Classes$b__black_80 = 'b--black-80';
+var _justgage$tachyons_elm$Tachyons_Classes$b__black_70 = 'b--black-70';
+var _justgage$tachyons_elm$Tachyons_Classes$b__black_60 = 'b--black-60';
+var _justgage$tachyons_elm$Tachyons_Classes$b__black_50 = 'b--black-50';
+var _justgage$tachyons_elm$Tachyons_Classes$b__black_40 = 'b--black-40';
+var _justgage$tachyons_elm$Tachyons_Classes$b__black_30 = 'b--black-30';
+var _justgage$tachyons_elm$Tachyons_Classes$b__black_20 = 'b--black-20';
+var _justgage$tachyons_elm$Tachyons_Classes$b__black_10 = 'b--black-10';
+var _justgage$tachyons_elm$Tachyons_Classes$b__black_05 = 'b--black-05';
+var _justgage$tachyons_elm$Tachyons_Classes$b__black_025 = 'b--black-025';
+var _justgage$tachyons_elm$Tachyons_Classes$b__black_0125 = 'b--black-0125';
+var _justgage$tachyons_elm$Tachyons_Classes$b__black = 'b--black';
+var _justgage$tachyons_elm$Tachyons_Classes$b = 'b';
+var _justgage$tachyons_elm$Tachyons_Classes$avenir = 'avenir';
+var _justgage$tachyons_elm$Tachyons_Classes$athelas = 'athelas';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio_ns = 'aspect-ratio-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio_m = 'aspect-ratio-m';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio_l = 'aspect-ratio-l';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__object_ns = 'aspect-ratio--object-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__object_m = 'aspect-ratio--object-m';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__object_l = 'aspect-ratio--object-l';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__object = 'aspect-ratio--object';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__9x16_ns = 'aspect-ratio--9x16-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__9x16_m = 'aspect-ratio--9x16-m';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__9x16_l = 'aspect-ratio--9x16-l';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__9x16 = 'aspect-ratio--9x16';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__8x5_ns = 'aspect-ratio--8x5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__8x5_m = 'aspect-ratio--8x5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__8x5_l = 'aspect-ratio--8x5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__8x5 = 'aspect-ratio--8x5';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__7x5_ns = 'aspect-ratio--7x5-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__7x5_m = 'aspect-ratio--7x5-m';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__7x5_l = 'aspect-ratio--7x5-l';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__7x5 = 'aspect-ratio--7x5';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__6x4_ns = 'aspect-ratio--6x4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__6x4_m = 'aspect-ratio--6x4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__6x4_l = 'aspect-ratio--6x4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__6x4 = 'aspect-ratio--6x4';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__5x8_ns = 'aspect-ratio--5x8-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__5x8_m = 'aspect-ratio--5x8-m';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__5x8_l = 'aspect-ratio--5x8-l';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__5x8 = 'aspect-ratio--5x8';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__5x7_ns = 'aspect-ratio--5x7-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__5x7_m = 'aspect-ratio--5x7-m';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__5x7_l = 'aspect-ratio--5x7-l';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__5x7 = 'aspect-ratio--5x7';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__4x6_ns = 'aspect-ratio--4x6-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__4x6_m = 'aspect-ratio--4x6-m';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__4x6_l = 'aspect-ratio--4x6-l';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__4x6 = 'aspect-ratio--4x6';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__4x3_ns = 'aspect-ratio--4x3-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__4x3_m = 'aspect-ratio--4x3-m';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__4x3_l = 'aspect-ratio--4x3-l';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__4x3 = 'aspect-ratio--4x3';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__3x4_ns = 'aspect-ratio--3x4-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__3x4_m = 'aspect-ratio--3x4-m';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__3x4_l = 'aspect-ratio--3x4-l';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__3x4 = 'aspect-ratio--3x4';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__1x1_ns = 'aspect-ratio--1x1-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__1x1_m = 'aspect-ratio--1x1-m';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__1x1_l = 'aspect-ratio--1x1-l';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__1x1 = 'aspect-ratio--1x1';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__16x9_ns = 'aspect-ratio--16x9-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__16x9_m = 'aspect-ratio--16x9-m';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__16x9_l = 'aspect-ratio--16x9-l';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio__16x9 = 'aspect-ratio--16x9';
+var _justgage$tachyons_elm$Tachyons_Classes$aspect_ratio = 'aspect-ratio';
+var _justgage$tachyons_elm$Tachyons_Classes$absolute_ns = 'absolute-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$absolute_m = 'absolute-m';
+var _justgage$tachyons_elm$Tachyons_Classes$absolute_l = 'absolute-l';
+var _justgage$tachyons_elm$Tachyons_Classes$absolute__fill_ns = 'absolute--fill-ns';
+var _justgage$tachyons_elm$Tachyons_Classes$absolute__fill_m = 'absolute--fill-m';
+var _justgage$tachyons_elm$Tachyons_Classes$absolute__fill_l = 'absolute--fill-l';
+var _justgage$tachyons_elm$Tachyons_Classes$absolute__fill = 'absolute--fill';
+var _justgage$tachyons_elm$Tachyons_Classes$absolute = 'absolute';
+
+var _user$project$App$renderHtml = function (str) {
 	return A2(
 		_elm_lang$html$Html_Attributes$property,
 		'innerHTML',
@@ -9323,64 +11380,132 @@ var _user$project$App$view = function (_p0) {
 	var _p1 = _p0;
 	return A2(
 		_elm_lang$html$Html$div,
-		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: _justgage$tachyons_elm$Tachyons$classes(
+				{
+					ctor: '::',
+					_0: _justgage$tachyons_elm$Tachyons_Classes$pa3,
+					_1: {
+						ctor: '::',
+						_0: _justgage$tachyons_elm$Tachyons_Classes$sans_serif,
+						_1: {ctor: '[]'}
+					}
+				}),
+			_1: {
+				ctor: '::',
+				_0: _elm_lang$html$Html_Attributes$style(
+					{
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: 'maxWidth', _1: '32rem'},
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: 'margin', _1: 'auto'},
+							_1: {ctor: '[]'}
+						}
+					}),
+				_1: {ctor: '[]'}
+			}
+		},
 		{
 			ctor: '::',
 			_0: A2(
 				_elm_lang$html$Html$h1,
+				{ctor: '[]'},
 				{
 					ctor: '::',
-					_0: _user$project$App$setHtml(_p1.title),
+					_0: _elm_lang$html$Html$text(_p1.title),
 					_1: {ctor: '[]'}
-				},
-				{ctor: '[]'}),
+				}),
 			_1: {
 				ctor: '::',
 				_0: A2(
 					_elm_lang$html$Html$p,
 					{
 						ctor: '::',
-						_0: _user$project$App$setHtml(_p1.content),
+						_0: _user$project$App$renderHtml(_p1.content),
 						_1: {ctor: '[]'}
 					},
 					{ctor: '[]'}),
-				_1: {ctor: '[]'}
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$p,
+						{
+							ctor: '::',
+							_0: _justgage$tachyons_elm$Tachyons$classes(
+								{
+									ctor: '::',
+									_0: _justgage$tachyons_elm$Tachyons_Classes$bg_dark_pink,
+									_1: {
+										ctor: '::',
+										_0: _justgage$tachyons_elm$Tachyons_Classes$white,
+										_1: {
+											ctor: '::',
+											_0: _justgage$tachyons_elm$Tachyons_Classes$flex,
+											_1: {
+												ctor: '::',
+												_0: _justgage$tachyons_elm$Tachyons_Classes$items_center,
+												_1: {
+													ctor: '::',
+													_0: _justgage$tachyons_elm$Tachyons_Classes$justify_start,
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									}
+								}),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$img,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$src(_p1.avatar),
+									_1: {ctor: '[]'}
+								},
+								{ctor: '[]'}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$span,
+									{
+										ctor: '::',
+										_0: _justgage$tachyons_elm$Tachyons$classes(
+											{
+												ctor: '::',
+												_0: _justgage$tachyons_elm$Tachyons_Classes$ml3,
+												_1: {
+													ctor: '::',
+													_0: _justgage$tachyons_elm$Tachyons_Classes$f3,
+													_1: {ctor: '[]'}
+												}
+											}),
+										_1: {ctor: '[]'}
+									},
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html$text(_p1.author),
+										_1: {ctor: '[]'}
+									}),
+								_1: {ctor: '[]'}
+							}
+						}),
+					_1: {ctor: '[]'}
+				}
 			}
 		});
 };
-var _user$project$App$responseToModel = F2(
-	function (_p2, model) {
-		var _p3 = _p2;
-		var _p4 = _p3.pageBy;
-		return _elm_lang$core$Native_Utils.update(
-			model,
-			{
-				title: A2(_elm_lang$core$Maybe$withDefault, model.title, _p4.title),
-				content: A2(_elm_lang$core$Maybe$withDefault, model.content, _p4.content)
-			});
-	});
-var _user$project$App$update = F2(
-	function (msg, model) {
-		var _p5 = msg;
-		if (_p5._0.ctor === 'Ok') {
-			return {
-				ctor: '_Tuple2',
-				_0: A2(_user$project$App$responseToModel, _p5._0._0, model),
-				_1: _elm_lang$core$Platform_Cmd$none
-			};
-		} else {
-			return {
-				ctor: '_Tuple2',
-				_0: _elm_lang$core$Native_Utils.update(
-					model,
-					{
-						content: _elm_lang$core$Basics$toString(_p5._0._0)
-					}),
-				_1: _elm_lang$core$Platform_Cmd$none
-			};
-		}
-	});
-var _user$project$App$baseRequest = _ghivert$elm_graphql$GraphQl$query('http://localhost:8000/graphql');
+var _user$project$App$extractAuthor = function (author) {
+	var _p2 = author;
+	if (_p2.ctor === 'Just') {
+		return A2(_elm_lang$core$Maybe$withDefault, '', _p2._0.name);
+	} else {
+		return 'unknown author';
+	}
+};
 var _user$project$App$pageRequest = A2(
 	_ghivert$elm_graphql$GraphQl$withVariables,
 	{ctor: '[]'},
@@ -9397,7 +11522,29 @@ var _user$project$App$pageRequest = A2(
 					_1: {
 						ctor: '::',
 						_0: _ghivert$elm_graphql$GraphQl$field('content'),
-						_1: {ctor: '[]'}
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_ghivert$elm_graphql$GraphQl$withSelectors,
+								{
+									ctor: '::',
+									_0: _ghivert$elm_graphql$GraphQl$field('name'),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_ghivert$elm_graphql$GraphQl$withSelectors,
+											{
+												ctor: '::',
+												_0: _ghivert$elm_graphql$GraphQl$field('url'),
+												_1: {ctor: '[]'}
+											},
+											_ghivert$elm_graphql$GraphQl$field('avatar')),
+										_1: {ctor: '[]'}
+									}
+								},
+								_ghivert$elm_graphql$GraphQl$field('author')),
+							_1: {ctor: '[]'}
+						}
 					}
 				},
 				A3(
@@ -9407,17 +11554,40 @@ var _user$project$App$pageRequest = A2(
 					_ghivert$elm_graphql$GraphQl$field('pageBy'))),
 			_1: {ctor: '[]'}
 		}));
-var _user$project$App$PageContent = F2(
+var _user$project$App$graphqlEndpoint = 'http://localhost:8000/graphql';
+var _user$project$App$baseRequest = _ghivert$elm_graphql$GraphQl$query(_user$project$App$graphqlEndpoint);
+var _user$project$App$Avatar = function (a) {
+	return {url: a};
+};
+var _user$project$App$decodeAvatar = A2(
+	_elm_lang$core$Json_Decode$map,
+	_user$project$App$Avatar,
+	_elm_lang$core$Json_Decode$maybe(
+		A2(_elm_lang$core$Json_Decode$field, 'url', _elm_lang$core$Json_Decode$string)));
+var _user$project$App$Author = F2(
 	function (a, b) {
-		return {title: a, content: b};
+		return {name: a, avatar: b};
 	});
-var _user$project$App$decodePageContent = A3(
+var _user$project$App$decodeAuthor = A3(
 	_elm_lang$core$Json_Decode$map2,
+	_user$project$App$Author,
+	_elm_lang$core$Json_Decode$maybe(
+		A2(_elm_lang$core$Json_Decode$field, 'name', _elm_lang$core$Json_Decode$string)),
+	_elm_lang$core$Json_Decode$maybe(
+		A2(_elm_lang$core$Json_Decode$field, 'avatar', _user$project$App$decodeAvatar)));
+var _user$project$App$PageContent = F3(
+	function (a, b, c) {
+		return {title: a, content: b, author: c};
+	});
+var _user$project$App$decodePageContent = A4(
+	_elm_lang$core$Json_Decode$map3,
 	_user$project$App$PageContent,
 	_elm_lang$core$Json_Decode$maybe(
 		A2(_elm_lang$core$Json_Decode$field, 'title', _elm_lang$core$Json_Decode$string)),
 	_elm_lang$core$Json_Decode$maybe(
-		A2(_elm_lang$core$Json_Decode$field, 'content', _elm_lang$core$Json_Decode$string)));
+		A2(_elm_lang$core$Json_Decode$field, 'content', _elm_lang$core$Json_Decode$string)),
+	_elm_lang$core$Json_Decode$maybe(
+		A2(_elm_lang$core$Json_Decode$field, 'author', _user$project$App$decodeAuthor)));
 var _user$project$App$PageBy = function (a) {
 	return {pageBy: a};
 };
@@ -9425,9 +11595,60 @@ var _user$project$App$decodePageBy = A2(
 	_elm_lang$core$Json_Decode$map,
 	_user$project$App$PageBy,
 	A2(_elm_lang$core$Json_Decode$field, 'pageBy', _user$project$App$decodePageContent));
-var _user$project$App$Model = F2(
-	function (a, b) {
-		return {title: a, content: b};
+var _user$project$App$Model = F4(
+	function (a, b, c, d) {
+		return {title: a, content: b, author: c, avatar: d};
+	});
+var _user$project$App$initModel = A4(_user$project$App$Model, '', '', '', '');
+var _user$project$App$extractUrl = function (avatar) {
+	var _p3 = avatar;
+	if (_p3.ctor === 'Just') {
+		return A2(_elm_lang$core$Maybe$withDefault, _user$project$App$initModel.avatar, _p3._0.url);
+	} else {
+		return _user$project$App$initModel.avatar;
+	}
+};
+var _user$project$App$extractAvatar = function (author) {
+	var _p4 = author;
+	if (_p4.ctor === 'Just') {
+		return _user$project$App$extractUrl(_p4._0.avatar);
+	} else {
+		return _user$project$App$initModel.avatar;
+	}
+};
+var _user$project$App$responseToModel = F2(
+	function (_p5, model) {
+		var _p6 = _p5;
+		var _p7 = _p6.pageBy;
+		return _elm_lang$core$Native_Utils.update(
+			model,
+			{
+				title: A2(_elm_lang$core$Maybe$withDefault, model.title, _p7.title),
+				content: A2(_elm_lang$core$Maybe$withDefault, model.content, _p7.content),
+				author: _user$project$App$extractAuthor(_p7.author),
+				avatar: _user$project$App$extractAvatar(_p7.author)
+			});
+	});
+var _user$project$App$update = F2(
+	function (msg, model) {
+		var _p8 = msg;
+		if (_p8._0.ctor === 'Ok') {
+			return {
+				ctor: '_Tuple2',
+				_0: A2(_user$project$App$responseToModel, _p8._0._0, model),
+				_1: _elm_lang$core$Platform_Cmd$none
+			};
+		} else {
+			return {
+				ctor: '_Tuple2',
+				_0: _elm_lang$core$Native_Utils.update(
+					model,
+					{
+						content: _elm_lang$core$Basics$toString(_p8._0._0)
+					}),
+				_1: _elm_lang$core$Platform_Cmd$none
+			};
+		}
 	});
 var _user$project$App$GotContent = function (a) {
 	return {ctor: 'GotContent', _0: a};
@@ -9436,15 +11657,11 @@ var _user$project$App$sendRequest = A2(
 	_ghivert$elm_graphql$GraphQl$send,
 	_user$project$App$GotContent,
 	A2(_user$project$App$baseRequest, _user$project$App$pageRequest, _user$project$App$decodePageBy));
-var _user$project$App$init = {
-	ctor: '_Tuple2',
-	_0: A2(_user$project$App$Model, '...', '...'),
-	_1: _user$project$App$sendRequest
-};
+var _user$project$App$init = {ctor: '_Tuple2', _0: _user$project$App$initModel, _1: _user$project$App$sendRequest};
 var _user$project$App$main = _elm_lang$html$Html$program(
 	{
 		init: _user$project$App$init,
-		subscriptions: function (_p6) {
+		subscriptions: function (_p9) {
 			return _elm_lang$core$Platform_Sub$none;
 		},
 		update: _user$project$App$update,

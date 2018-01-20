@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div id="elm-root"></div>
+    <script src="bundle.js"></script>
+    <script>
+      const root = document.getElementById("elm-root")
+      const app = Elm.Posts.embed(root)
+    </script>
+  </body>
+</html>

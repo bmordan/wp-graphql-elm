@@ -1,7 +1,11 @@
 {
   "scripts": {
-    "build": "cp src/*.html dist/ && elm-make src/index.elm --output dist/bundle.js",
-    "watch": "onchange src/*.elm -- npm run build",
-    "elm": "elm-reactor --port=3000"
+    "build:html": "rsync -avz --exclude *.elm src/ dist",
+    "build:elm": "elm-make src/App.elm --output dist/bundle.js",
+    "build:posts": "elm-make src/Posts.elm --output dist/posts/bundle.js",
+    "build": "npm run build:html && npm run build:elm && npm run build:posts",
+    "watch": "onchange src/*.elm -- npm run build:elm",
+    "elm": "elm-reactor --port=3000",
+    "deploy": "surge ./dist abusive-skate.surge.sh"
   }
 }
