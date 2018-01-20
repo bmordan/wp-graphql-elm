@@ -6,7 +6,7 @@ Get started with
 npm run build
 ```
 
-The site is built out into the `/dist` folder
+This is an Elm site that consumes a Wordpress API via a GraphQl. The site is built out into the `/dist` folder from the elm files and I'm deploying the built artifacts to [surge.sh](https://surge.sh)
 
 ## GraphQl
 
