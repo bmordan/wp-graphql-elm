@@ -1,10 +1,10 @@
 module Home exposing (main)
 
 import Json.Encode as Encode
-import Json.Decode as Decode exposing (Decoder, field, maybe, int, string, nullable)
-import Json.Decode.Pipeline exposing (decode, required, optional, hardcoded)
+import Json.Decode as Decode exposing (Decoder, at, field, maybe, int, string, nullable, list)
+import Json.Decode.Pipeline exposing (decode, required, optional, custom, requiredAt)
 import Http exposing (..)
-import Html exposing (text, img, h1, p, div, span)
+import Html exposing (a, text, img, h1, h2, p, div, span)
 import Html.Attributes exposing (style, classList, src)
 import GraphQl exposing (Operation, Variables, Query, Named)
 import Debug exposing (log)
@@ -38,15 +38,10 @@ defaultImage =
     "http://localhost:8000/wp-content/uploads/2018/01/CMF-new-logo.jpg"
 
 
-type alias PageBy =
+type alias Data =
     { pageBy : Page
+    , posts : Edges
     }
-
-
-decodePageBy : Decoder PageBy
-decodePageBy =
-    decode PageBy
-        |> required "pageBy" decodePage
 
 
 type alias Page =
@@ -55,11 +50,68 @@ type alias Page =
     }
 
 
+type alias FeaturedImage =
+    { sourceUrl : String
+    }
+
+
+type alias Edges =
+    { edges : List Node
+    }
+
+
+type alias Node =
+    { node : Post
+    }
+
+
+type alias Post =
+    { id : String
+    , slug : String
+    , title : String
+    , excerpt : Maybe String
+    }
+
+
+decodeData : Decoder Data
+decodeData =
+    decode Data
+        |> required "pageBy" decodePage
+        |> required "posts" decodeEdges
+
+
 decodePage : Decoder Page
 decodePage =
     decode Page
         |> required "content" (nullable string)
-        |> required "featureImage" decodeFeaturedImage
+        |> required "featuredImage" (nullable decodeFeaturedImage)
+
+
+decodeFeaturedImage : Decoder FeaturedImage
+decodeFeaturedImage =
+    decode FeaturedImage
+        |> optional "sourceUrl" string defaultImage
+
+
+decodeEdges : Decoder Edges
+decodeEdges =
+    decode Edges
+        |> required "edges" (Decode.list decodeNode)
+
+
+decodeNode : Decoder Node
+decodeNode =
+    decode Node
+        |> required "node" decodePost
+
+
+decodePost : Decoder Post
+decodePost =
+    decode Post
+        |> required "id" string
+        |> required "slug" string
+        |> required "title" string
+        |> required "excerpt" (nullable string)
 
 
 extractPageContent : Maybe String -> String
@@ -72,17 +124,6 @@ extractPageContent content =
             "no content"
 
 
-type alias FeaturedImage =
-    { sourceUrl : String
-    }
-
-
-decodeFeaturedImage : Decoder FeaturedImage
-decodeFeaturedImage =
-    decode FeaturedImage
-        |> optional "sourceUrl" string defaultImage
-
-
 extractPageFeaturedImage : Maybe FeaturedImage -> String
 extractPageFeaturedImage featuredImage =
     case featuredImage of
@@ -93,41 +134,14 @@ extractPageFeaturedImage featuredImage =
             defaultImage
 
 
+extractPostContent : Maybe String -> String
+extractPostContent content =
+    case content of
+        Just val ->
+            val
 
--- type alias Node =
---     { node : Maybe Post }
---
---
--- decodeNode : Decoder Node
--- decodeNode =
---     Decode.map Node
---         (field "node" decodePost)
---
---
--- type alias Post =
---     { title : Maybe String
---     , content : Maybe String
---     , featuredImage : Maybe FeaturedImage
---     }
---
---
--- decodePost : Decoder Post
--- decodePost =
---     Decode.map3 Post
---         (field "title" string)
---         (field "content" string)
---         (field "featuredImage" decodeFeaturedImage)
---
---
--- type alias Posts =
---     { edges : List Node
---     }
---
---
--- decodePosts : Decoder Posts
--- decodePosts =
---     Decode.map Posts
---         (field "edges" decodeNode)
+        Nothing ->
+            "Can't find content"
 
 
 pageRequest : Operation Query Variables
@@ -143,41 +157,56 @@ pageRequest =
                         [ GraphQl.field "sourceUrl"
                         ]
                 ]
+        , GraphQl.field "posts"
+            |> GraphQl.withSelectors
+                [ GraphQl.field "edges"
+                    |> GraphQl.withSelectors
+                        [ GraphQl.field "node"
+                            |> GraphQl.withSelectors
+                                [ GraphQl.field "id"
+                                , GraphQl.field "slug"
+                                , GraphQl.field "title"
+                                , GraphQl.field "excerpt"
+                                ]
+                        ]
+                ]
         ]
         |> GraphQl.withVariables []
 
 
 baseRequest :
     Operation Query Variables
-    -> Decoder PageBy
-    -> GraphQl.Request Query Variables PageBy
+    -> Decoder Data
+    -> GraphQl.Request Query Variables Data
 baseRequest =
     GraphQl.query graphqlEndpoint
 
 
 sendRequest : Cmd Msg
 sendRequest =
-    baseRequest pageRequest decodePageBy
+    baseRequest pageRequest decodeData
         |> GraphQl.send GotContent
 
 
-extractToModel : PageBy -> Model -> Model
-extractToModel { pageBy } model =
+extractToModel : Data -> Model -> Model
+extractToModel { pageBy, posts } model =
     { model
         | content = extractPageContent pageBy.content
         , featuredImage = extractPageFeaturedImage pageBy.featuredImage
+        , posts = List.map (\post -> post.node) posts.edges
     }
 
 
 type alias Model =
     { content : String
     , featuredImage : String
+    , posts : List Post
     }
 
 
 initModel : Model
 initModel =
-    Model "" ""
+    Model "" "" []
 
 
 init : ( Model, Cmd Msg )
@@ -186,14 +215,14 @@ init =
 
 
 type Msg
-    = GotContent (Result Error PageBy)
+    = GotContent (Result Error Data)
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        GotContent (Ok pageBy) ->
-            ( extractToModel pageBy model, Cmd.none )
+        GotContent (Ok data) ->
+            ( extractToModel data model, Cmd.none )
 
         GotContent (Err err) ->
             ( { model | content = toString err }, Cmd.none )
@@ -204,11 +233,22 @@ renderHtml str =
     (Html.Attributes.property "innerHTML" (Encode.string str))
 
 
+renderPost : Post -> Html.Html Msg
+renderPost post =
+    a [ Html.Attributes.href ("#" ++ post.slug) ]
+        [ div []
+            [ Html.h2 [] [ text post.title ]
+            , div [ renderHtml (Maybe.withDefault "" post.excerpt) ] []
+            ]
+        ]
+
+
 view : Model -> Html.Html Msg
-view { featuredImage, content } =
+view { featuredImage, content, posts } =
     div [ classes [ pa3, sans_serif ], style [ ( "maxWidth", "32rem" ), ( "margin", "auto" ) ] ]
         [ div []
             [ img [ src featuredImage ] []
             ]
         , div [ renderHtml content ] []
+        , div [] (List.map renderPost posts)
         ]
