@@ -1,7 +1,8 @@
 module Home exposing (main)
 
 import Json.Encode as Encode
-import Json.Decode as Decode exposing (Decoder, field, maybe, int, string)
+import Json.Decode as Decode exposing (Decoder, field, maybe, int, string, nullable)
+import Json.Decode.Pipeline exposing (decode, required, optional, hardcoded)
 import Http exposing (..)
 import Html exposing (text, img, h1, p, div, span)
 import Html.Attributes exposing (style, classList, src)
@@ -44,8 +45,8 @@ type alias PageBy =
 
 decodePageBy : Decoder PageBy
 decodePageBy =
-    Decode.map PageBy
-        (field "pageBy" decodePage)
+    decode PageBy
+        |> required "pageBy" decodePage
 
 
 type alias Page =
@@ -56,9 +57,9 @@ type alias Page =
 
 decodePage : Decoder Page
 decodePage =
-    Decode.map2 Page
-        (maybe (field "content" string))
-        (maybe (field "featuredImage" decodeFeaturedImage))
+    decode Page
+        |> required "content" (nullable string)
+        |> required "featureImage" decodeFeaturedImage
 
 
 extractPageContent : Maybe String -> String
@@ -78,8 +79,8 @@ type alias FeaturedImage =
 
 decodeFeaturedImage : Decoder FeaturedImage
 decodeFeaturedImage =
-    Decode.map FeaturedImage
-        (field "sourceUrl" string)
+    decode FeaturedImage
+        |> optional "sourceUrl" string defaultImage
 
 
 extractPageFeaturedImage : Maybe FeaturedImage -> String
