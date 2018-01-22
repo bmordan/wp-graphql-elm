@@ -4,7 +4,9 @@
     "repository": "https://github.com/user/project.git",
     "license": "BSD3",
     "source-directories": [
-        "./src/"
+        "./src/",
+        "./src/about-us",
+        "./src/contact-us"
     ],
     "exposed-modules": [],
     "dependencies": {

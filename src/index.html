@@ -2,13 +2,20 @@
   <head>
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Muslim Forum</title>
   </head>
   <body>
+    <nav class="flex justify-start items-center bg-dark-gray pa2 sans-serif">
+      <a class="mr2 flex-none white" href="/dist/index.html">Home</a>
+      <a class="mr2 flex-none white" href="/dist/news.html">News</a>
+      <a class="mr2 flex-none white" href="/dist/about-us/index.html">About Us</a>
+      <a class="mr2 flex-none white" href="/dist/contact-us/index.html">Contact Us</a>
+    </nav>
     <div id="elm-root"></div>
-    <script src="bundle.js"></script>
+    <script src="home.js"></script>
     <script>
       const root = document.getElementById("elm-root")
-      const app = Elm.App.embed(root)
+      const app = Elm.Home.embed(root)
     </script>
   </body>
 </html>
