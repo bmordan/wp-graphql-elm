@@ -10,6 +10,7 @@ import GraphQl exposing (Operation, Variables, Query, Named)
 import Debug exposing (log)
 import Tachyons exposing (..)
 import Tachyons.Classes exposing (..)
+import Config exposing (graphqlEndpoint)
 
 
 main : Program Never Model Msg
@@ -22,12 +23,6 @@ main =
         }
 
 
-graphqlEndpoint : String
-graphqlEndpoint =
-    -- "http://138.68.187.161:8000/graphql"
-    "http://localhost:8000/graphql"
-
-
 pageTitle : String
 pageTitle =
     "home"
@@ -35,7 +30,7 @@ pageTitle =
 
 defaultImage : String
 defaultImage =
-    "http://localhost:8000/wp-content/uploads/2018/01/CMF-new-logo.jpg"
+    "http://localhost/wp-content/uploads/2018/01/CMF.png"
 
 
 type alias Data =

@@ -1,16 +1,13 @@
 {
   "scripts": {
     "copy": "rsync -avz --exclude *.elm src/ dist",
-    "build:home": "elm-make src/home.elm --output dist/home.js",
-    "build:news": "elm-make src/news.elm --output dist/news.js",
-    "build:about-us": "elm-make src/about-us/about-us.elm --output dist/about-us/about-us.js",
-    "build:contact-us": "elm-make src/contact-us/contact-us.elm --output dist/contact-us/contact-us.js",
-    "build": "npm-run-all -p build",
+    "build:home": "elm-make src/elm/home.elm --output dist/home.js",
+    "build:news": "elm-make src/elm/news.elm --output dist/news.js",
+    "build:about-us": "elm-make src/elm/about-us.elm --output dist/about-us/about-us.js",
+    "build:contact-us": "elm-make src/elm/contact-us.elm --output dist/contact-us/contact-us.js",
+    "build": "npm run build:home && npm run build:news && npm run build:about-us && npm run build:contact-us",
     "watch": "onchange src/**/*.elm -- npm run build",
     "elm": "elm-reactor --port=3000",
     "deploy": "surge ./dist abusive-skate.surge.sh"
-  },
-  "devDependencies": {
-    "npm-run-all": "^4.1.2"
   }
 }

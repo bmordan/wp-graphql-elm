@@ -196,7 +196,7 @@ update msg model =
 
 view : Model -> Html.Html Msg
 view { title, content, author, avatar } =
-    div [ classes [ pa3, sans_serif ], style [ ( "maxWidth", "32rem" ), ( "margin", "auto" ) ] ]
+    div [ classes [ pa3 ], style [ ( "maxWidth", "32rem" ), ( "margin", "auto" ) ] ]
         [ Html.h1 [] [ text title ]
         , p [ renderHtml content ] []
         , p [ classes [ bg_dark_gray, white, flex, items_center, justify_start ] ]
