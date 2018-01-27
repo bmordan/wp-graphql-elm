@@ -12,6 +12,7 @@ import Navigation
 import Tachyons exposing (..)
 import Tachyons.Classes exposing (..)
 import Debug exposing (log)
+import List.Extra exposing (elemIndex, getAt)
 
 
 main =
@@ -65,16 +66,26 @@ type alias FullPost =
     }
 
 
+type alias Links =
+    ( Maybe String, Maybe String )
+
+
 type alias Model =
     { hash : Maybe String
     , posts : List ShortPost
     , post : Maybe FullPost
+    , prev : Maybe String
+    , next : Maybe String
     }
 
 
 init : Navigation.Location -> ( Model, Cmd Msg )
 init location =
-    ( Model (maybeHash location) [] Nothing, (updateModelWithLocation location) )
+    let
+        model =
+            Model (maybeHash location) [] Nothing Nothing Nothing
+    in
+        ( model, requestPostsCmd model )
 
 
 decodeData : Decoder Data
@@ -196,6 +207,16 @@ extractPosts { edges } =
         List.map createShortPostFromNode edges
 
 
+add1 : Int -> Int
+add1 n =
+    n + 1
+
+
+subtract1 : Int -> Int
+subtract1 n =
+    n - 1
+
+
 addPostsToModel : Data -> Model -> Model
 addPostsToModel { posts } model =
     { model | posts = extractPosts posts }
@@ -203,33 +224,77 @@ addPostsToModel { posts } model =
 
 addPostToModel : PostBy -> Model -> Model
 addPostToModel { postBy } model =
-    { model | post = Just postBy }
+    { model
+        | post = Just postBy
+        , prev = maybeLink model subtract1
+        , next = maybeLink model add1
+    }
 
 
-updateModelWithLocation : Navigation.Location -> Cmd Msg
-updateModelWithLocation location =
+maybeLink : Model -> (Int -> Int) -> Maybe String
+maybeLink model fn =
     let
+        posts =
+            List.map (\post -> post.slug) model.posts
+
         hash =
-            maybeHash location
+            case model.hash of
+                Just val ->
+                    val
+
+                Nothing ->
+                    ""
+
+        index =
+            elemIndex hash posts
     in
-        case hash of
-            Just uri ->
-                postBaseRequest (postRequest uri) decodePostBy
-                    |> GraphQl.send GotPost
+        case index of
+            Just ind ->
+                getAt (fn ind) posts
 
             Nothing ->
-                postsBaseRequest postsRequest decodeData
-                    |> GraphQl.send GotPosts
+                Nothing
+
+
+requestPostsCmd : Model -> Cmd Msg
+requestPostsCmd model =
+    if List.isEmpty model.posts then
+        postsBaseRequest postsRequest decodeData
+            |> GraphQl.send GotPosts
+    else
+        Cmd.none
+
+
+updatePostCmd : Model -> ( Model, Cmd Msg )
+updatePostCmd model =
+    let
+        command =
+            case model.hash of
+                Just uri ->
+                    postBaseRequest (postRequest uri) decodePostBy
+                        |> GraphQl.send GotPost
+
+                Nothing ->
+                    Cmd.none
+    in
+        ( model, command )
+
+
+updateModelWithLocation : Navigation.Location -> Model -> ( Model, Cmd Msg )
+updateModelWithLocation location model =
+    { model | hash = maybeHash location }
+        |> updatePostCmd
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         UrlChange location ->
-            ( { model | hash = maybeHash location }, (updateModelWithLocation location) )
+            updateModelWithLocation location model
 
         GotPosts (Ok data) ->
-            ( addPostsToModel data model, Cmd.none )
+            addPostsToModel data model
+                |> updatePostCmd
 
         GotPosts (Err err) ->
             ( model, Cmd.none )
@@ -251,27 +316,51 @@ createShortPostView post =
         ]
 
 
-createFullPostView : Maybe FullPost -> Html.Html Msg
-createFullPostView fullPost =
-    case fullPost of
+createFullPostView : Model -> Html.Html Msg
+createFullPostView model =
+    case model.post of
         Just post ->
             div []
                 [ a [ Html.Attributes.href (baseUrl ++ "/news.html#") ] [ text "<- back" ]
                 , Html.h2 [] [ text post.title ]
                 , div [ renderHtml post.content ] []
+                , div [ classes [ flex ] ]
+                    [ createPrevLink model.prev
+                    , createNextLink model.next
+                    ]
                 ]
 
         Nothing ->
             div [] []
 
 
+createPrevLink : Maybe String -> Html.Html Msg
+createPrevLink postLink =
+    case postLink of
+        Just link ->
+            a [ Html.Attributes.href (baseUrl ++ "/news.html#" ++ link), classes [ flex_auto, justify_start ] ] [ text ("<- " ++ link) ]
+
+        Nothing ->
+            a [ Html.Attributes.href (baseUrl ++ "/news.html#"), classes [ flex_auto, justify_start ] ] [ text "<- back to news" ]
+
+
+createNextLink : Maybe String -> Html.Html Msg
+createNextLink postLink =
+    case postLink of
+        Just link ->
+            a [ Html.Attributes.href (baseUrl ++ "/news.html#" ++ link), classes [ justify_end ] ] [ text (link ++ " ->") ]
+
+        Nothing ->
+            a [ Html.Attributes.href (baseUrl ++ "/news.html#"), classes [ justify_end ] ] [ text "back to news ->" ]
+
+
 view : Model -> Html.Html Msg
 view model =
     div []
-        [ div [] [ text (Maybe.withDefault "no hash" model.hash) ]
+        [ div [] []
         , case model.hash of
             Just hash ->
-                createFullPostView model.post
+                createFullPostView model
 
             Nothing ->
                 div [] (List.map createShortPostView model.posts)
