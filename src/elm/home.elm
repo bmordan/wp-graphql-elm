@@ -11,6 +11,7 @@ import Debug exposing (log)
 import Tachyons exposing (..)
 import Tachyons.Classes exposing (..)
 import Config exposing (graphqlEndpoint)
+import Elements exposing (navbar, footer)
 
 
 main : Program Never Model Msg
@@ -35,7 +36,6 @@ defaultImage =
 
 type alias Data =
     { pageBy : Page
-    , posts : Edges
     }
 
 
@@ -50,29 +50,10 @@ type alias FeaturedImage =
     }
 
 
-type alias Edges =
-    { edges : List Node
-    }
-
-
-type alias Node =
-    { node : Post
-    }
-
-
-type alias Post =
-    { id : String
-    , slug : String
-    , title : String
-    , excerpt : Maybe String
-    }
-
-
 decodeData : Decoder Data
 decodeData =
     decode Data
         |> required "pageBy" decodePage
-        |> required "posts" decodeEdges
 
 
 decodePage : Decoder Page
@@ -86,27 +67,6 @@ decodeFeaturedImage : Decoder FeaturedImage
 decodeFeaturedImage =
     decode FeaturedImage
         |> optional "sourceUrl" string defaultImage
-
-
-decodeEdges : Decoder Edges
-decodeEdges =
-    decode Edges
-        |> required "edges" (Decode.list decodeNode)
-
-
-decodeNode : Decoder Node
-decodeNode =
-    decode Node
-        |> required "node" decodePost
-
-
-decodePost : Decoder Post
-decodePost =
-    decode Post
-        |> required "id" string
-        |> required "slug" string
-        |> required "title" string
-        |> required "excerpt" (nullable string)
 
 
 extractPageContent : Maybe String -> String
@@ -129,16 +89,6 @@ extractPageFeaturedImage featuredImage =
             defaultImage
 
 
-extractPostContent : Maybe String -> String
-extractPostContent content =
-    case content of
-        Just val ->
-            val
-
-        Nothing ->
-            "Can't find content"
-
-
 pageRequest : Operation Query Variables
 pageRequest =
     GraphQl.named "query"
@@ -150,19 +100,6 @@ pageRequest =
                 , GraphQl.field "featuredImage"
                     |> GraphQl.withSelectors
                         [ GraphQl.field "sourceUrl"
-                        ]
-                ]
-        , GraphQl.field "posts"
-            |> GraphQl.withSelectors
-                [ GraphQl.field "edges"
-                    |> GraphQl.withSelectors
-                        [ GraphQl.field "node"
-                            |> GraphQl.withSelectors
-                                [ GraphQl.field "id"
-                                , GraphQl.field "slug"
-                                , GraphQl.field "title"
-                                , GraphQl.field "excerpt"
-                                ]
                         ]
                 ]
         ]
@@ -184,24 +121,22 @@ sendRequest =
 
 
 extractToModel : Data -> Model -> Model
-extractToModel { pageBy, posts } model =
+extractToModel { pageBy } model =
     { model
         | content = extractPageContent pageBy.content
         , featuredImage = extractPageFeaturedImage pageBy.featuredImage
-        , posts = List.map (\post -> post.node) posts.edges
     }
 
 
 type alias Model =
     { content : String
     , featuredImage : String
-    , posts : List Post
     }
 
 
 initModel : Model
 initModel =
-    Model "" "" []
+    Model "" ""
 
 
 init : ( Model, Cmd Msg )
@@ -228,22 +163,15 @@ renderHtml str =
     (Html.Attributes.property "innerHTML" (Encode.string str))
 
 
-renderPost : Post -> Html.Html Msg
-renderPost post =
-    a [ Html.Attributes.href ("#" ++ post.slug) ]
-        [ div []
-            [ Html.h2 [] [ text post.title ]
-            , div [ renderHtml (Maybe.withDefault "" post.excerpt) ] []
-            ]
-        ]
-
-
 view : Model -> Html.Html Msg
-view { featuredImage, content, posts } =
-    div [ classes [ pa3, sans_serif ], style [ ( "maxWidth", "32rem" ), ( "margin", "auto" ) ] ]
-        [ div []
-            [ img [ src featuredImage ] []
+view { featuredImage, content } =
+    div []
+        [ navbar
+        , div [ classes [ pa3, sans_serif ], style [ ( "maxWidth", "32rem" ), ( "margin", "auto" ) ] ]
+            [ div []
+                [ img [ src featuredImage ] []
+                ]
+            , div [ renderHtml content ] []
             ]
-        , div [ renderHtml content ] []
-        , div [] (List.map renderPost posts)
+        , footer
         ]

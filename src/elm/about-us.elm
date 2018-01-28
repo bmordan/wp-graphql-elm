@@ -9,6 +9,8 @@ import GraphQl exposing (Operation, Variables, Query, Named)
 import Debug exposing (log)
 import Tachyons exposing (..)
 import Tachyons.Classes exposing (..)
+import Config exposing (graphqlEndpoint)
+import Elements exposing (navbar, footer)
 
 
 main : Program Never Model Msg
@@ -19,12 +21,6 @@ main =
         , update = update
         , view = view
         }
-
-
-graphqlEndpoint : String
-graphqlEndpoint =
-    -- "http://138.68.187.161:8000/graphql"
-    "http://localhost:8000/graphql"
 
 
 pageTitle : String
@@ -196,11 +192,11 @@ update msg model =
 
 view : Model -> Html.Html Msg
 view { title, content, author, avatar } =
-    div [ classes [ pa3 ], style [ ( "maxWidth", "32rem" ), ( "margin", "auto" ) ] ]
-        [ Html.h1 [] [ text title ]
-        , p [ renderHtml content ] []
-        , p [ classes [ bg_dark_gray, white, flex, items_center, justify_start ] ]
-            [ img [ src avatar ] []
-            , span [ classes [ ml3, f3 ] ] [ text author ]
+    div []
+        [ navbar
+        , div [ classes [ pa3, sans_serif ], style [ ( "maxWidth", "32rem" ), ( "margin", "auto" ) ] ]
+            [ Html.h1 [] [ text title ]
+            , p [ renderHtml content ] []
             ]
+        , footer
         ]

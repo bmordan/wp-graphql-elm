@@ -2,14 +2,13 @@
   <head>
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.0/css/tachyons.min.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christian Muslim Forum</title>
+    <title>Articles</title>
   </head>
   <body>
     <div id="elm-root"></div>
-    <script src="home.js"></script>
+    <script src="articles.js"></script>
     <script>
-      const root = document.getElementById("elm-root")
-      const app = Elm.Home.embed(root)
+      Elm.Articles.embed(document.getElementById("elm-root"))
     </script>
   </body>
 </html>
