@@ -56,7 +56,8 @@ type alias PageBy =
 
 
 type alias Model =
-    { title : String
+    { loading : Bool
+    , title : String
     , content : String
     , author : String
     , avatar : String
@@ -65,7 +66,7 @@ type alias Model =
 
 initModel : Model
 initModel =
-    Model "" "" "" ""
+    Model True "" "" "" ""
 
 
 decodeAvatar : Decoder Avatar
@@ -167,6 +168,7 @@ responseToModel { pageBy } model =
         , content = Maybe.withDefault model.content pageBy.content
         , author = extractAuthor pageBy.author
         , avatar = extractAvatar pageBy.author
+        , loading = False
     }
 
 
@@ -187,16 +189,16 @@ update msg model =
             ( responseToModel response model, Cmd.none )
 
         GotContent (Err err) ->
-            ( { model | content = toString err }, Cmd.none )
+            ( { model | content = toString err, loading = False }, Cmd.none )
 
 
 view : Model -> Html.Html Msg
-view { title, content, author, avatar } =
+view { title, content, author, avatar, loading } =
     div []
         [ navbar
         , div [ classes [ pa3, sans_serif ], style [ ( "maxWidth", "32rem" ), ( "margin", "auto" ) ] ]
             [ Html.h1 [] [ text title ]
             , p [ renderHtml content ] []
             ]
-        , footer
+        , footer loading
         ]

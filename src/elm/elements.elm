@@ -41,8 +41,25 @@ navbar =
         ]
 
 
-footer : Html.Html msg
-footer =
-    div [ classes [ flex, items_center, justify_center, pv1, dark_gray, bg_white, mt6 ] ]
-        [ text "Christian Muslim Forum © copyright 2018"
-        ]
+footer : Bool -> Html.Html msg
+footer loading =
+    let
+        baseClasses =
+            [ flex
+            , items_center
+            , justify_center
+            , pv1
+            , dark_gray
+            , bg_white
+            , mt6
+            ]
+
+        loadingClasses =
+            if loading then
+                List.append baseClasses [ absolute, right_0, left_0, bottom_0 ]
+            else
+                baseClasses
+    in
+        div [ classes loadingClasses ]
+            [ text "Christian Muslim Forum © copyright 2018"
+            ]

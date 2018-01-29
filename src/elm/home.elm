@@ -125,18 +125,20 @@ extractToModel { pageBy } model =
     { model
         | content = extractPageContent pageBy.content
         , featuredImage = extractPageFeaturedImage pageBy.featuredImage
+        , loading = False
     }
 
 
 type alias Model =
     { content : String
     , featuredImage : String
+    , loading : Bool
     }
 
 
 initModel : Model
 initModel =
-    Model "" ""
+    Model "" "" True
 
 
 init : ( Model, Cmd Msg )
@@ -164,7 +166,7 @@ renderHtml str =
 
 
 view : Model -> Html.Html Msg
-view { featuredImage, content } =
+view { featuredImage, content, loading } =
     div []
         [ navbar
         , div [ classes [ pa3, sans_serif ], style [ ( "maxWidth", "32rem" ), ( "margin", "auto" ) ] ]
@@ -173,5 +175,5 @@ view { featuredImage, content } =
                 ]
             , div [ renderHtml content ] []
             ]
-        , footer
+        , footer loading
         ]
