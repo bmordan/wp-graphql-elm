@@ -8,4 +8,4 @@ graphqlEndpoint =
 
 baseUrl : String
 baseUrl =
-    "http://localhost:3000/dist"
+    "http://localhost:3000"
