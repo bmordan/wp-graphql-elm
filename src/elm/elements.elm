@@ -1,7 +1,8 @@
-module Elements exposing (navbar, footer)
+module Elements exposing (..)
 
-import Html exposing (nav, a, text, div)
-import Html.Attributes exposing (href)
+import Html exposing (nav, a, text, div, img)
+import Html.Attributes exposing (href, src)
+import Json.Encode as Encode
 import Config exposing (baseUrl)
 import Tachyons exposing (..)
 import Tachyons.Classes
@@ -63,3 +64,13 @@ footer loading =
         div [ classes loadingClasses ]
             [ text "Christian Muslim Forum © copyright 2018"
             ]
+
+
+strToHtml : String -> Html.Attribute msg
+strToHtml str =
+    (Html.Attributes.property "innerHTML" (Encode.string str))
+
+
+defaultImg : Html.Html msg
+defaultImg =
+    img [ src "http://localhost/wp-content/uploads/2018/01/placeholder.jpg" ] []
