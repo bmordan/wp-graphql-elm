@@ -2,9 +2,10 @@
   "scripts": {
     "copy": "rsync -avz --exclude elm src/ dist",
     "build:home": "elm-make src/elm/home.elm --output dist/home.js",
+    "build:article": "elm-make src/elm/article.elm --output dist/article.js",
     "build:articles": "elm-make src/elm/articles.elm --output dist/articles/articles.js",
     "build:about-us": "elm-make src/elm/about-us.elm --output dist/about-us/about-us.js",
-    "build": "npm run build:home && npm run build:articles && npm run build:about-us",
+    "build": "npm run build:home && npm run build:articles && npm run build:article && npm run build:about-us",
     "watch": "onchange src/**/*.elm -- npm run build",
     "elm": "elm-reactor --port=3000",
     "serve": "http-server ./dist -p 3000 -c-1",
