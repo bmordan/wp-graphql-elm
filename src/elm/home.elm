@@ -4,8 +4,9 @@ import Json.Encode as Encode
 import Json.Decode as Decode exposing (Decoder, at, field, maybe, int, string, nullable, list)
 import Json.Decode.Pipeline exposing (decode, required, optional, custom, requiredAt)
 import Http exposing (..)
-import Html exposing (a, text, img, h1, h2, p, div, span)
-import Html.Attributes exposing (style, classList, src)
+import Html exposing (a, text, img, h1, h2, p, div, span, input, button)
+import Html.Attributes exposing (style, classList, src, placeholder, value)
+import Html.Events exposing (onClick, onInput)
 import GraphQl exposing (Operation, Variables, Query, Named)
 import Debug exposing (log)
 import Tachyons exposing (..)
@@ -24,14 +25,33 @@ main =
         }
 
 
-pageTitle : String
-pageTitle =
-    "home"
+type Msg
+    = GotContent (Result Error Data)
+    | Term String
+    | GotSearch (Result Error Search)
+    | GoSearch
 
 
-defaultImage : String
-defaultImage =
-    "http://localhost/wp-content/uploads/2018/01/CMF.png"
+type alias Search =
+    { posts : Edges
+    }
+
+
+type alias Edges =
+    { edges : List Node
+    }
+
+
+type alias Node =
+    { node : Post
+    }
+
+
+type alias Post =
+    { title : String
+    , slug : String
+    , excerpt : String
+    }
 
 
 type alias Data =
@@ -50,6 +70,45 @@ type alias FeaturedImage =
     }
 
 
+type alias QueryArgs =
+    { search : String
+    }
+
+
+type alias Model =
+    { content : Maybe String
+    , featuredImage : Maybe FeaturedImage
+    , loading : Bool
+    , term : String
+    }
+
+
+decodeSearch : Decoder Search
+decodeSearch =
+    decode Search
+        |> required "posts" decodeEdges
+
+
+decodeEdges : Decoder Edges
+decodeEdges =
+    decode Edges
+        |> required "edges" (Decode.list decodeNode)
+
+
+decodeNode : Decoder Node
+decodeNode =
+    decode Node
+        |> required "node" decodePost
+
+
+decodePost : Decoder Post
+decodePost =
+    decode Post
+        |> required "title" string
+        |> required "slug" string
+        |> required "excerpt" string
+
+
 decodeData : Decoder Data
 decodeData =
     decode Data
@@ -66,34 +125,14 @@ decodePage =
 decodeFeaturedImage : Decoder FeaturedImage
 decodeFeaturedImage =
     decode FeaturedImage
-        |> optional "sourceUrl" string defaultImage
-
-
-extractPageContent : Maybe String -> String
-extractPageContent content =
-    case content of
-        Just val ->
-            val
-
-        Nothing ->
-            "no content"
-
-
-extractPageFeaturedImage : Maybe FeaturedImage -> String
-extractPageFeaturedImage featuredImage =
-    case featuredImage of
-        Just val ->
-            val.sourceUrl
-
-        Nothing ->
-            defaultImage
+        |> required "sourceUrl" string
 
 
 pageRequest : Operation Query Variables
 pageRequest =
     GraphQl.named "query"
         [ GraphQl.field "pageBy"
-            |> GraphQl.withArgument "uri" (GraphQl.string pageTitle)
+            |> GraphQl.withArgument "uri" (GraphQl.string "home")
             |> GraphQl.withSelectors
                 [ GraphQl.field "title"
                 , GraphQl.field "content"
@@ -120,34 +159,55 @@ sendRequest =
         |> GraphQl.send GotContent
 
 
+searchQuery : String -> Operation Query Variables
+searchQuery term =
+    GraphQl.named "searchQuery"
+        [ GraphQl.field "posts"
+            |> GraphQl.withArgument "where" (GraphQl.variable "search")
+            |> GraphQl.withSelectors
+                [ GraphQl.field "edges"
+                    |> GraphQl.withSelectors
+                        [ GraphQl.field "node"
+                            |> GraphQl.withSelectors
+                                [ GraphQl.field "slug"
+                                ]
+                        ]
+                ]
+        ]
+        |> GraphQl.withVariables [ ( "search", "QueryArgs" ) ]
+
+
+searchRequest :
+    Operation Query Variables
+    -> Decoder Search
+    -> GraphQl.Request Query Variables Search
+searchRequest =
+    GraphQl.query graphqlEndpoint
+
+
+sendSearch : String -> Cmd Msg
+sendSearch term =
+    let
+        searchTerm =
+            { search = term }
+    in
+        searchRequest (searchQuery term) decodeSearch
+            |> GraphQl.addVariables [ ( "search", (Encode.encode 0 searchTerm) ) ]
+            |> GraphQl.send GotSearch
+
+
 extractToModel : Data -> Model -> Model
 extractToModel { pageBy } model =
     { model
-        | content = extractPageContent pageBy.content
-        , featuredImage = extractPageFeaturedImage pageBy.featuredImage
+        | content = pageBy.content
+        , featuredImage = pageBy.featuredImage
         , loading = False
     }
 
 
-type alias Model =
-    { content : String
-    , featuredImage : String
-    , loading : Bool
-    }
-
-
-initModel : Model
-initModel =
-    Model "" "" True
-
-
 init : ( Model, Cmd Msg )
 init =
-    ( initModel, sendRequest )
-
-
-type Msg
-    = GotContent (Result Error Data)
+    ( Model Nothing Nothing True "", sendRequest )
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -157,7 +217,19 @@ update msg model =
             ( extractToModel data model, Cmd.none )
 
         GotContent (Err err) ->
-            ( { model | content = toString err }, Cmd.none )
+            ( model, Cmd.none )
+
+        Term search ->
+            ( { model | term = search }, Cmd.none )
+
+        GotSearch (Ok search) ->
+            ( { model | term = "" }, Cmd.none )
+
+        GotSearch (Err err) ->
+            ( { model | term = "search error" }, Cmd.none )
+
+        GoSearch ->
+            ( model, sendSearch model.term )
 
 
 renderHtml : String -> Html.Attribute msg
@@ -165,15 +237,32 @@ renderHtml str =
     (Html.Attributes.property "innerHTML" (Encode.string str))
 
 
+renderFeaturedImage : Maybe FeaturedImage -> Html.Html Msg
+renderFeaturedImage feature =
+    case feature of
+        Just val ->
+            img [ src val.sourceUrl ] []
+
+        Nothing ->
+            Elements.defaultImg
+
+
+searchBox : Model -> Html.Html Msg
+searchBox model =
+    div []
+        [ input [ onInput Term, placeholder "search our articles", value model.term ] []
+        , button [ onClick GoSearch ] [ text "Search" ]
+        ]
+
+
 view : Model -> Html.Html Msg
-view { featuredImage, content, loading } =
+view model =
     div []
         [ navbar
-        , div [ classes [ pa3, sans_serif ], style [ ( "maxWidth", "32rem" ), ( "margin", "auto" ) ] ]
-            [ div []
-                [ img [ src featuredImage ] []
-                ]
-            , div [ renderHtml content ] []
+        , div []
+            [ renderFeaturedImage model.featuredImage
+            , div [ renderHtml (Maybe.withDefault "" model.content) ] []
+            , searchBox model
             ]
-        , footer loading
+        , footer model.loading
         ]
