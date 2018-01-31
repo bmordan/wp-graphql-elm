@@ -20,7 +20,7 @@ import Tachyons.Classes
         , center
         , w_100
         , ba
-        , b__dark_gray
+        , b__light_gray
         , link
         , flex
         , justify_start
@@ -294,11 +294,11 @@ renderSmallAuthor { author, commentCount } =
 
 renderPost : Node -> Html.Html Msg
 renderPost { node } =
-    div [ classes [ db, mv3, ba, b__dark_gray ] ]
+    div [ classes [ db, mv3, ba, b__light_gray ] ]
         [ renderFeaturedImage node.featuredImage
         , div [ classes [ pa2, mt2 ] ]
             [ a [ href ("/article.html#" ++ node.slug), classes [ link ] ]
-                [ strong [] [ text node.title ]
+                [ strong [ strToHtml node.title ] []
                 ]
             , div [ strToHtml node.excerpt ] []
             , renderSmallAuthor node
