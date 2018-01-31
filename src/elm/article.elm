@@ -5,14 +5,12 @@ import Json.Decode as Decode exposing (Decoder, field, int, string, list, bool, 
 import Json.Decode.Pipeline exposing (decode, required, optional, requiredAt)
 import Http exposing (Error)
 import Html exposing (text, div, button, a, strong, img, span, p)
-import Html.Attributes exposing (href, src)
+import Html.Attributes exposing (href, src, style)
 import Html.Events exposing (onClick)
 import Dom exposing (Error)
 import Dom.Scroll exposing (toTop)
 import Task
 import Navigation
-import Process
-import Time
 import List.Extra exposing (elemIndex, getAt)
 import Config exposing (graphqlEndpoint, baseUrl)
 import GraphQl exposing (Operation, Variables, Query, Named)
@@ -35,9 +33,7 @@ import Tachyons.Classes
         , f3
         , overflow_y_scroll
         , mb4
-        , absolute
-        , top_0
-        , w_100
+        , h2
         )
 
 
@@ -70,7 +66,6 @@ type Msg
     | GotPosts (Result Http.Error PostsData)
     | GotPost (Result Http.Error PostBy)
     | Scroll
-    | NoOp
 
 
 type alias PostsData =
@@ -341,7 +336,7 @@ maybeLink model fn =
                 Nothing
 
 
-updatePost : Model -> PostBy -> ( Model, Cmd Msg )
+updatePost : Model -> PostBy -> Model
 updatePost model postdata =
     let
         slug =
@@ -354,7 +349,7 @@ updatePost model postdata =
                 , next = maybeLink model add1
             }
     in
-        ( newModel, Cmd.none )
+        newModel
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -374,15 +369,12 @@ update msg model =
             ( model, Cmd.none )
 
         GotPost (Ok postdata) ->
-            updatePost model postdata
+            ( updatePost model postdata, Task.attempt (always Scroll) <| toTop (Maybe.withDefault "elm-root" model.slug) )
 
         GotPost (Err err) ->
             ( model, Cmd.none )
 
         Scroll ->
-            ( model, Task.attempt (always NoOp) <| toTop (Maybe.withDefault "" model.slug) )
-
-        NoOp ->
             ( model, Cmd.none )
 
 
@@ -411,7 +403,7 @@ viewPost : Model -> Html.Html Msg
 viewPost model =
     case model.post of
         Just post ->
-            div [ Html.Attributes.id post.slug ]
+            div [ Html.Attributes.id post.slug, classes [ overflow_y_scroll ], style [ ( "height", "95vh" ) ] ]
                 [ viewFeaturedImage post.featuredImage
                 , div
                     [ classes [ bg_dark_gray, white, f3, pa2 ]
@@ -430,7 +422,7 @@ viewPrevLink : Maybe String -> Html.Html Msg
 viewPrevLink postLink =
     case postLink of
         Just link ->
-            a [ Html.Attributes.href (baseUrl ++ "/article.html#" ++ link), classes [ flex_auto, justify_start ] ] [ text ("<- " ++ link) ]
+            a [ Html.Attributes.href ("#" ++ link), classes [ flex_auto, justify_start ] ] [ text ("<- " ++ link) ]
 
         Nothing ->
             a [ Html.Attributes.href (baseUrl ++ "/articles"), classes [ flex_auto, justify_start ] ] [ text "<- back to articles" ]
@@ -440,7 +432,7 @@ viewNextLink : Maybe String -> Html.Html Msg
 viewNextLink postLink =
     case postLink of
         Just link ->
-            a [ Html.Attributes.href (baseUrl ++ "/article.html#" ++ link), classes [ justify_end ] ] [ text (link ++ " ->") ]
+            a [ Html.Attributes.href ("#" ++ link), classes [ justify_end ] ] [ text (link ++ " ->") ]
 
         Nothing ->
             a [ Html.Attributes.href (baseUrl ++ "/articles"), classes [ justify_end ] ] [ text "back to articles ->" ]
@@ -448,7 +440,7 @@ viewNextLink postLink =
 
 viewLinks : Model -> Html.Html Msg
 viewLinks model =
-    div [ classes [ flex, mb4 ] ]
+    div [ classes [ flex, h2 ] ]
         [ viewPrevLink model.prev
         , viewNextLink model.next
         ]
@@ -459,5 +451,4 @@ view model =
     div []
         [ viewPost model
         , viewLinks model
-        , button [ onClick Scroll ] [ text "to top" ]
         ]
