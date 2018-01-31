@@ -352,6 +352,11 @@ updatePost model postdata =
         newModel
 
 
+scrollToTop : Cmd Msg
+scrollToTop =
+    Task.attempt (always Scroll) <| toTop "elm-root"
+
+
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
@@ -369,7 +374,7 @@ update msg model =
             ( model, Cmd.none )
 
         GotPost (Ok postdata) ->
-            ( updatePost model postdata, Task.attempt (always Scroll) <| toTop (Maybe.withDefault "elm-root" model.slug) )
+            ( updatePost model postdata, scrollToTop )
 
         GotPost (Err err) ->
             ( model, Cmd.none )
@@ -403,7 +408,7 @@ viewPost : Model -> Html.Html Msg
 viewPost model =
     case model.post of
         Just post ->
-            div [ Html.Attributes.id post.slug, classes [ overflow_y_scroll ], style [ ( "height", "95vh" ) ] ]
+            div [ Html.Attributes.id post.slug ]
                 [ viewFeaturedImage post.featuredImage
                 , div
                     [ classes [ bg_dark_gray, white, f3, pa2 ]
