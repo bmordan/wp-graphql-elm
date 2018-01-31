@@ -4,10 +4,15 @@ import Json.Encode as Encode
 import Json.Decode as Decode exposing (Decoder, field, int, string, list, bool, nullable)
 import Json.Decode.Pipeline exposing (decode, required, optional, requiredAt)
 import Http exposing (Error)
-import Html exposing (text, div, button, a, strong, img, span)
+import Html exposing (text, div, button, a, strong, img, span, p)
 import Html.Attributes exposing (href, src)
 import Html.Events exposing (onClick)
+import Dom exposing (Error)
+import Dom.Scroll exposing (toTop)
+import Task
 import Navigation
+import Process
+import Time
 import List.Extra exposing (elemIndex, getAt)
 import Config exposing (graphqlEndpoint, baseUrl)
 import GraphQl exposing (Operation, Variables, Query, Named)
@@ -21,6 +26,18 @@ import Tachyons.Classes
         , justify_start
         , flex_none
         , flex_auto
+        , mr2
+        , br_100
+        , items_center
+        , bg_light_gray
+        , bg_dark_gray
+        , white
+        , f3
+        , overflow_y_scroll
+        , mb4
+        , absolute
+        , top_0
+        , w_100
         )
 
 
@@ -43,15 +60,6 @@ initModel location =
     }
 
 
-
--- initCmds : String -> String -> Cmd Msg
--- initCmds cursor slug =
---     Cmd.map
---         [ postsRequest cursor
---         , postRequest slug
---         ]
-
-
 init : Navigation.Location -> ( Model, Cmd Msg )
 init location =
     ( initModel location, postsRequest "null" )
@@ -59,8 +67,10 @@ init location =
 
 type Msg
     = Slug Navigation.Location
-    | GotPosts (Result Error PostsData)
-    | GotPost (Result Error PostBy)
+    | GotPosts (Result Http.Error PostsData)
+    | GotPost (Result Http.Error PostBy)
+    | Scroll
+    | NoOp
 
 
 type alias PostsData =
@@ -95,6 +105,20 @@ type alias Post =
     { slug : String
     , title : String
     , content : String
+    , author : Author
+    , featuredImage : Maybe FeaturedImage
+    }
+
+
+type alias FeaturedImage =
+    { sourceUrl : String
+    }
+
+
+type alias Author =
+    { name : String
+    , bio : String
+    , avatar : String
     }
 
 
@@ -146,6 +170,22 @@ decodePost =
         |> required "slug" string
         |> required "title" string
         |> required "content" string
+        |> required "author" decodeAuthor
+        |> required "featuredImage" (nullable decodeFeaturedImage)
+
+
+decodeFeaturedImage : Decoder FeaturedImage
+decodeFeaturedImage =
+    decode FeaturedImage
+        |> required "sourceUrl" string
+
+
+decodeAuthor : Decoder Author
+decodeAuthor =
+    decode Author
+        |> required "name" string
+        |> required "bio" string
+        |> requiredAt [ "avatar", "url" ] string
 
 
 postsQuery : String -> Operation Query Variables
@@ -196,6 +236,20 @@ postQuery slug =
                 [ GraphQl.field "slug"
                 , GraphQl.field "title"
                 , GraphQl.field "content"
+                , GraphQl.field "author"
+                    |> GraphQl.withSelectors
+                        [ GraphQl.field "name"
+                        , GraphQl.field "description"
+                            |> GraphQl.withAlias "bio"
+                        , GraphQl.field "avatar"
+                            |> GraphQl.withSelectors
+                                [ GraphQl.field "url"
+                                ]
+                        ]
+                , GraphQl.field "featuredImage"
+                    |> GraphQl.withSelectors
+                        [ GraphQl.field "sourceUrl"
+                        ]
                 ]
         ]
         |> GraphQl.withVariables []
@@ -290,6 +344,9 @@ maybeLink model fn =
 updatePost : Model -> PostBy -> ( Model, Cmd Msg )
 updatePost model postdata =
     let
+        slug =
+            postdata.postBy.slug
+
         newModel =
             { model
                 | post = Just postdata.postBy
@@ -304,7 +361,11 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         Slug location ->
-            ( { model | slug = maybeSlug location }, postRequest (String.dropLeft 1 location.hash) )
+            let
+                slug =
+                    String.dropLeft 1 location.hash
+            in
+                ( { model | slug = maybeSlug location }, postRequest slug )
 
         GotPosts (Ok postsdata) ->
             updatePosts model postsdata
@@ -318,18 +379,47 @@ update msg model =
         GotPost (Err err) ->
             ( model, Cmd.none )
 
+        Scroll ->
+            ( model, Task.attempt (always NoOp) <| toTop (Maybe.withDefault "" model.slug) )
+
+        NoOp ->
+            ( model, Cmd.none )
+
+
+viewAuthor : Author -> Html.Html Msg
+viewAuthor author =
+    div [ classes [ flex, items_center, bg_light_gray, pa2 ] ]
+        [ img [ src author.avatar, classes [ mr2, br_100 ] ] []
+        , div [ classes [ flex_auto ] ]
+            [ strong [] [ text author.name ]
+            , p [] [ text author.bio ]
+            ]
+        ]
+
+
+viewFeaturedImage : Maybe FeaturedImage -> Html.Html Msg
+viewFeaturedImage featured =
+    case featured of
+        Just val ->
+            img [ src val.sourceUrl ] []
+
+        Nothing ->
+            defaultImg
+
 
 viewPost : Model -> Html.Html Msg
 viewPost model =
     case model.post of
         Just post ->
-            div []
-                [ Html.h1 [] [ text post.title ]
-                , div [ strToHtml post.content ] []
-                , div [ classes [ flex ] ]
-                    [ viewPrevLink model.prev
-                    , viewNextLink model.next
+            div [ Html.Attributes.id post.slug ]
+                [ viewFeaturedImage post.featuredImage
+                , div
+                    [ classes [ bg_dark_gray, white, f3, pa2 ]
+                    , strToHtml post.title
                     ]
+                    []
+                , viewAuthor post.author
+                , div [ strToHtml post.content ] []
                 ]
 
         Nothing ->
@@ -356,8 +446,18 @@ viewNextLink postLink =
             a [ Html.Attributes.href (baseUrl ++ "/articles"), classes [ justify_end ] ] [ text "back to articles ->" ]
 
 
+viewLinks : Model -> Html.Html Msg
+viewLinks model =
+    div [ classes [ flex, mb4 ] ]
+        [ viewPrevLink model.prev
+        , viewNextLink model.next
+        ]
+
+
 view : Model -> Html.Html Msg
 view model =
     div []
         [ viewPost model
+        , viewLinks model
+        , button [ onClick Scroll ] [ text "to top" ]
         ]

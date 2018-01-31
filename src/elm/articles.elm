@@ -298,7 +298,7 @@ renderPost { node } =
         [ renderFeaturedImage node.featuredImage
         , div [ classes [ pa2, mt2 ] ]
             [ a [ href ("/article.html#" ++ node.slug), classes [ link ] ]
-                [ strong [] [ text node.title ]
+                [ strong [ strToHtml node.title ] []
                 ]
             , div [ strToHtml node.excerpt ] []
             , renderSmallAuthor node
