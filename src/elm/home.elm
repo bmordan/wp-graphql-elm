@@ -163,7 +163,7 @@ searchQuery : String -> Operation Query Variables
 searchQuery term =
     GraphQl.named "searchQuery"
         [ GraphQl.field "posts"
-            |> GraphQl.withArgument "where" (GraphQl.variable "search")
+            |> GraphQl.withArgument "where" (GraphQl.string "search")
             |> GraphQl.withSelectors
                 [ GraphQl.field "edges"
                     |> GraphQl.withSelectors
@@ -174,7 +174,7 @@ searchQuery term =
                         ]
                 ]
         ]
-        |> GraphQl.withVariables [ ( "search", "QueryArgs" ) ]
+        |> GraphQl.withVariables []
 
 
 searchRequest :
@@ -187,13 +187,8 @@ searchRequest =
 
 sendSearch : String -> Cmd Msg
 sendSearch term =
-    let
-        searchTerm =
-            { search = term }
-    in
-        searchRequest (searchQuery term) decodeSearch
-            |> GraphQl.addVariables [ ( "search", (Encode.encode 0 searchTerm) ) ]
-            |> GraphQl.send GotSearch
+    searchRequest (searchQuery term) decodeSearch
+        |> GraphQl.send GotSearch
 
 
 extractToModel : Data -> Model -> Model
