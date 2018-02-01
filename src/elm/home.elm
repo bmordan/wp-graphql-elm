@@ -10,9 +10,19 @@ import Html.Events exposing (onClick, onInput)
 import GraphQl exposing (Operation, Variables, Query, Named)
 import Debug exposing (log)
 import Tachyons exposing (..)
-import Tachyons.Classes exposing (..)
+import Tachyons.Classes
+    exposing
+        ( flex
+        , flex_auto
+        , flex_none
+        , bb
+        , b__light_gray
+        , pt2
+        , justify_end
+        , input_reset
+        )
 import Config exposing (graphqlEndpoint)
-import Elements exposing (navbar, footer)
+import Elements exposing (navbar, footer, strToHtml)
 
 
 main : Program Never Model Msg
@@ -23,6 +33,22 @@ main =
         , update = update
         , view = view
         }
+
+
+initModel : Model
+initModel =
+    { content = Nothing
+    , featuredImage = Nothing
+    , loading = True
+    , term = ""
+    , lastTerm = ""
+    , searches = Nothing
+    }
+
+
+init : ( Model, Cmd Msg )
+init =
+    ( initModel, sendRequest )
 
 
 type Msg
@@ -80,6 +106,8 @@ type alias Model =
     , featuredImage : Maybe FeaturedImage
     , loading : Bool
     , term : String
+    , lastTerm : String
+    , searches : Maybe Edges
     }
 
 
@@ -163,13 +191,15 @@ searchQuery : String -> Operation Query Variables
 searchQuery term =
     GraphQl.named "searchQuery"
         [ GraphQl.field "posts"
-            |> GraphQl.withArgument "where" (GraphQl.string "search")
+            |> GraphQl.withArgument "where" (GraphQl.queryArgs [ ( "search", (GraphQl.string term) ) ])
             |> GraphQl.withSelectors
                 [ GraphQl.field "edges"
                     |> GraphQl.withSelectors
                         [ GraphQl.field "node"
                             |> GraphQl.withSelectors
                                 [ GraphQl.field "slug"
+                                , GraphQl.field "title"
+                                , GraphQl.field "excerpt"
                                 ]
                         ]
                 ]
@@ -200,11 +230,6 @@ extractToModel { pageBy } model =
     }
 
 
-init : ( Model, Cmd Msg )
-init =
-    ( Model Nothing Nothing True "", sendRequest )
-
-
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
@@ -217,19 +242,20 @@ update msg model =
         Term search ->
             ( { model | term = search }, Cmd.none )
 
-        GotSearch (Ok search) ->
-            ( { model | term = "" }, Cmd.none )
+        GotSearch (Ok results) ->
+            ( { model
+                | term = ""
+                , lastTerm = model.term
+                , searches = Just results.posts
+              }
+            , Cmd.none
+            )
 
         GotSearch (Err err) ->
-            ( { model | term = "search error" }, Cmd.none )
+            ( { model | term = "", searches = Nothing }, Cmd.none )
 
         GoSearch ->
             ( model, sendSearch model.term )
-
-
-renderHtml : String -> Html.Attribute msg
-renderHtml str =
-    (Html.Attributes.property "innerHTML" (Encode.string str))
 
 
 renderFeaturedImage : Maybe FeaturedImage -> Html.Html Msg
@@ -242,12 +268,58 @@ renderFeaturedImage feature =
             Elements.defaultImg
 
 
-searchBox : Model -> Html.Html Msg
-searchBox model =
-    div []
-        [ input [ onInput Term, placeholder "search our articles", value model.term ] []
-        , button [ onClick GoSearch ] [ text "Search" ]
+viewSearchBox : Model -> Html.Html Msg
+viewSearchBox model =
+    div [ classes [ flex, justify_end ] ]
+        [ input
+            [ onInput Term
+            , placeholder "search our articles"
+            , value model.term
+            , classes [ flex_auto, bb, b__light_gray, input_reset ]
+            ]
+            []
+        , button [ onClick GoSearch, classes [ flex_none ] ] [ text "search" ]
         ]
+
+
+viewSearchResult : Node -> Html.Html Msg
+viewSearchResult { node } =
+    div []
+        [ a [ Html.Attributes.href ("/article.html#" ++ node.slug), strToHtml node.title ] []
+        , p [ strToHtml node.excerpt ] []
+        ]
+
+
+viewResultsHeader : Model -> List Node -> Html.Html Msg
+viewResultsHeader model searches =
+    let
+        resultsLength =
+            searches
+                |> List.length
+
+        plural =
+            if resultsLength == 1 then
+                ""
+            else
+                "s "
+
+        header =
+            (toString resultsLength) ++ " search result" ++ plural ++ " for " ++ model.lastTerm
+    in
+        h2 [] [ text header ]
+
+
+viewSearchResults : Model -> Html.Html Msg
+viewSearchResults model =
+    case model.searches of
+        Just { edges } ->
+            div [ classes [ pt2 ] ]
+                [ viewResultsHeader model edges
+                , div [] (List.map viewSearchResult edges)
+                ]
+
+        Nothing ->
+            div [] []
 
 
 view : Model -> Html.Html Msg
@@ -256,8 +328,9 @@ view model =
         [ navbar
         , div []
             [ renderFeaturedImage model.featuredImage
-            , div [ renderHtml (Maybe.withDefault "" model.content) ] []
-            , searchBox model
+            , div [ strToHtml (Maybe.withDefault "" model.content) ] []
+            , viewSearchBox model
+            , viewSearchResults model
             ]
         , footer model.loading
         ]

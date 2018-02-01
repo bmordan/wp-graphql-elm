@@ -1,7 +1,7 @@
 {
     "version": "1.0.0",
     "summary": "Here is the frontend to the new Christan Muslim Forum Site",
-    "repository": "https://github.com/bmordan/wp-graphql-elm",
+    "repository": "https://github.com/bmordan/wp-graphql-elm.git",
     "license": "BSD3",
     "source-directories": [
         "./src/elm"
