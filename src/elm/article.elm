@@ -19,6 +19,7 @@ import Tachyons exposing (..)
 import Tachyons.Classes
     exposing
         ( pa2
+        , pt2
         , flex
         , justify_end
         , justify_start
@@ -34,6 +35,7 @@ import Tachyons.Classes
         , overflow_y_scroll
         , mb4
         , h2
+        , tr
         )
 
 
@@ -53,6 +55,7 @@ initModel location =
     , prev = Nothing
     , next = Nothing
     , slug = maybeSlug location
+    , comments = []
     }
 
 
@@ -70,6 +73,21 @@ type Msg
 
 type alias PostsData =
     { posts : Posts
+    }
+
+
+type alias Edges =
+    { edges : List Node }
+
+
+type alias Node =
+    { node : Comment }
+
+
+type alias Comment =
+    { content : String
+    , date : String
+    , author : Author
     }
 
 
@@ -102,6 +120,7 @@ type alias Post =
     , content : String
     , author : Author
     , featuredImage : Maybe FeaturedImage
+    , comments : Edges
     }
 
 
@@ -123,6 +142,7 @@ type alias Model =
     , prev : Maybe String
     , next : Maybe String
     , slug : Maybe String
+    , comments : List Node
     }
 
 
@@ -167,6 +187,7 @@ decodePost =
         |> required "content" string
         |> required "author" decodeAuthor
         |> required "featuredImage" (nullable decodeFeaturedImage)
+        |> required "comments" decodeEdges
 
 
 decodeFeaturedImage : Decoder FeaturedImage
@@ -181,6 +202,26 @@ decodeAuthor =
         |> required "name" string
         |> required "bio" string
         |> requiredAt [ "avatar", "url" ] string
+
+
+decodeEdges : Decoder Edges
+decodeEdges =
+    decode Edges
+        |> required "edges" (Decode.list decodeNode)
+
+
+decodeNode : Decoder Node
+decodeNode =
+    decode Node
+        |> required "node" decodeComment
+
+
+decodeComment : Decoder Comment
+decodeComment =
+    decode Comment
+        |> required "content" string
+        |> required "date" string
+        |> required "author" decodeAuthor
 
 
 postsQuery : String -> Operation Query Variables
@@ -244,6 +285,30 @@ postQuery slug =
                 , GraphQl.field "featuredImage"
                     |> GraphQl.withSelectors
                         [ GraphQl.field "sourceUrl"
+                        ]
+                , GraphQl.field "comments"
+                    |> GraphQl.withSelectors
+                        [ GraphQl.field "edges"
+                            |> GraphQl.withSelectors
+                                [ GraphQl.field "node"
+                                    |> GraphQl.withSelectors
+                                        [ GraphQl.field "content"
+                                        , GraphQl.field "date"
+                                        , GraphQl.field "author"
+                                            |> GraphQl.withSelectors
+                                                [ GraphQl.field "... on User"
+                                                    |> GraphQl.withSelectors
+                                                        [ GraphQl.field "name"
+                                                        , GraphQl.field "description"
+                                                            |> GraphQl.withAlias "bio"
+                                                        , GraphQl.field "avatar"
+                                                            |> GraphQl.withSelectors
+                                                                [ GraphQl.field "url"
+                                                                ]
+                                                        ]
+                                                ]
+                                        ]
+                                ]
                         ]
                 ]
         ]
@@ -347,6 +412,7 @@ updatePost model postdata =
                 | post = Just postdata.postBy
                 , prev = maybeLink model subtract1
                 , next = maybeLink model add1
+                , comments = postdata.postBy.comments.edges
             }
     in
         newModel
@@ -416,7 +482,7 @@ viewPost model =
                     ]
                     []
                 , viewAuthor post.author
-                , div [ strToHtml post.content ] []
+                , div [ strToHtml post.content, classes [ pa2 ] ] []
                 ]
 
         Nothing ->
@@ -451,9 +517,29 @@ viewLinks model =
         ]
 
 
+viewComments : Model -> Html.Html Msg
+viewComments { comments } =
+    if List.isEmpty comments then
+        div [] []
+    else
+        div [] (List.map viewComment comments)
+
+
+viewComment : Node -> Html.Html Msg
+viewComment { node } =
+    div []
+        [ viewAuthor node.author
+        , div [ strToHtml node.content, classes [ pa2 ] ] []
+        , div [ classes [ pt2, tr ] ] [ text node.date ]
+        ]
+
+
 view : Model -> Html.Html Msg
 view model =
     div []
-        [ viewPost model
+        [ navbar
+        , viewPost model
+        , viewComments model
         , viewLinks model
+        , footer False
         ]
