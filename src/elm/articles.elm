@@ -277,10 +277,10 @@ renderCommentCount : Maybe Int -> Html.Html Msg
 renderCommentCount commentCount =
     case commentCount of
         Just count ->
-            span [] [ text ((toString count) ++ " Comments") ]
+            span [] [ text ((toString count) ++ " Forum Contributions") ]
 
         Nothing ->
-            span [] [ text "0 Comments" ]
+            span [] []
 
 
 renderSmallAuthor : Post -> Html.Html Msg
